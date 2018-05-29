@@ -30,9 +30,33 @@ function paintSpaceShip(x, y) {
     drawTriangle(x, y, 20, '#ff0000', 'up');
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function paintEnemies(enemies) {
+    enemies.forEach(enemy => {
+        enemy.y += 5;
+        enemy.x += getRandomInt(-15, 15);
+
+        drawTriangle(enemy.x, enemy.y, 20, '#00ff00', 'down');
+    })
+}
+
+const SHOOTING_SPEED = 15;
+
+function paintHeroShots(heroShots) {
+    heroShots.forEach(shot => {
+        shot.y -= SHOOTING_SPEED;
+        drawTriangle(shot.x, shot.y, 5, '#ffff00', 'up');
+    })
+}
+
 function renderScener(actors) {
     paintStar(actors.stars);
     paintSpaceShip(actors.spaceShip.x, actors.spaceShip.y);
+    paintEnemies(actors.enemies);
+    paintHeroShots(actors.heroShots);
 }
 
 // Background
@@ -74,13 +98,59 @@ const SpaceShip = mouseMove
         y: HERO_Y
     });
 
+// ENEMY
+
+const ENEMY_FREQ = 1500;
+const Enemies = Rx.Observable.interval(ENEMY_FREQ)
+    .scan(enemyArray => {
+        const enemy = {
+            x: parseInt(Math.random() * canvas.width),
+            y: -30
+        };
+
+        enemyArray.push(enemy);
+        return enemyArray;
+    }, [])
+
+// Player firing
+const playerFiring = Rx.Observable
+    .merge(
+    Rx.Observable.fromEvent(canvas, 'click'),
+    Rx.Observable.fromEvent(canvas, 'keydown')
+        .filter(evt => {
+            return evt.keycode === 32;
+        })
+    )
+    .sample(200)
+    .timestamp();
+
+const HeroShots = Rx.Observable
+    .combineLatest(playerFiring, SpaceShip, (shotEvents, spaceShip) => {
+        return {
+            timestamp: shotEvents.timestamp,
+            x: spaceShip.x
+        };
+    })
+    .distinctUntilChanged(shot => {
+        return shot.timestamp;
+    })
+    .scan((shortArray, shot) => {
+        shortArray.push({ x: shot.x, y: HERO_Y });
+        return shortArray;
+    }, [])
+
 //Game
 const Game = Rx.Observable
-    .combineLatest(StarStream, SpaceShip, (stars, spaceShip) => {
+    .combineLatest(StarStream, SpaceShip, Enemies, HeroShots, (stars, spaceShip, enemies, heroShots) => {
         return {
             stars: stars,
-            spaceShip: spaceShip
-        }
-    });
+            spaceShip: spaceShip,
+            enemies: enemies,
+            heroShots: heroShots
+        };
+    })
 
-Game.subscribe(renderScener);
+
+Game
+    .sample(SPEED)
+    .subscribe(renderScener);
