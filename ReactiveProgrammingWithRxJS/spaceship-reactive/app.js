@@ -15,7 +15,27 @@ function paintStar(stars) {
     });
 }
 
+// Helpers
+function drawTriangle(x, y, width, color, direction) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x - width, y);
+    ctx.lineTo(x, direction === 'up' ? y - width : y + width);
+    ctx.lineTo(x + width, y);
+    ctx.lineTo(x - width, y);
+    ctx.fill();
+}
 
+function paintSpaceShip(x, y) {
+    drawTriangle(x, y, 20, '#ff0000', 'up');
+}
+
+function renderScener(actors) {
+    paintStar(actors.stars);
+    paintSpaceShip(actors.spaceShip.x, actors.spaceShip.y);
+}
+
+// Background
 const SPEED = 40;
 const STAR_NUMBER = 250;
 const StarStream = Rx.Observable.range(1, STAR_NUMBER)
@@ -38,6 +58,29 @@ const StarStream = Rx.Observable.range(1, STAR_NUMBER)
             return starArray;
         });
     })
-    .subscribe(starArray => {
-        paintStar(starArray);
+
+//HERO
+const HERO_Y = canvas.height - 30;
+const mouseMove = Rx.Observable.fromEvent(canvas, 'mousemove');
+const SpaceShip = mouseMove
+    .map(event => {
+        return {
+            x: event.clientX,
+            y: HERO_Y
+        }
+    })
+    .startWith({
+        x: canvas.width / 2,
+        y: HERO_Y
     });
+
+//Game
+const Game = Rx.Observable
+    .combineLatest(StarStream, SpaceShip, (stars, spaceShip) => {
+        return {
+            stars: stars,
+            spaceShip: spaceShip
+        }
+    });
+
+Game.subscribe(renderScener);
