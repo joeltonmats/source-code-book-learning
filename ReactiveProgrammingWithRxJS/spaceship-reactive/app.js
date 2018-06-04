@@ -39,24 +39,69 @@ function paintEnemies(enemies) {
         enemy.y += 5;
         enemy.x += getRandomInt(-15, 15);
 
-        drawTriangle(enemy.x, enemy.y, 20, '#00ff00', 'down');
+        if (!enemy.isDead)
+            drawTriangle(enemy.x, enemy.y, 20, '#00ff00', 'down');
+
+        enemy.shots.forEach(shot => {
+            shot.y += SHOOTING_SPEED;
+            drawTriangle(shot.x, shot.y, 5, '#00ffff', 'down');
+        })
     })
 }
 
-const SHOOTING_SPEED = 15;
+const ScoreSubject = new Rx.Subject();
+const score = ScoreSubject.scan((prev, cur) => {
+    return prev + cur;
+}, 0).startWith(0);
 
-function paintHeroShots(heroShots) {
-    heroShots.forEach(shot => {
+const SHOOTING_SPEED = 15;
+const SCORE_INCREASE = 10;
+
+function paintHeroShots(heroShots, enemies) {
+    heroShots.forEach((shot, i) => {
+        for (let l = 0; l < enemies.length; l++) {
+            const enemy = enemies[l];
+            if (!enemy.isDead && collision(shot, enemy)) {
+                ScoreSubject.onNext(SCORE_INCREASE);
+                enemy.isDead = true;
+                shot.x = shot.y = -100;
+                break;
+            }
+        }
         shot.y -= SHOOTING_SPEED;
         drawTriangle(shot.x, shot.y, 5, '#ffff00', 'up');
     })
+}
+
+function collision(target1, target2) {
+    return (target1.x > target2.x - 20 && target1.x < target2.x + 20) &&
+        (target1.y > target2.y - 20 && target1.y < target2.y + 20);
+}
+
+function gameOver(ship, enemies) {
+    return enemies.some(enemy => {
+        if (collision(ship, enemy)) {
+            return true;
+        }
+
+        return enemy.shots.some(shot => {
+            return collision(ship, shot);
+        })
+    })
+}
+
+function paintScore(score) {
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 26px sans-serif';
+    ctx.fillText('Score: ' + score, 40, 43);
 }
 
 function renderScener(actors) {
     paintStar(actors.stars);
     paintSpaceShip(actors.spaceShip.x, actors.spaceShip.y);
     paintEnemies(actors.enemies);
-    paintHeroShots(actors.heroShots);
+    paintHeroShots(actors.heroShots, actors.enemies);
+    paintScore(actors.score);
 }
 
 // Background
@@ -100,16 +145,35 @@ const SpaceShip = mouseMove
 
 // ENEMY
 
+
+function isVisible(obj) {
+    return obj.x > -40 && obj.x < canvas.width + 40 && obj.y > -40 && obj.y < canvas.height + 40;
+}
+
 const ENEMY_FREQ = 1500;
+const ENEMY_SHOOTING_FREQ = 750;
 const Enemies = Rx.Observable.interval(ENEMY_FREQ)
     .scan(enemyArray => {
         const enemy = {
             x: parseInt(Math.random() * canvas.width),
-            y: -30
+            y: -30,
+            shots: []
         };
 
+        Rx.Observable.interval(ENEMY_SHOOTING_FREQ)
+            .subscribe(() => {
+                if (!enemy.isDead) {
+                    enemy.shots.push({ x: enemy.x, y: enemy.y });
+                }
+                enemy.shots = enemy.shots.filter(isVisible);
+            })
+
         enemyArray.push(enemy);
-        return enemyArray;
+        return enemyArray
+            .filter(isVisible)
+            .filter(enemy => {
+                return !(enemy.isDead && enemy.shots.length === 0);
+            });
     }, [])
 
 // Player firing
@@ -139,18 +203,24 @@ const HeroShots = Rx.Observable
         return shortArray;
     }, [])
 
+
+
 //Game
 const Game = Rx.Observable
-    .combineLatest(StarStream, SpaceShip, Enemies, HeroShots, (stars, spaceShip, enemies, heroShots) => {
+    .combineLatest(StarStream, SpaceShip, Enemies, HeroShots, score, (stars, spaceShip, enemies, heroShots, score) => {
         return {
             stars: stars,
             spaceShip: spaceShip,
             enemies: enemies,
-            heroShots: heroShots
+            heroShots: heroShots,
+            score: score
         };
     })
 
 
 Game
     .sample(SPEED)
+    .takeWhile(actors => {
+        return gameOver(actors.spaceShip, actors.enemies) === false;
+    })
     .subscribe(renderScener);
