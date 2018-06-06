@@ -39,6 +39,8 @@ function getRowFromEvent(event) {
 }
 
 function initialize() {
+    const socket = Rx.DOM.fromWebSocket('ws://127.0.0.1:8082');
+
     const quakes = Rx.Observable
         .interval(5000)
         .flatMap(() => {
@@ -64,6 +66,24 @@ function initialize() {
         codeLayers[quake.id] = quakeLayer.getLayerId(circle);
 
     });
+
+    quakes
+        .bufferWithCount(100)
+        .subscribe(quakes => {
+            const quakesData = quakes.map(quake => {
+                return {
+                    id: quake.properties.net + quake.properties.code,
+                    lat: quake.geometry.coordinates[1],
+                    lng: quake.geometry.coordinates[0],
+                    mag: quake.properties.mag
+                }
+            })
+            socket.onNext(JSON.stringify({ quakes: quakesData }));
+        })
+
+    socket.subscribe(message => {
+        console.log(JSON.parse(message.data));
+    })
 
     getRowFromEvent('mouseover')
         .pairwise()
