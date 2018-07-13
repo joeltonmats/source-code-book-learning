@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .layout {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        section>aside {
+            flex: auto;
+        }
+
+        section>article {
+            flex: 2 1 auto;
+        }
+
+        aside.level1 {
+            order: -1;
+            background-color: yellow;
+        }
+
+        aside.level2 {
+            order: 2;
+            background-color: green;
+        }
+
+        .maincontent {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="layout">
+        <article class="maincontent">
+            Hello
+        </article>
+        <aside class="level1">Hello1</aside>
+        <aside class="level2">Hello2</aside>
+    </section>
+</body>
+
+</html>

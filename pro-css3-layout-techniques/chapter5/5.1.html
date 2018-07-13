@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #library {
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .library-item {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .library-item>img {
+            order: -1;
+            align-self: center;
+        }
+
+        .library-item>button {
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="library">
+        <article class="library-item ">
+            <h1>The Wonderful Wizard of Oz</h1>
+            <h2>by L. Frank Baum</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51pWdLRZ9EL._SX361_BO1,204,203,200_.jpg" alt="Original cover of The Wonderful Wizard of Oz " />
+            <button>Remove from library</button>
+        </article>
+        <article class="library-item ">
+            <h1>Pride and Prejudice</h1>
+            <h2>by Jane Austen</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Prideundprejudice.jpg/220px-Prideundprejudice.jpg" alt="Pride and Prejudice book cover " />
+            <button>Remove from library</button>
+        </article>
+        <article class="library-item ">
+            <h1>Adventures of Huckleberry Finn</h1>
+            <h2>by Mark Twain</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51aFNKc2hmL.jpg" alt="Original cover of Huckleberry Finn " />
+            <button>Remove from library</button>
+        </article>
+    </section>
+</body>
+
+</html>
