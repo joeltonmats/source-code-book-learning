@@ -3,7 +3,10 @@ var Twit = require('twit');
 var Rx = require('rx');
 
 var T = new Twit({
-   
+    consumer_key: '8VDGiIUNvqP7Iu1R69VLS13HF',
+    consumer_secret: 'XsWK7rZJzZp82QwI8ka1Q7iHpGRTCwVWeqOFNJhS2DCZByklsB',
+    access_token: '177328471-Rps1CF8njZc4FolFBQbkdxCfyLjOHxwjSeC8WgPS',
+    access_token_secret: 'SLaj5TLlaEjun3uJNknGX4FjMLARwDU6oEzQ8VFlhmioR'
 });
 
 var stream = T.stream('statuses/filter', {
