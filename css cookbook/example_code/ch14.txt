@@ -1,0 +1,450 @@
+chapter: Interacting with JavaScript
+==================
+<body>
+ <noscript>
+  <p>JavaScript is not enabled. Some features of this website
+  will not work.</p>
+ </noscript>
+</body>
+    
+    
+====================================
+<script type="text/javascript">
+ function setTimedStylesheet() {
+  var theTime = new Date().getHours();
+   if (8 <= theTime&&theTime < 20) {
+    document.write("<link rel='stylesheet' href='daytime.css'
+type='text/css'>");
+   }
+  if (20 <= theTime&&theTime < 8) {
+   document.write("<link rel='stylesheet' href='nighttime.css'
+type='text/css'>");
+  }
+ }
+setTimedStylesheet();
+</script>
+    
+    
+====================================
+<script type="text/javascript">
+ function setTimedStylesheet() {
+  var theTime = new Date().getHours();
+   if (8 <= theTime&&theTime < 20) {
+    document.write("<link rel='stylesheet' href='daytime.css'
+type='text/css'>");
+   }
+  if (20 <= theTime&&theTime < 8) {
+   document.write("<link rel='stylesheet' href='nighttime.css'
+type='text/css'>");
+  }
+ }
+setTimedStylesheet();
+</script>
+<noscript>
+ <link href="default.css" rel="stylesheet" type="text/css">
+</noscript>
+    
+    
+====================================
+<script type= "text/javascript">
+if (screen.width <= 481) {
+  document.location = "http://mobi.example.com/"
+ }
+</script>
+    
+    
+====================================
+<script type= "text/javascript">
+if (screen.width <= 481) {
+ document.location = "http://mobi.example.com/"
+} else if (screen.width >= 1280) {
+ document.location = "http://high-def.example.com/";
+}
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ // Your code goes here...
+ $(document).ready(function(){
+  window.alert("Hello, world! You have JavaScript!")
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript">
+ window.alert("Hello, world! You have JavaScript!")
+</script>
+    
+    
+====================================
+#content {
+ border: 4px solid black;
+}
+#content p {
+ margin: 1em 0;
+}
+/* removes the bottom margin from the last paragraph */
+#content p:last-child {
+ margin: 1em 0 0 0;
+}
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ // Your code goes here...
+ $(document).ready(function(){
+  $("#content p:last-child").css("margin","1em 0 0 0");
+ });
+</script>
+    
+    
+====================================
+$(css-selector);
+    
+    
+====================================
+$("p+p");
+    
+    
+====================================
+$("p+p").css("font-weight","normal");
+    
+    
+====================================
+<!--[if lt IE 8]>
+<script type="text/javascript">
+ // Your code goes here...
+ $(document).ready(function(){
+  $("#content p:last-child").css("margin","1em 0 0 0");
+ });
+</script>
+<![endif]-->
+    
+    
+====================================
+table.striping tr.diff td {
+ background-color: #cbc1be;
+}
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $(".striping tr:even").addClass("diff");
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $(".striping tr:even").addClass("diff");
+ });
+</script>
+    
+    
+====================================
+tr:nth-child(even) td {
+ background-color: #cbc1be;
+}
+    
+    
+====================================
+table.striping tr.over td {
+ background-color: #fbc057;
+}
+    
+    
+====================================
+$(".striping tr");
+    
+    
+====================================
+$(".striping tr").mouseover();
+    
+    
+====================================
+$(".striping tr").mouseover(function() {
+});
+    
+    
+====================================
+$(".striping tr").mouseover(function() {
+ $(this);
+});
+    
+    
+====================================
+$(".striping tr").mouseover(function() {
+    $(this).addClass("over");
+});
+    
+    
+====================================
+$(".striping tr").mouseover(function() {
+ $(this).addClass("over");
+});
+$(".striping tr").mouseout(function() {
+ $(this).removeClass("over");
+});
+    
+    
+====================================
+$(".striping tr").mouseover(function() {
+ $(this).addClass("over");
+}).mouseout(function() {
+ $(this).removeClass("over");
+});
+    
+    
+====================================
+$("#site-nav a").mouseover(function () {
+});
+    
+    
+====================================
+$("#site-nav a").mouseover(function() {
+ $(this).fadeTo("slow", .50);
+});
+    
+    
+====================================
+$("#site-nav a").mouseover(function () {
+ $(this).fadeTo("slow", .50);
+}).mouseout(function () {
+$ (this).fadeTo("slow", 1);
+});
+    
+    
+====================================
+ $("#site-nav a").mouseover(function() {
+ $(this).fadeTo(2000, .50);
+});
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  var topHeight = 0;
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  var topHeight = 0;
+  $("#content p").each();
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  var topHeight = 0;
+  $("#content p").each(function(){
+   if ($(this).height() > topHeight) {
+   }
+  });
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  var topHeight = 0;
+  $("#content p").each(function(){
+   if ($(this).height() > topHeight) {
+    topHeight = $(this).height();
+   }
+  });
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  var topHeight = 0;
+  $("#content p").each(function(){
+   if ($(this).height() > topHeight) { topHeight = $(this).height(); }
+  });
+  $("#content p").height(topHeight);
+ });
+</script>
+    
+    
+====================================
+ <a href="http://csscookbook.com/" rel="external">Click here</a> to check it out!
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('a[rel="external"]');
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('a[rel="external"]').click();
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('a[rel="external"]').click(function() {
+   window.open($(this).attr('href')););
+ });
+});
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('a[rel="external"]').click( function() {
+   window.open($(this).attr('href'));
+   return false;
+  });
+ });
+</script>
+    
+    
+====================================
+<div class="link" id="blipvert">
+ <h2>Amazing Sale</h2>
+ <p><a href="http://csscookbook.com/">Click here</a> to check it out!</p>
+</div>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $("div.link").click(function() {
+  });
+ });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $("div.link").click(function() {
+   window.location=$(this).find("a").attr("href");
+   return false;
+  });
+ });
+</script>
+    
+    
+====================================
+<div id="blipvert">
+<a href="http://csscookbook.com/">
+ <h2>Amazing Sale</h2>
+ <p>Click here to check it out!</p>
+</a>
+</div>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript" src="/_assets/js/jquery.pngFix.js"></script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script type="text/javascript" src="/_assets/js/jquery.pngFix.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function(){
+   $(document).pngFix();
+  });
+</script>
+    
+    
+====================================
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="/_assets/js/jquery.pngFix.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).pngFix();
+    });
+</script>
+<![endif]-->
+    
+    
+====================================
+<script src="modernizr-0.9.min.js"></script>
+    
+    
+====================================
+h1 {
+ background-color: #333;
+ color: #fff;
+}
+.rgba h1 {
+ background-color: rgba(0,0,0, .8);
+}
+    
+    
+====================================
+<audio>
+ <source src="example.ogg" />
+ <source src="example.mp3" />
+</audio>
+    
+    
+====================================
+.no-audio audio {
+ display: none;
+}
+    
+    
+==================

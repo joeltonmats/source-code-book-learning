@@ -1,0 +1,1073 @@
+chapter: Forms
+==================
+form {
+ margin: 0;
+ padding: 1em 0;
+ border: 1px dotted red; /* set in order to see padding effect */
+}
+    
+    
+====================================
+form {
+ display: inline;
+ padding: 0
+}
+    
+    
+====================================
+<h2>Simple Quiz</h2>
+ <form action="simplequiz.php" method="post">
+ <p>
+  Are you
+   <input type="radio" value="male" name="sex"
+class="radioinput" />
+  Male or
+   <input type="radio" value="female" name="sex"
+class="radioinput" />
+  Female?
+ </p>
+<p>
+ What pizza toppings do you like? <input type="checkbox" name=""
+value="l" class="checkbxinput"> Pepperoni <input type="checkbox"
+name="" value="mushrooms" class="checkbxinput"> Mushrooms <input
+type="checkbox" name="" value="pineapple" class="checkbxinput">
+ Pineapple
+ </p>
+ <label for="question1">Who is buried in Grant's tomb?</label>
+ <input type="text" name="question1" id="question1"
+class="textinput"
+value="Type answer here" /><br />
+ <label for="question2">In what country is the Great Wall of
+China Located?</label>
+ <input type="text" name="question2" id="question2"
+class="textinput"
+value="Type answer here" /><br />
+ <label for="password">What is your password?</label>
+ <input type="password" name="password" id="password"
+class="pwordinput"
+value="" /><br />
+ <input name="reset" type="reset" id="reset" value="Reset" />
+ <input type="submit" name="Submit" value="Submit"
+class="buttonSubmit" />
+</form>
+    
+    
+====================================
+.textinput {
+ margin-bottom: 1.5em;
+ width: 50%;
+ color: #666;
+ background-color: #ccc;
+}
+.pwordinput {
+ color: white;
+ background-color: white;
+}
+.radioinput {
+ color: green;
+ background-color: #ccc;
+}
+.checkbxinput {
+ color: green;
+ background-color: green;
+}
+    
+    
+====================================
+input[type="text"] {
+ margin-bottom: 1.5em;
+ width: 50%;
+ color: #666;
+ background-color: #ccc;
+}
+input[type="password"] {
+ color: white;
+ background-color: white;
+}
+    
+    
+====================================
+.textinput:focus {
+ background-color: yellow;
+}
+    
+    
+====================================
+<label for="fmname">Name</label>
+<input type="text" name="fmname" class="fmname" />
+<label for="fmemail">Email</label>
+<input type="text" name="fmemail" class="fmemail" />
+    
+    
+====================================
+.fmname {
+ text-align: left;
+}
+.fmemail {
+ text-align: center;
+}
+    
+    
+====================================
+input[name="fmname"] {
+ text-align: left;
+}
+input[name="fmemail"] {
+ text-align: center;
+}
+    
+    
+====================================
+textarea {
+ width: 300px;
+ height: 100px;
+ background-color: yellow;
+ font-size: 1em;
+ font-weight: bold;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ border: 1px solid black;
+}
+    
+    
+====================================
+textarea {
+ background-color: blue;
+}
+    
+    
+====================================
+textarea:focus {
+ background-color: green;
+}
+    
+    
+====================================
+select {
+ color: white;
+ background-color: blue;
+ font-size: 0.9em;
+}
+option {
+ padding: 4px;
+}
+    
+    
+====================================
+<select name="Topping_ID" size="6" multiple>
+ <option value="1">Pepperoni</option>
+ <option value="2" class="even">Sausage</option>
+ <option value="3">Green Peppers</option>
+ <option value="4" class="even">Pineapple</option>
+ <option value="5">Chicken</option>
+ <option value="6" class="even">Ham</option>
+ <option value="7">Olives</option>
+ <option value="8" class="even">Onions</option>
+ <option value="9">Red Peppers</option>
+</select>
+    
+    
+====================================
+<select name="Topping_ID" size="6" multiple="multiple">
+    
+    
+====================================
+select {
+ font-size: 0.9em;
+}
+option {
+ color: white;
+ background-color: blue;
+}
+option.even {
+color: blue;
+ background-color: red;
+}
+    
+    
+====================================
+<form method="get" action="/search.php">
+<div>
+<label for="q">Search</label>
+<input type="search" placeholder="keywords"
+autosave="com.domain.search" results="7" name="q" />
+</div>
+</form>
+    
+    
+====================================
+<label for="fmwebsite">Web Site:</label>
+<input type="text" name="fmwebsite" value="http://" />
+    
+    
+====================================
+<form action="simplequiz.php" method="post">
+ <label for="question">Who is president of the U.S.?
+</label>
+ <input type="text" name="question" id="textfield"
+ value="Type answer here" /><br />
+ <input name="reset" type="reset" value="Reset"
+ class="buttonReset" />
+ <input type="submit" name="Submit" value="Submit"
+class="buttonSubmit" />
+</form>
+    
+    
+====================================
+.buttonReset {
+ color: #fcc;
+ background-color: #900;
+ font-size: 1.5em;
+ border: 1px solid #660;
+ padding: 4px;
+ background-image: url(title-glass.png);
+ background-repeat: repeat-x;
+ background-position: 50%;
+ text-shadow: 0 −1px 0 #666;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-top: 1px solid #900;
+}
+.buttonSubmit {
+ color: white;
+ background-color: #660;
+ font-size: 1.5em;
+ border: 1px solid #660;
+ padding: 4px;
+ background-image: url(title-glass.png);
+ background-repeat: repeat-x;
+ background-position: 50%;
+ -moz-border-radius: 8px;
+ -webkit-border-radius: 8px;
+ border-top: 1px solid #660;
+}
+    
+    
+====================================
+<script language="JavaScript" type="text/javascript">
+function classChange(styleChange,item) {
+ item.className = styleChange;
+}
+</script>
+    
+    
+====================================
+.buttonResetRoll {
+ color: white;
+ background-color: #c00;
+ font-size: 1.5em;
+ border: 1px solid #660;
+ padding: 4px;
+}
+.buttonSubmitRoll {
+ color: white;
+ background-color: #cc0;
+ font-size: 1.5em;
+ border: 1px solid #660;
+ padding: 4px;
+}
+    
+    
+====================================
+<form action="simplequiz.php" method="post">
+ <label for="question">Who is president of the U.S.?</label>
+ <input type="text" name="question" id="textfield"
+value="Type answer here" /><br />
+ <input name="reset" type="reset" id="reset" value="Reset"
+class="buttonReset"
+onMouseOver="classChange('buttonResetRoll',this)"
+onMouseOut="classChange('buttonReset',this)" />
+ <input type="submit" name="Submit" value="Submit"
+class="buttonSubmit"
+onMouseOver="classChange('buttonSubmitRoll',this)"
+onMouseOut="classChange('buttonSubmit',this)" />
+</form>
+    
+    
+====================================
+input[type="reset"] {
+ color: #fcc;
+ background-color: #900;
+ font-size: 1.5em;
+ border: 1px solid #660;
+ padding: 4px;
+}
+input[type="submit"] {
+ color: white;
+ background-color: #660;
+ font-size: 1.5em;
+ border: 1px solid #660;
+ padding: 4px;
+}
+    
+    
+====================================
+<input type="image" name="submit" src="submit.gif" />
+    
+    
+====================================
+.buttonSubmitHide {
+ display: none;
+}
+    
+    
+====================================
+<script language="JavaScript" type="text/javascript">
+function classChange(styleChange,item) {
+ item.className = styleChange;
+}
+</script>
+    
+    
+====================================
+<h2>Order Confirmation</h2>
+<form action="login.php" method="post"
+ onsubmit="classChange('buttonSubmitHide',submit);
+return true;">
+ <div align="center">
+  <p>Are you sure you want to purchase 12 cans of soda over the
+Web?</p>
+  <label for="uname">Final Price:</label>
+  <input type="text" name="uname" id="uname" value="$7.95" />
+<br />
+   (includes tax, s+h extra)<br />
+  <input type="submit" name="submit" value="submit"
+class="buttonSubmit" />
+ </div>
+</form>
+    
+    
+====================================
+<input type="submit" name="submit" value="send &raquo;" class="submit" />
+    
+    
+====================================
+.submit {
+ border: none;
+ background-color: #fff;
+ padding: 0;
+ margin: 0;
+ width: 5em;
+}
+    
+    
+====================================
+.submit:hover {
+ text-decoration: underline;
+}
+    
+    
+====================================
+<form name="msgform" method="get" action="results.php">
+<label for="fmmsg">Message</label>
+<textarea name="fmmsg" accesskey="m" id="fmmsg" rows="5" cols="14"></textarea>
+<a href="javascript:document.msgform.submit();">Submit</a>
+</form>
+    
+    
+====================================
+<form action="login.php" method="post">
+ <label for="uname">Username</label>
+ <input type="text" name="uname" id="uname" value="" /><br />
+ <label for="pname">Password</label>
+ <input type="text" name="pname" id="pname" value="" /><br />
+ <label for="recall">Remember you?</label>
+ <input type="checkbox" name="recall" id="recall"
+class="checkbox" /><br />
+ <input type="submit" name="Submit" value="Submit"
+class="buttonSubmit" />
+</form>
+    
+    
+====================================
+input {
+ display: block;
+ width: 175px;
+ float: left;
+ margin-bottom: 10px;
+}
+label {
+ display: block;
+ text-align: right;
+ float: left;
+ width: 75px;
+ padding-right: 20px;
+}
+.checkbox {
+ width: 1em;
+}
+br {
+ clear: left;
+}
+.buttonSubmit {
+ width: 75px;
+ margin-left: 95px;
+}
+    
+    
+====================================
+<form id="regform" name="regform" method="post" action="/regform.php">
+ <div id="register">
+  <h4>Register</h4>
+  <label for="fmlogin">Login</label>
+  <input type="text" name="fmlogin" id="fmlogin" />
+  <label for="fmemail">Email Address</label>
+  <input type="text" name="fmemail" id="fmemail" />
+  <label for="fmemail2">Confirm Address</label>
+  <input type="text" name="fmemail2" id="fmemail2" />
+  <label for="fmpswd">Password</label>
+  <input type="password" name="fmpswd" id="fmpswd" />
+  <label for="fmpswd2">Confirm Password</label>
+  <input type="password" name="fmpswd2" id="fmpswd2" />
+ </div>
+ <div id="contactinfo">
+  <h4>Contact Information</h4>
+  <label for="fmfname">First Name</label>
+  <input type="text" name="fmfname" id="fmfname" />
+  <label for="fmlname">Last Name</label>
+  <input type="text" name="fmlname" id="fmlname" />
+  <label for="fmaddy1">Address 1</label>
+  <input type="text" name="fmaddy1" id="fmaddy1" />
+  <label for="fmaddy2">Address 2</label>
+  <input type="text" name="fmaddy2" id="fmaddy2" />
+  <label for="fmcity">City</label>
+  <input type="text" name="fmcity" id="fmcity" />
+  <label for="fmstate">State or Province</label>
+  <input type="text" name="fmstate" id="fmstate" />
+  <label for="fmzip">Zip</label>
+  <input type="text" name="fmzip" id="fmzip"  size="5" />
+  <label for="fmcountry">Country</label>
+  <input type="text" name="fmcountry" id="fmcountry" />
+  <input type="submit" name="submit" value="send" class="submit" />
+ </div>
+</form>
+    
+    
+====================================
+label {
+ margin-top: .33em;
+ display: block;
+}
+input {
+ display: block;
+ width: 250px;
+}
+    
+    
+====================================
+#register {
+ float: left;
+}
+    
+    
+====================================
+#register {
+ float: left;
+}
+#contactinfo {
+ padding-left: 275px;
+}
+    
+    
+====================================
+<form id="msgform" name="msgform" method="post" action="/process.php">
+ <fieldset>
+  <legend>Contact Information</legend>
+  <label for="fmtitle" accesskey="i">T<span class="akey">i</span>tle</label>
+  <select name="fmtitle" id="fmtitle">
+   <option value="ms">Ms.</option>
+   <option value="mrs">Mrs.</option>
+   <option value="miss">Miss</option>
+   <option value="mr">Mr.</option>
+  </select>
+  <label for="fmname" accesskey="n"><span class="akey">N</span>ame</label>
+  <input type="text" name="fmname" id="fmname" />
+  <label for="fmemail" accesskey="e" class="required">
+<span class="akey">E</span>mail <img src="alert.gif" /> Required</label>
+  <input type="text"  name="fmemail" id="fmemail" class="required" />
+ </fieldset>
+ <fieldset>
+  <legend>Your Message</legend>
+  <label for="fmstate" accesskey="y">Subject</label>
+  <input type="text" name="fmcountry" id="fmcountry" />
+  <label for="fmmsg" class="required"><span class="akey">M</span>essage
+<img src="alert.gif" /> Required</label>
+  <textarea name="fmmsg" accesskey="m" id="fmmsg" rows="5" cols="14"
+class="required"></textarea>
+ </fieldset>
+ <input type="submit" name="submit" value="send" class="submit" />
+</form>
+    
+    
+====================================
+label {
+ margin-top: .33em;
+ display: block;
+}
+input {
+ display: block;
+ width: 250px;
+}
+textarea {
+ width: 250px;
+ height: 75px;
+}
+label.required {
+ color: #c00;
+ font-weight: bold;
+}
+textarea.required, input.required  {
+ border: 1px solid red;
+ background-color: #eee;
+}
+    
+    
+====================================
+form em {
+ text-decoration: underline;
+ font-style: normal;
+}
+    
+    
+====================================
+<form id="msgform" name="msgform" method="post" action="/">
+ <label for="fmtitle" accesskey="i">T<em>i</em>tle</label>
+ <select name="fmtitle" id="fmtitle">
+  <option value="ms">Ms.</option>
+  <option value="mrs">Mrs.</option>
+  <option value="miss">Miss</option>
+  <option value="mr">Mr.</option>
+ </select>
+ <label for="fmname" accesskey="n"><em>N</em>ame</label>
+ <input type="text" name="fmname" id="fmname" />
+ <label for="fmemail" accesskey="e"><em>E</em>mail</label>
+ <input type="text"  name="fmemail" id="fmemail" />
+ <label for="fmstate" accesskey="a">St<em>a</em>te/Province</label>
+ <input type="text" name="fmstate" id="fmstate" />
+ <label for="fmcountry" accesskey="y">Countr<em>y</em></label>
+ <input type="text" name="fmcountry" id="fmcountry" />
+ <label for="fmmsg" accesskey="m"><em>M</em>essage</label>
+ <textarea name="fmmsg" id="fmmsg" rows="5" cols="14"></textarea>
+ <input type="submit" name="submit" value="send" class="submit" />
+</form>
+    
+    
+====================================
+<form id="msgform" name="msgform" method="post" action="/">
+ <fieldset>
+  <legend>Contact Information</legend>
+  <label for="fmtitle">Title</label>
+  <select name="fmtitle" id="fmtitle">
+   <option value="ms">Ms.</option>
+   <option value="mrs">Mrs.</option>
+   <option value="miss">Miss</option>
+   <option value="mr">Mr.</option>
+  </select>
+  <label for="fmname">Name</label>
+  <input type="text" name="fmname" id="fmname" />
+  <label for="fmemail">Email</label>
+  <input type="text"  name="fmemail" id="fmemail" />
+ </fieldset>
+ <fieldset>
+  <legend>Your Message</legend>
+  <label for="fmstate">Subject</label>
+  <input type="text" name="fmcountry" id="fmcountry" />
+  <label for="fmmsg">Message</label>
+  <textarea name="fmmsg" accesskey="m" id="fmmsg" rows="5"
+cols="14"></textarea>
+  </fieldset>
+ <input type="submit" name="submit" value="send" class="submit" />
+</form>
+    
+    
+====================================
+fieldset {
+ margin-bottom: 1em;
+ border: 1px solid #888;
+ border-right: 1px solid #666;
+ border-bottom: 1px solid #666;
+}
+legend {
+ font-weight: bold;
+ border: 1px solid #888;
+ border-right: 1px solid #666;
+ border-bottom: 1px solid #666;
+ padding: .5em;
+ background-color: #666;
+ background-image: url(title-glass.png);
+ background-repeat: repeat-x;
+ background-position: 50% 50%;
+ color: #fff;
+ text-shadow: 0 −1px 0 #333;
+ letter-spacing: .1em;
+ text-transform: uppercase;
+}
+    
+    
+====================================
+<form action="/process.php" method="get" name="copresentations">
+ <table cellspacing="0">
+  <caption>
+   Summary of Financial Data
+  </caption>
+  <tr>
+   <th scope="col">Fiscal Year </th>
+   <th scope="col">Worksite<br />
+    Presentations </th>
+   <th scope="col">Passing Grades </th>
+   <th scope="col">Number of Presenters </th>
+  </tr>
+  <tr>
+   <th scope="row">1999</th>
+   <td><input type="text" name="wkpst1999" /></td>
+   <td><input type="text" name="pass1999" /></td>
+   <td><input type="text" name="numpst1999" /></td>
+  </tr>
+  <tr>
+   <th scope="row">2000</th>
+   <td><input type="text" name="wkpst2000" /></td>
+   <td><input type="text" name="pass2000" /></td>
+   <td><input type="text" name="numpst2000" /></td>
+  </tr>
+  <tr>
+   <th scope="row">2001</th>
+   <td><input type="text" name="wkpst2001" /></td>
+   <td><input type="text" name="pass2001" /></td>
+   <td><input type="text" name="numpst2001" /></td>
+  </tr>
+  <tr>
+   <th scope="row">2002</th>
+   <td><input type="text" name="wkpst2002" /></td>
+   <td><input type="text" name="pass2002" /></td>
+   <td><input type="text" name="numpst2002" /></td>
+  </tr>
+  <tr>
+   <th scope="row">2003</th>
+   <td><input type="text" name="wkpst2003" /></td>
+   <td><input type="text" name="pass2003" /></td>
+   <td><input type="text" name="numpst2003" /></td>
+  </tr>
+  <tr>
+   <th scope="row">2004</th>
+   <td><input type="text" name="wkpst2004" /></td>
+   <td><input type="text" name="pass2004" /></td>
+   <td><input type="text" name="numpst2004" /></td>
+  </tr>
+ </table>
+ <input type="submit" class="save" value="Save" />
+</form>
+    
+    
+====================================
+table {
+ border-collapse: collapse;
+ border: 1px solid black;
+}
+    
+    
+====================================
+th {
+ border: 1px solid black;
+ width: 6em;
+}
+td {
+ width:6em;
+ border: 1px solid black;
+}
+    
+    
+====================================
+th {
+ border: 1px solid black;
+ width: 6em;
+}
+td {
+ width:6em;
+ border: 1px solid black;
+ padding: 0;
+ margin: 0;
+}
+    
+    
+====================================
+input {
+ width: 100%;
+ border: none;
+ margin: 0;
+}
+    
+    
+====================================
+.save {
+ margin-top: 1em;
+ width: 5em;
+}
+    
+    
+====================================
+input {
+ width: 100%;
+ border: none;
+ margin: 0;
+ text-align: right;
+}
+    
+    
+====================================
+tr:hover {
+ background-color: #ffc;
+}
+tr:hover input {
+ background-color: #ffc;
+}
+input:focus {
+ background-color: #ffc;
+}
+    
+    
+====================================
+<form action="login.php" method="post">
+ <label for="uname">Username</label>
+ <input type="text" name="uname" id="uname" value="" /><br />
+ <label for="pword">Password</label>
+ <input type="text" name="pword" id="pword" value="" /> <br />
+ <input type="submit" name="Submit" value="Submit" />
+</form>
+    
+    
+====================================
+label:after {
+ content: ": ";
+}
+    
+    
+====================================
+label {
+ background-color: gray;
+ color: #fff;
+ font-weight: bold;
+}
+    
+    
+====================================
+label {
+ background-color: gray;
+ color: #fff;
+ font-weight: bold;
+ padding: 4px;
+ text-transform: uppercase;
+ background-image: url(title-glass.png);
+ background-repeat: repeat-x;
+ background-position: 50%;
+ text-shadow: 0 −1px 0 #000;
+}
+    
+    
+====================================
+label {
+ background-color: gray;
+ color: #fff;
+ font-weight: bold;
+ padding: 4px;
+ background-image: url(title-glass.png);
+ background-repeat: repeat-x;
+ background-position: 50%;
+ text-shadow: 0 −1px 0 #000;
+ -moz-border-radius-topleft: 5px;
+ -webkit-border-top-left-radius: 5px;
+ -moz-border-radius-topright: 5px;
+ -webkit-border-top-right-radius: 5px;
+ text-transform: uppercase;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: xx-small;
+}
+    
+    
+====================================
+<input type="submit" name="Submit" value="Submit"
+class="buttonSubmit" />
+    
+    
+====================================
+input {
+ display: block;
+ margin-bottom: 1.25em;
+}
+    
+    
+====================================
+input {
+ display: block;
+ margin-bottom: 1.25em;
+ width: 150px;
+ border: solid black;
+ border-width: 1px 2px 2px 1px;
+}
+    
+    
+====================================
+input[type="text"] {
+ background-image: -moz-linear-gradient(left top, left bottom, from(#999),
+to(#fff), color-stop(0.2, #fff));
+ background-image: -webkit-gradient(linear,left top, left bottom,
+from(#999), to(#fff), color-stop(0.2, #fff));
+
+}
+    
+    
+====================================
+.buttonSubmit {
+ width: 75px;
+ margin-left: 75px;
+}
+    
+    
+====================================
+.buttonSubmit {
+ width: 75px;
+ margin-left: 75px;
+ color: green;
+ text-transform: uppercase;
+ border: 1px solid green;
+ -moz-border-radius-bottomleft: 5px;
+ -webkit-border-bottom-radius: 5px;
+ -moz-border-radius-bottomright: 5px;
+ -webkit-border-bottom-right-radius: 5px;
+ text-shadow: 0 −1px 0 #000;
+ background-image: -moz-linear-gradient(left top, left bottom, from(#ccc),
+to(#999), color-stop(0.2, #999));
+ background-image: -webkit-gradient(linear,left top, left bottom, from(#ccc),
+to(#999), color-stop(0.2, #999));
+}
+    
+    
+====================================
+br {
+ display: none;
+}
+    
+    
+====================================
+Example: Stylized long form
+
+<form action="registration.cfm" method="post">
+  <table cellspacing="0">
+    <tr class="header">
+      <th colspan="2">Account Information</th>
+    </tr>
+    <tr class="required">
+      <th scope="row">Login Name*</th>
+      <td><input name="uname" type="text" size="12"
+maxlength="12" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Password*</th>
+      <td><input name="pword" type="text" size="12"
+maxlength="12" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Confirm Password* </th>
+      <td><input name="pword2" type="text" size="12"
+maxlength="12" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Email Address*</th>
+      <td><input name="email" type="text" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Confirm Email*</th>
+      <td><input type="text" name="email2" /></td>
+    </tr>
+    <tr class="header">
+      <th colspan="2">Contact Information</th>
+    </tr>
+    <tr class="required">
+      <th scope="row">First Name* </th>
+      <td><input name="fname" type="text" size="11" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Last Name* </th>
+      <td><input name="lname" type="text" size="11" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Address 1*</th>
+      <td><input name="address1" type="text" size="11" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Address 2 </th>
+      <td><input type="text" name="address2" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">City* </th>
+      <td><input type="text" name="city" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">State or Province*</th>
+      <td><select name="state">
+          <option selected="selected"
+disabled="disabled">Select...</option>
+          <option value="alabama">Alabama</option>
+        </select></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Zip*</th>
+      <td><input name="zipcode" type="text" id="zipcode"
+size="5" maxlength="5" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Country*</th>
+      <td><input type="text" name="country" /></td>
+    </tr>
+    <tr class="required">
+      <th scope="row">Gender*</th>
+      <td> <input type="radio" name="sex" value="female" />
+        Female
+        <input type="radio" name="sex" value="male" />
+        Male </td>
+    </tr>
+    <tr class="header">
+      <th colspan="2">Misc. Information</th>
+    </tr>
+    <tr>
+      <th scope="row"> Annual Household Income </th>
+      <td>
+       <select name="income" size="1" >
+         <option selected="selected" disabled="disabled">
+Select...</option>
+          <option value="notsay">I'd rather not say</option>
+        </select> </td>
+    </tr>
+    <tr>
+      <th scope="row">Interests</th>
+      <td><input name="interests" type="checkbox"
+value="shopping-fashion" />
+        Shopping/fashion
+        <input name="interests" type="checkbox"
+value="sports" />
+        Sports
+        <input name="interests" type="checkbox"
+value="travel" />
+        Travel</td>
+    </tr>
+    <tr>
+      <th scope="row">Eye Color</th>
+      <td><input name="eye" type="checkbox" value="red" />
+        Red
+        <input name="eye" type="checkbox" value="green" />
+        Green
+        <input name="eye" type="checkbox" value="brown" />
+        Brown
+        <input name="eye" type="checkbox" value="blue" />
+        Blue Gold</td>
+    </tr>
+  </table>
+  <input type="submit" name="Submit" value="Submit"
+id="buttonSubmit" />
+  <input type="reset" name="Submit2" value="Reset"
+id="buttonReset" />
+</form>
+    
+    
+====================================
+table {
+ border-collapse: collapse;
+ color: black;
+ border: 1px solid black;
+}
+    
+    
+====================================
+th {
+ width: 200px;
+ text-align: right;
+ vertical-align: top;
+ border-top: 1px solid black;
+ font-family: Verdana;
+ font-size: 0.7em;
+}
+    
+    
+====================================
+th {
+ width: 200px;
+ text-align: right;
+ vertical-align: top;
+ border-top: 1px solid black;
+ font-family: Verdana;
+ font-size: 0.7em;
+ padding-right: 12px;
+ padding-top: 0.75em;
+ padding-bottom: 0.75em;
+}
+    
+    
+====================================
+td {
+ vertical-align: middle;
+ background-color: black;
+ border-bottom: 1px solid white;
+ color: white;
+ border-left: 4px solid gray;
+ padding: 4px;
+ font-family: Verdana;
+ font-size: .7em;
+}
+    
+    
+====================================
+td {
+ vertical-align: middle;
+ background-color: black;
+ border-bottom: 1px solid white;
+ color: white;
+ border-left: 4px solid gray;
+ padding: 4px;
+ font-family: Verdana;
+ font-size: .7em;
+ background-image: url(title-glass.png);
+ background-repeat: repeat-x;
+ background-position: 50%;
+}
+    
+    
+====================================
+.required {
+ color: red;
+}
+    
+    
+====================================
+.header th {
+ text-align: left;
+ text-transform: uppercase;
+ font-size: .9em;
+}
+    
+    
+====================================
+.header th {
+ text-align: left;
+ text-transform: uppercase;
+ font-size: .9em;
+ padding-left: 220px;
+}
+    
+    
+====================================
+.header th {
+ text-align: left;
+ text-transform: uppercase;
+ font-size: .9em;
+ padding-left: 220px;
+ border-bottom: 2px solid gray;
+ border-top: 2px solid black;
+}
+    
+    
+====================================
+#buttonSubmit {
+ margin-left: 220px;
+ margin-top: 4px;
+}
+    
+    
+==================

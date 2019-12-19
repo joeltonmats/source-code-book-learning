@@ -1,0 +1,1206 @@
+chapter: Designing with CSS
+==================
+<h1>Hi.</h1>
+    
+    
+====================================
+h1 {
+ font-size: 17em;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+    
+    
+====================================
+h3 {
+ font-size: 63360in;
+}
+    
+    
+====================================
+<h2><span class="no">Earth News</span></h2>
+<p>Earth escapes potential impact with killer asteroid;
+will we escape the next one in 2014? <a href="more.html">Read
+more</a></p>
+    
+    
+====================================
+<style type="text/css">
+body {
+ background-color: #009E69;
+ margin: 0;
+ background-image: url(billiard.jpg);
+ background-repeat: no-repeat;
+}
+h2 {
+ background-image: url(earth.gif);
+ position:absolute;
+ width:126px;
+ height:126px;
+ z-index:1;
+ left: 166px;
+ top: 69px;
+}
+.no {
+ display: none;
+}
+p {
+ width: 120px;
+ margin: 260px 100px 0 170px;
+ font-family: Verdana, sans-serif;
+ font-size: small;
+ font-weight: bold;
+}
+</style>
+    
+    
+====================================
+<h2>Cross<span>i</span>ng <span>Over</span></h2>
+<h4>Sen. Jane Gordon (<span>I</span>-Utah) bolts GOP;
+<br />changes part<span>i</span>es to be
+<span>I</span>ndependent</h4>
+    
+    
+====================================
+body {
+ margin: 25% 10% 0 10%;
+}
+h2 {
+ font-size: 2em;
+ font-weight: bold;
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+ text-transform: uppercase;
+ text-align: center;
+ padding: 0;
+ margin: 0;
+}
+h2 span {
+ font-family: Times, "Times New Roman", Georgia, serif;
+ font-size: 1.1em;
+ font-weight: normal;
+ }
+h4 {
+ margin: 0;
+ padding: 0;
+ font-size: 1.25em;
+ font-weight: bold;
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+ text-transform: uppercase;
+ text-align: center;
+}
+h4 span {
+ font-family: Times, "Times New Roman", Georgia, serif;
+ font-size: 1.1em;
+ font-weight: normal;
+}
+    
+    
+====================================
+/* Text size */
+#layer4  {
+ font-size: .7em;
+ line-height: 20px;
+}
+#layer3  {
+ font-size: 1em;
+ line-height: 20px;
+}
+#layer2  {
+ font-size: 2em;
+ line-height: 10px;
+}
+#layer1  {
+ font-size: 3em;
+ line-height: 10px;
+}
+    
+    
+====================================
+<blockquote>
+ <p>There is a tendency for things to right themselves.</p>
+ <cite>Ralph Waldo Emerson</cite>
+</blockquote>
+    
+    
+====================================
+blockquote {
+ padding: 0;
+ margin: 0;
+ text-align: center;
+}
+p {
+ font-size: 1em;
+ padding-bottom: 3em;
+ text-transform: lowercase;
+ font-family: Georgia, Times, "Times New Roman", serif;
+ margin: 0;
+ padding: 0;
+}
+cite {
+ display: block;
+ text-align: center;
+}
+    
+    
+====================================
+blockquote p:before {
+ content: "\201C";
+ font-size: 1.2em;
+ font-weight: bold;
+ font-family: Georgia, Times, "Times New Roman", serif;
+}
+blockquote p:after {
+ content: "\201D";
+ font-size: 1.2em;
+ font-weight: bold;
+ font-family: Georgia, Times, "Times New Roman", serif;
+}
+cite:before {
+ content: "\2014 ";
+}
+cite {
+ display: block;
+ text-align: center;
+}
+    
+    
+====================================
+content: "\201C ";
+    
+    
+====================================
+content: open-quote;
+    
+    
+====================================
+body {
+ font-size: 62.5%;
+ background-color: #fff;
+ background-image: url(birds-flock.png);
+ background-repeat: repeat-x;
+ background-position: −80% 0;
+}
+    
+    
+====================================
+<body>
+ <div id="birds2">
+  <div id="birds1">
+   <div id="filler">
+   [...]
+   </div>
+  </div>
+ </div>
+</body>
+    
+    
+====================================
+#birds2 {
+ background-image: url(birds-two.png);
+ background-position: 90% 0;
+ background-color: transparent;
+ background-repeat: no-repeat;
+ width: 100%;
+}
+#birds1 {
+ background-image: url(birds-one.png);
+ background-position: −20% 0;
+ background-color: transparent;
+ background-repeat: no-repeat;
+ width: 100%;
+}
+    
+    
+====================================
+<body>
+ <div id="clouds1"></div>
+ [...]
+</body>
+    
+    
+====================================
+#clouds1 {
+ width: 627px;
+ height: 410px;
+ position: absolute;
+ right: −300px;
+ top: 0;
+ background-image: url(clouds.png);
+}
+    
+    
+====================================
+@-webkit-keyframes "clouds" {
+ from {
+  right: 0px;
+ }
+ to {
+  right: 100px;
+ }
+}
+    
+    
+====================================
+#clouds1 {
+ width: 627px;
+ height: 410px;
+ position: absolute;
+ right: −300px;
+ top: 0;
+ background-image: url(clouds.png);
+ -webkit-transform: translate(300px, 0px);
+ -webkit-animation-name: "clouds";
+ -webkit-animation-duration: 10s;
+ -webkit-animation-iteration-count: 10;
+ -webkit-animation-direction: alternate;
+}
+    
+    
+====================================
+@-webkit-keyframes "clouds" {
+ from {
+  right: 0px;
+ }
+ to {
+  right: 100px;
+ }
+}
+    
+    
+====================================
+@-webkit-keyframes "clouds" {
+ 0% {
+  right: 0px;
+ }
+ 33% {
+  right: 10px;
+ }
+ 68% {
+  right: 90px;
+ }
+ 100% {
+  right: 100px;
+ }
+}
+    
+    
+====================================
+@-webkit-keyframes "clouds" {
+ 0% {
+  right: 0px;
+  top: 0px;
+ }
+ 33% {
+  right: 10px;
+  top: 10px;
+ }
+ 68% {
+  right: 90px;
+  top: 90px;
+ }
+ 100% {
+  right: 100px;
+  top: 100px;
+ }
+}
+    
+    
+====================================
+@-webkit-keyframes "clouds" {
+ from {
+  right: 0px;
+ }
+ to {
+  right: 100px;
+ }
+}
+#clouds1 {
+ width: 627px;
+ height: 410px;
+ position: absolute;
+ right: −300px;
+ top: 0;
+ background-image: url(clouds.png);
+ -webkit-transform: translate(300px, 0px);
+ -webkit-animation-name: "clouds";
+}
+    
+    
+====================================
+#clouds1 {
+ width: 627px;
+ height: 410px;
+ position: absolute;
+ right: −300px;
+ top: 0;
+ background-image: url(clouds.png);
+ -webkit-transform: translate(300px, 0px);
+ -webkit-animation-name: "clouds";
+ -webkit-animation-duration: 10s;
+}
+    
+    
+====================================
+#clouds1 {
+ width: 627px;
+ height: 410px;
+ position: absolute;
+ right: −300px;
+ top: 0;
+ background-image: url(clouds.png);
+ -webkit-transform: translate(300px, 0px);
+ -webkit-animation-name: "clouds";
+ -webkit-animation-duration: 10s;
+ -webkit-animation-iteration-count: 10;
+}
+    
+    
+====================================
+-webkit-animation-iteration-count: infinite;
+    
+    
+====================================
+#clouds1 {
+ width: 627px;
+ height: 410px;
+ position: absolute;
+ right: −300px;
+ top: 0;
+ background-image: url(clouds.png);
+ -webkit-transform: translate(300px, 0px);
+ -webkit-animation-name: "clouds";
+ -webkit-animation-duration: 10s;
+ -webkit-animation-iteration-count: 10;
+ -webkit-animation-direction: alternate;
+}
+    
+    
+====================================
+body {
+ font-size: 62.5%;
+ background-color: #fff;
+ background-image: url(bkgd.jpg);
+ background-position: center;
+ background-color: white;
+ background-attachment: fixed;
+}
+    
+    
+====================================
+<body>
+ <div id="easel">
+  [...]
+ </div>
+</body>
+    
+    
+====================================
+#easel {
+ background-image: url(fireworks.png);
+ width: 100%;
+ height: 100%;
+}
+    
+    
+====================================
+view_source.editor.path: C:\Program Files\Notepad++\notepad++.exe
+    
+    
+====================================
+view_source.editor.path: /Applications/TextEdit.app/Contents/MacOS/TextMate
+    
+    
+====================================
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css"
+media="screen, projection">
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css"
+media="print">
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="css/blueprint/ie.css" type="text/css"
+media="screen, projection">
+<![endif]-->
+    
+    
+====================================
+<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css"
+media="screen, projection">
+<link rel="stylesheet" href="css/blueprint/print.css" type="text/css"
+media="print">
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="css/blueprint/ie.css" type="text/css"
+media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="css/example.css" type="text/css"
+media="screen, projection">
+    
+    
+====================================
+<div class="container">
+ ...
+</div>
+    
+    
+====================================
+<div class="container">
+ <div class="span-24">
+  Header
+ </div>
+ <div class="span-5">
+  Side column
+ </div>
+ <div class="span-14">
+  Main column
+ </div>
+ <div class="span-5">
+  Side column
+ </div>
+</div>
+    
+    
+====================================
+<div class="container">
+ <div class="span-24 last">
+  Header
+ </div>
+ <div class="span-5">
+  Side column
+ </div>
+ <div class="span-14">
+  Main column
+ </div>
+ <div class="span-5 last">
+  Side column
+ </div>
+</div>
+    
+    
+====================================
+<div class="container">
+ <div class="span-24 last">
+  Header
+ </div>
+ <div class="span-5">
+  Side column
+ </div>
+ <div class="span-14">
+  <div class="span-5">
+   Sidebar
+  </div>
+  <div class="span-9 last">
+   Main column
+  </div>
+  <div class="span-14 last">
+   Footer for main column
+  </div>
+ </div>
+ <div class="span-5 last">
+  Side column
+ </div>
+</div>
+    
+    
+====================================
+<div id="header" class="">
+ <h1><a href="/" title="Home Page">Kirkland Composition &amp;
+Copyediting</a></h1>
+</div><!-- /#header -->
+
+<hr />
+
+<div id="nav" class="">
+ <div id="nav-site">
+  <p class="hide">Content Navigation:</p>
+  <ul>
+   <li id="linkservices"><a href="/services/">Services</a></li>
+   <li id="linkrates"><a href="/rates/">Rates</a></li>
+   <li id="linkclients"><a href="/clients/">Clients</a></li>
+   <li id="linksamples"><a href="/samples">Samples</a></li>
+  </ul>
+ </div>
+ <div id="nav-info">
+  <p class="hide">Information Navigation:</p>
+  <ul>
+   <li><a href="/about/">About</a></li>
+   <li><a href="/guarentee/">Guarantee</a></li>
+   <li><a href="/contact/">Contact</a></li>
+  </ul>
+ </div><!-- /#nav-info -->
+</div><!-- /#nav -->
+
+<hr />
+
+<div id="content" class="">
+ <div id="article">
+  [...]
+ </div><!-- /#article -->
+<div id="aside" class="">
+  [...]
+ </div><!-- /#aside -->
+</div><!-- /#content -->
+
+<hr />
+
+<div id="footer" class="">
+ [...]
+</div>
+    
+    
+====================================
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, a, abbr, acronym, big, font, img, small, center, dl, dt, dd, ol,
+ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ outline: 0;
+ font-size: 100%;
+ vertical-align: baseline;
+ background: transparent;
+}
+body {
+ line-height:1;
+}
+ol, ul {
+ list-style:none;
+}
+blockquote, q {
+ quotes:none;
+}
+:focus {
+ outline:0;
+}
+ins {
+ text-decoration:none;
+}
+del {
+ text-decoration:line-through;
+}
+table {
+ border-collapse:collapse; border-spacing:0;
+}
+    
+    
+====================================
+body {
+ background-color: #000;
+ color: rgba(255,255,255,.8);
+ font-size: 62.5%;
+ font-family: Times, "Times New Roman", Georgia, serif;
+}
+    
+    
+====================================
+.eight5x11 {
+ width: 805px;
+ margin: 0 auto;
+}
+    
+    
+====================================
+<div id="header" class="">
+ <div class="eight5x11">
+  <h1><a href="/" title="Home Page">Kirkland Composition &amp;
+Copyediting</a></h1>
+ </div><!-- /.eight5x11 -->
+</div><!-- /#header -->
+
+<hr />
+
+<div id="nav" class="">
+ <div class="eight5x11">
+  <div id="nav-site">
+
+   <p class="hide">Content Navigation:</p>
+   <ul>
+    <li id="linkservices"><a href="/services/">Services</a></li>
+    <li id="linkrates"><a href="/rates/">Rates</a></li>
+    <li id="linkclients"><a href="/clients/">Clients</a></li>
+    <li id="linksamples"><a href="/samples">Samples</a></li>
+   </ul>
+  </div>
+  <div id="nav-info">
+   <p class="hide">Information Navigation:</p>
+   <ul>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/guarantee/">Guarantee</a></li>
+    <li><a href="/contact/">Contact</a></li>
+   </ul>
+  </div><!-- /#nav-info -->
+ </div><!-- /.eight5x11 -->
+</div><!-- /#nav -->
+
+<hr />
+
+<div id="content" class="">
+ <div class="eight5x11">
+  <div id="article">
+    [...]
+  </div><!-- /#article -->
+  <div id="aside" class="">
+   [...]
+  </div><!-- /#aside -->
+ </div><!-- /.eight5x11 -->
+</div><!-- /#content -->
+
+<hr />
+
+<div id="footer" class="">
+ <div class="eight5x11">
+  [...]
+ </div><!-- /.eight5x11 -->
+</div><!-- /#footer -->
+    
+    
+====================================
+/* Logo */
+#header {
+ background-image: url(img/bkgd-header.gif);
+ background-repeat: no-repeat;
+ background-position: top center;
+ margin-top: 30px;
+}
+    
+    
+====================================
+/* Logo */
+#header {
+ background-image: url(img/bkgd-header.gif);
+ background-repeat: no-repeat;
+ background-position: top center;
+ margin-top: 30px;
+}
+#header h1 a {
+ background-image: url(img/logo.png);
+ background-repeat: no-repeat;
+ background-position: top center;
+ display: block;
+ width: 456px;
+ height: 270px;
+ text-indent: −9999em;
+ position: relative;
+ left: −78px;
+ top: −30px;
+ border: none;
+}
+    
+    
+====================================
+/* Common Elements */
+.hide, hr {
+ display: none;
+}
+a {
+ text-decoration: none;
+}
+    
+    
+====================================
+#nav-site {
+ width: 433px;
+ margin-left: 380px;
+ position: relative;
+ top: −95px;
+}
+#nav-site ul, #nav-site ul li {
+ display: inline;
+}
+    
+    
+====================================
+#nav-site ul li a {
+ display: block;
+ float: left;
+ text-indent: −9999em;
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+#nav-site ul li#linkservices a {
+ width: 118px;
+ height: 39px;
+ background-image: url(img/nav.gif);
+}
+#nav-site ul li#linkrates a {
+ width: 88px;
+ height: 39px;
+ background-image: url(img/nav.gif);
+ background-position: −118px 0;
+}
+#nav-site ul li#linkclients a {
+ width: 107px;
+ height: 39px;
+ background-image: url(img/nav.gif);
+ background-position: −206px 0;
+}
+#nav-site ul li#linksamples a {
+ width: 120px;
+ height: 39px;
+ background-image: url(img/nav.gif);
+ background-position: −313px 0;
+}
+    
+    
+====================================
+#nav-site ul li#linkservices a:link:hover,
+#nav-site ul li#linkservices a:visited:hover {
+ background-position: 0 −39px;
+}
+#nav-site ul li#linkrates a:link:hover,
+#nav-site ul li#linkrates a:visited:hover {
+ background-position: −118px −39px;
+}
+#nav-site ul li#linkclients a:link:hover,
+#nav-site ul li#linkclients a:visited:hover  {
+ background-position: −206px −39px;
+}
+#nav-site ul li#linksamples a:link:hover,
+#nav-site ul li#linksamples a:visited:hover {
+ background-position: −313px −39px;
+}
+    
+    
+====================================
+#pageservices #nav-site ul li#linkservices a {
+ background-position: 0 −78px;
+}
+#pagerates #nav-site ul li#linkrates a {
+ background-position: −118px −78px;
+}
+#pageclients #nav-site ul li#linkclients a {
+ background-position: −206px −78px;
+}
+#pagesamples #nav-site ul li#linksamples a {
+ background-position: −313px −78px;
+}
+    
+    
+====================================
+<body id="pagerates">
+[...]
+</body>
+    
+    
+====================================
+/* Top Navigation Links */
+#nav-info {
+ position: absolute;
+ width: 100%;
+ top: 0;
+ left: 0;
+ font-size: 1.2em;
+ height: 30px;
+}
+#nav-info ul {
+ width: 805px;
+ margin: 0 auto;
+ text-align: right;
+}
+#nav-info ul li {
+ display: inline;
+ padding-left: 1.2em;
+ line-height: 1.9;
+ text-transform: lowercase;
+}
+    
+    
+====================================
+/* Content */
+#content {
+ clear: both;
+ color: rgba(255,255,255,.8);
+}
+    
+    
+====================================
+/* Content */
+#content {
+ clear: both;
+ color: rgba(255,255,255,.8);
+}
+#content #article {
+ float: right;
+ width: 585px;
+ margin-bottom: 70px;
+}
+    
+    
+====================================
+/* Content */
+#content {
+ clear: both;
+ color: rgba(255,255,255,.8);
+}
+#content #article {
+ float: right;
+ width: 585px;
+ margin-bottom: 70px;
+}
+#content #article h2 {
+ font-size: 2.4em;
+ font-weight: normal;
+ line-height: .9998;
+}
+#content #article h3 {
+ font-size: 1.6em;
+ font-weight: bold;
+ line-height: 1.4975;
+ margin-top: 1.6em;
+}
+#content #article p {
+ font-size: 1.4em;
+ line-height: 1.714;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    
+    
+====================================
+/* Content */
+#content {
+ clear: both;
+ color: rgba(255,255,255,.8);
+}
+#content #article {
+ float: right;
+ width: 585px;
+ margin-bottom: 70px;
+}
+#content #article h2 {
+ font-size: 2.4em;
+ font-weight: normal;
+ line-height: .9998;
+}
+#content #article h3 {
+ font-size: 1.6em;
+ font-weight: bold;
+ line-height: 1.4975;
+ margin-top: 1.6em;
+}
+#content #article p {
+ font-size: 1.4em;
+ line-height: 1.714;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#content #article h2:first-letter {
+ letter-spacing: -.1em;
+}
+    
+    
+====================================
+#content #aside {
+ margin-right: 650px;
+ color: #999;
+}
+    
+    
+====================================
+#content #aside {
+ margin-right: 650px;
+ color: #999;
+}
+#content #aside h4 {
+ font-size: 1.4em;
+ text-transform: uppercase;
+ font-style: italic;
+ letter-spacing: .3em;
+ line-height: 2.3996;
+ margin-bottom: -.7em;
+}
+#content #aside p {
+ font-size: 1.4em;
+ line-height: 1.714;
+}
+    
+    
+====================================
+#content #aside {
+ margin-right: 650px;
+ color: #999;
+}
+#content #aside h4 {
+ font-size: 1.4em;
+ text-transform: uppercase;
+ font-style: italic;
+ letter-spacing: .3em;
+ line-height: 2.3996;
+ margin-bottom: -.7em;
+}
+#content #aside p {
+ font-size: 1.4em;
+ line-height: 1.714;
+}
+#content #aside p+p {
+ font-size: 1.4em;
+ font-style: italic;
+ line-height: 1.714;
+}
+    
+    
+====================================
+#content a:link, #content a:visited {
+ color: rgba(51,153,204,.8);
+ border-bottom: 1px solid #3399cc;
+ border-bottom: 1px solid rgba(51,153,204,.8);
+}
+#content a:link:hover, #content a:visited:hover {
+ color: rgba(51,153,204,.8);
+ border-bottom: none;
+}
+    
+    
+====================================
+#footer {
+ background-image: url(img/bkgd-footer.gif);
+ background-repeat: no-repeat;
+ background-position: top center;
+ font-size: 1.4em;
+ line-height: 1.4;
+ clear: both;
+ padding-top: 25px;
+ color: #666;
+}
+    
+    
+====================================
+#footer .vcard {
+ padding-left: 40px;
+}
+#footer .org {
+ color: #999;
+}
+#footer img {
+ float: left;
+}
+    
+    
+====================================
+#footer .tagline {
+ position: absolute;
+ right: 0;
+ top: 0;
+ font-family: Times, "Times New Roman", Georgia, serif;
+ letter-spacing: .4em;
+ font-style: italic;
+ font-weight: bold;
+}
+    
+    
+====================================
+a:link, a:visited {
+ color: rgba(255,255,255,.8);
+ border-bottom: 1px solid #fff;
+ border-bottom: 1px solid rgba(255,255,255,.8);
+}
+a:link:hover, a:visited:hover {
+ color: rgba(255,255,255,.8);
+ border-bottom: none;
+}
+    
+    
+====================================
+<!--[if lt IE 8]>
+<style type="text/css">
+#content {
+ color: #fff;
+}
+a:link, a:visited {
+ color: #fff;
+ border-bottom: 1px solid #fff;
+}
+a:link:hover, a:visited:hover {
+ color: #fff;
+ border-bottom: none;
+}
+#content a:link, #content a:visited {
+ color: #3399cc;
+ border-bottom: 1px solid #3399cc;
+}
+#content a:link:hover, #content a:visited:hover {
+ color: #3399cc;
+ border-bottom: none;
+}
+</style>
+<![endif]-->
+    
+    
+====================================
+<h1>
+ <a href="http://www.usa.gov/">United States of America</a>
+</h1>
+<ol>
+ <li><a href="http://www.alabama.gov/">
+  <strong>State of Alabama</strong>
+  <i></i>
+ </a></li>
+ <li><a href="http://www.state.ak.us/">
+  <strong>State of Alaska</strong><i></i>
+ </a></li>
+ [...]
+</ol>
+    
+    
+====================================
+<li><a href="http://www.ct.gov/">
+ <em><strong>State of Connecticut</strong></em>
+ <i></i>
+</a>
+</li>
+    
+    
+====================================
+<div id="easel">
+ <h1>
+  <a href="http://www.usa.gov/">United States of America</a>
+ </h1>
+ <ol>
+  <li><a href="http://www.alabama.gov/">
+   <strong>State of Alabama</strong><i></i>
+  </a></li>
+  [...]
+ </ol>
+</div>
+    
+    
+====================================
+body {
+ margin: 10px 0 0 0;
+ padding: 0;
+}
+#easel {
+ width: 955px;
+ margin: 0 auto;
+ position: relative;
+}
+    
+    
+====================================
+#easel ol {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+#easel strong {
+  display: none;
+}
+    
+    
+====================================
+#easel em {
+ width: 955px;
+ height: 50px;
+ display: block;
+ background: #BF0A30;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+    
+    
+====================================
+<li><a href="http://www.ct.gov/">
+ <em>State of Connecticut</em>
+ <i></i>
+</a>
+</li>
+    
+    
+====================================
+#easel a[href="http://delaware.gov/"] em {
+  background: white;
+ top: 50px;
+ left: 0;
+}
+#easel a[href="http://www.georgia.gov/"] em {
+ top: 100px;
+ left: 0;
+}
+[...]
+    
+    
+====================================
+#easel h1 a {
+ position: absolute;
+ width: 215px;
+ height: 175px;
+ background: #002868;
+ text-indent: −9999em;
+ margin: 0;
+ padding: 0;
+ z-index: 20;
+}
+    
+    
+====================================
+#easel ol li a[href="http://www.alabama.gov/"] i {
+ background-image: url(stars.gif);
+ display: block;
+ position: absolute;
+ top: 13px;
+ left: 13px;
+ z-index: 50;
+ width: 24px;
+ height: 23px;
+}
+#easel ol li a[href="http://www.state.ak.us/"] i {
+ background-image: url(stars.gif);
+ display: block;
+ position: absolute;
+ top: 13px;
+ left: 90px;
+ z-index: 50;
+ width: 24px;
+ height: 23px;
+}
+[...]
+    
+    
+====================================
+#easel em {
+ width: 955px;
+ height: 50px;
+ display: block;
+ background: #BF0A30;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+ background-image: url(flag_bkgd.png);
+ background-position: 50%;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+    
+    
+====================================
+#easel a[href="http://delaware.gov/"] em {
+ background: white;
+ top: 50px;
+ left: 0;
+ background-image: url(flag_bkgd.png);
+ background-position: 50%;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+    
+    
+====================================
+#easel h1 a {
+ position: absolute;
+ width: 215px;
+ height: 175px;
+ background: #002868;
+ text-indent: −9999em;
+ margin: 0;
+ padding: 0;
+ z-index: 20;
+ background-image: url(flag_bkgd.png);
+ background-position: 50%;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+    
+    
+==================

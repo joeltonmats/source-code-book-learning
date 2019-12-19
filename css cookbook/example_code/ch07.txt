@@ -1,0 +1,1083 @@
+chapter: Links and Navigation
+==================
+a:link, a:visited {
+ text-decoration: none;
+}
+    
+    
+====================================
+a:link, a:visited {
+ text-decoration: none;
+ background-color: red;
+ color: white;
+}
+    
+    
+====================================
+a:link, a:visited {
+ font-weight: bold;
+ text-decoration: none;
+ color: red;
+}
+    
+    
+====================================
+ a:link {
+ font-weight: bold;
+ text-decoration: none;
+ color: red;
+}
+a:visited {
+ font-weight: bold;
+ text-decoration: line-through;
+ color: black;
+}
+    
+    
+====================================
+body {
+ color: #9ff;
+}
+a:link {
+ color: #3cf;
+}
+a:visited {
+ color: #cecece;
+}
+a:hover {
+ color: #366;
+}
+a:active {
+ color: #399;
+}
+    
+    
+====================================
+a {
+ outline: none;
+}
+    
+    
+====================================
+a:hover, a:active, a:focus {
+ color: #399;
+}
+    
+    
+====================================
+<div id="nav">
+ [...]
+</div><!-- /#nav -->
+<div id="content">
+ [...]
+</div><!-- /#content -->
+    
+    
+====================================
+/* navigation link design */
+#nav a:link {
+ color: blue;
+}
+#nav a:visited {
+ color: purple;
+}
+/* content link design */
+#content a:link {
+ color: white;
+}
+#content a:visited {
+ color: yellow;
+}
+    
+    
+====================================
+<p>Sed sed nisi. <a href="mailto:orders@csscookbook.com">Quote me on
+an estimate</a> nulla ligula. Etiam pulvinar,
+<a href="http://www.csscookbook.com/">CSS Cookbook web site</a> quisque
+ante quam, ultricies quis, rutrum dignissim, <a href="sample-chapter.pdf">
+fermentum</a> a, est. Nulla felis dolor, tempor non, posuere ut, ornare ac,
+eros. Cras in metus. Sed rutrum lectus ut nibh. Pellentesque ipsum.</p>
+    
+    
+====================================
+a {
+ text-decoration: none;
+ font-weight: bold;
+}
+a[href^="mailto:"] {
+ padding-right: 20px;
+ background: url(mail.gif) no-repeat right;
+}
+a[href^="http://"] {
+ padding-right: 20px;
+ background: url(website.gif) no-repeat right;
+}
+a[href$="pdf"] {
+ padding-right: 20px;
+ background: url(document.gif) no-repeat right;
+}
+    
+    
+====================================
+a:link, a:visited {
+ cursor: move;
+}
+    
+    
+====================================
+a.help:link, a.help:visited{
+ cursor: url(bewildered.gif);
+}
+    
+    
+====================================
+a:link {
+ color: #777;
+ text-decoration: none;
+}
+a:visited {
+ color: #333;
+ text-decoration: none;
+}
+a:link:hover, a:visited:hover {
+ color: #777;
+ background-color: #ccc;
+}
+a:link:active, a:visited:active {
+ color: #ccc;
+ background-color: #ccc;
+}
+    
+    
+====================================
+<h2><a name="europan">Li Europan lingues</a></h2>
+    
+    
+====================================
+<h2 id="europan">Li Europan lingues</h2>
+    
+    
+====================================
+#navsite a {-webkit-transition-timing-function: linear;-webkit-transition-duration: .66s;-webkit-transition-property: background-color;}
+a:link {
+ color: #777;
+ text-decoration: none;
+}
+a:visited {
+ color: #333;
+ text-decoration: none;
+}
+a:link:hover, a:visited:hover {
+ color: #777;
+ background-color: #ccc;
+}
+a:link:active, a:visited:active {
+ color: #ccc;
+ background-color: #ccc;
+}
+    
+    
+====================================
+#navsite a {
+ -webkit-transition: background-color .66s linear;
+}
+    
+    
+====================================
+#web20 li a {
+ background: transparent url(icons.png) 100% 0 no-repeat;
+ border: none;
+ color: #848484;
+ display: block;
+ font-size: 11px;
+ font-weight: normal;
+ height: 63px;
+ left: −19px;
+ line-height: 18px;
+ margin: 3px 0;
+ padding-left: 19px;
+ position: relative;
+ text-decoration: none;
+ width: 220px;
+ text-shadow: rgba(0,0,0, 0) 1px 1px 2px;
+ -moz-box-shadow: rgba(0,0,0, 0) 2px 2px 2px;
+ -webkit-box-shadow: rgba(0,0,0, 0) 2px 2px 2px;
+ -moz-border-radius-topright: 31px;
+ -moz-border-radius-bottomright: 31px;
+ -webkit-border-top-right-radius: 31px;
+ -webkit-border-bottom-right-radius: 31px;
+ -webkit-transition: background-color .25s ease,
+   color .5s ease,
+   width .2s ease-out,
+   -webkit-box-shadow .25s ease,
+   text-shadow .2s ease,
+   opacity .2s ease;
+}
+    
+    
+====================================
+<div id="navsite">
+ <p>Site navigation:</p>
+ <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/archives/">Archives</a></li>
+  <li><a href="/writing/">Writing</a></li>
+  <li><a href="/speaking/">Speaking</a></li>
+  <li><a href="/contact/">Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+#navsite p {
+ display: none;
+}
+a {
+ text-shadow: 0 −1px 0px rgba(0,0,0,.8);
+}
+#navsite {
+ font-family: Verdana, Helvetica, Arial, sans-serif;
+ font-size: 1em;
+ font-weight: bold;
+ border-right: 1px solid #666;
+ padding: 0;
+ margin-bottom: 1em;
+ color: #333;
+ width: 15em;
+}
+#navsite ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+#navsite ul li {
+ margin: 0;
+ border-top: 1px solid #003;
+}
+#navsite ul li a:link, #navsite ul li a:visited {
+ display: block;
+ padding: 4px 4px 4px 0.5em;
+ border-left: 10px solid #369;
+ border-right: 1px solid #69c;
+ border-bottom: 1px solid #369;
+ color: #E5DEAC;
+ text-decoration: none;
+ background-color: #495961;
+ background-image: url(title-glass.png);
+ background-position: 50%;
+ background-repeat: repeat-x;
+}
+html>body #navsite ul li a {
+ width: auto;
+}
+#navsite ul li a:hover {
+ border-left: 10px solid #036;
+ border-right: 1px solid #69c;
+ border-bottom: 1px solid #369;
+ background-color: #69f;
+ color: #fff;
+}
+    
+    
+====================================
+<p>Site navigation:</p>
+    
+    
+====================================
+#navsite p {
+ display: none;
+}
+    
+    
+====================================
+#navsite {
+ font-family: Verdana, Helvetica, Arial, sans-serif;
+ font-size: 1em;
+ font-weight: bold;
+ border-right: 1px solid #666;
+ padding: 0;
+ margin-bottom: 1em;
+ color: #333;
+ width: 15em;
+}
+    
+    
+====================================
+#navsite ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+    
+    
+====================================
+#navsite ul li {
+ margin: 0;
+ border-top: 1px solid #003;
+}
+    
+    
+====================================
+#navsite ul li a:link, #navsite ul li a:visited {
+ display: block;
+ padding: 4px 4px 4px 0.5em;
+ border-left: 10px solid #369;
+ border-right: 1px solid #69c;
+ border-bottom: 1px solid #369;
+ color: #E5DEAC;
+ text-decoration: none;
+ background-color: #495961;
+ background-image: url(title-glass.png);
+ background-position: 50%;
+ background-repeat: repeat-x;
+}
+    
+    
+====================================
+html>body #navsite ul li a {
+ width: auto;
+}
+    
+    
+====================================
+#navsite ul li a:hover {
+ border-left: 10px solid #036;
+ border-right: 1px solid #69c;
+ border-bottom: 1px solid #369;
+ background-color: #69f;
+ color: #fff;
+}
+    
+    
+====================================
+<div id="navsite">
+ <p>Site navigation:</p>
+ <div><a href="/">Home</a></div>
+ <div><a href="/about/">About</a></div>
+ <div><a href="/archives/">Archives</a></div>
+ <div><a href="/writing/">Writing</a></div>
+ <div><a href="/speaking/">Speaking</a></div>
+ <div><a href="/contact/">Contact</a></div>
+</div>
+    
+    
+====================================
+<div id="navsite">
+ <p>Site navigation:</p>
+ <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/archives/">Archives</a></li>
+  <li><a href="/writing/">Writing</a>
+   <ul>
+    <li><a href="/writing/releasing-css">Releasing CSS</a></li>
+    <li><a href="/writing/css-cookbook">CSS Cookbook</a></li>
+   </ul>
+  </li>
+  <li><a href="/speaking/">Speaking</a></li>
+  <li><a href="/contact/">Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+#navsite ul ul {
+ background-color: white;
+ margin-left: 10px;
+}
+    
+    
+====================================
+#navsite ul ul li a:link, #navsite ul ul li a:visited  {
+ border-left: 10px solid #69c;
+ border-right: 1px solid #9cF;
+ border-bottom: 1px solid #69c;
+ background-color: #888;
+}
+#navsite ul li a:hover, #navsite ul ul li a:hover {
+ border-left: 10px solid #036;
+ border-right: 1px solid #69c;
+ border-bottom: 1px solid #369;
+ background-color: #69f;
+ color: #fff;
+}
+    
+    
+====================================
+#navsite ul li > ul li a:link, #navsite ul li > ul li a:visited  {
+ border-left: 10px solid #69c;
+ border-right: 1px solid #9cF;
+ border-bottom: 1px solid #69c;
+ background-color: #888;
+}
+#navsite ul li a:hover, #navsite ul li > ul li a:hover {
+ border-left: 10px solid #036;
+ border-right: 1px solid #69c;
+ border-bottom: 1px solid #369;
+ background-color: #69f;
+ color: #fff;
+}
+    
+    
+====================================
+ <div id="navsite" class="clearfix">
+ <p>Site navigation:</p>
+ <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/archives/">Archives</a></li>
+  <li><a href="/writing/">Writing</a></li>
+  <li><a href="/speaking/" id="current">Speaking</a></li>
+  <li><a href="/contact/">Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+#navsite p {
+ display: none;
+}
+#navsite ul {
+    width: 100%;
+    float: left;
+ padding: 0;
+ margin-left: 0;
+ border-bottom: 1px solid #778;
+ font: bold 12px Verdana, sans-serif;
+}
+#navsite ul li {
+ list-style: none;
+ margin: 0;
+ float: left;
+}
+#navsite ul li a {
+ padding: 12px 0.5em;
+ margin-left: 3px;
+ border: 1px solid #778;
+ border-bottom: none;
+ background-color: #666;
+ text-decoration: none;
+ background-image: url(title-glass.png);
+ background-position: 50%;
+ background-repeat: repeat-x;
+ display: block;
+ width: 7em;
+}
+#navsite ul li a:link {
+ color: white;
+}
+#navsite ul li a:visited {
+ color: #667;
+}
+#navsite ul li a:link:hover, #navsite ul li a:visited:hover {
+ color: #000;
+ background-color: #aae;
+ border-color: #227;
+}
+#navsite ul li a#current {
+ background-color: white;
+ border-bottom: 1px solid white;
+color: #448;
+margin-bottom: −1px;
+}
+#navsite ul li a#current:hover {
+ background-image: url(title-glass.png);
+ background-position: 50%;
+ background-repeat: repeat-x;
+}
+.clearfix:after {
+ content: ".";
+ display: block;
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+/* for IE6 */
+* html .clearfix {
+ height: 1%;
+}
+/* for IE7 */
+*:first-child+html .clearfix {
+ min-height: 1px;
+}
+    
+    
+====================================
+#navsite p {
+ display: none;
+}
+    
+    
+====================================
+#navsite ul {
+ width: 100%;
+ float: left;
+ padding: 0;
+ margin-left: 0;
+ border-bottom: 1px solid #778;
+ font: bold 12px Verdana, sans-serif;
+}
+    
+    
+====================================
+#navsite ul li {
+ list-style: none;
+ margin: 0;
+ float: left;
+}
+    
+    
+====================================
+#navsite ul li a {
+ padding: 12px 0.5em;
+ margin-left: 3px;
+ border: 1px solid #778;
+ border-bottom: none;
+ background-color: #666;
+ text-decoration: none;
+ background-image: url(title-glass.png);
+ background-position: 50%;
+ background-repeat: repeat-x;
+ display: block;
+ width: 7em;
+}
+    
+    
+====================================
+#navsite ul li a:link {
+ color: white;
+}
+#navsite ul li a:visited {
+ color: #667;
+}
+#navsite ul li a:link:hover, #navsite ul li a:visited:hover {
+ color: #000;
+ background-color: #aae;
+ border-color: #227;
+}
+    
+    
+====================================
+#navsite ul li a#current {
+ background: white;
+ border-bottom: 1px solid white;
+}
+    
+    
+====================================
+.clearfix:after {
+ content: ".";
+ display: block;
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+/* for IE6 */
+* html .clearfix {
+ height: 1%;
+}
+/* for IE7 */
+*:first-child+html .clearfix {
+ min-height: 1px;
+}
+    
+    
+====================================
+<div id="navsite">
+ <p>Site navigation:</p>
+ <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/archives/">Archives</a></li>
+  <li><a href="/writing/">Writing</a>
+   <ul>
+    <li><a href="/writing/releasing-css">Releasing CSS</a></li>
+    <li><a href="/writing/css-cookbook">CSS Cookbook</a></li>
+   </ul>
+  </li>
+  <li><a href="/speaking/">Speaking</a></li>
+  <li><a href="/contact/">Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+#navsite ul li ul {
+ position: absolute;
+ width: 7em;
+ left: −999em;
+ float: none;
+ border-bottom: none;
+}
+    
+    
+====================================
+#navsite ul li:hover ul {left: auto;}
+#navsite ul li ul li a {
+ background: #999;
+ border: 1px solid black;
+ margin-top: 4px;
+}
+    
+    
+====================================
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/" width="190" height="290">
+ <param name="movie" value="flash/file.swf">
+ <param name="quality" value="high">
+ <param name="wmode" value="transparent">
+ <embed src="flash/file.swf" width="190" height="290" quality="high"
+pluginspage="http://www.macromedia.com/go/getflashplayer"
+type="application/x-shockwave-flash" wmode="transparent"></embed>
+</object>
+    
+    
+====================================
+<div id="navsite">
+ <ul>
+  <li><a href="/" accesskey="h">Home</a></li>
+  <li><a href="/about/" accesskey="b">About</a></li>
+  <li><a href="/archives/" accesskey="a">Archives</a></li>
+  <li><a href="/writing/" accesskey="w">Writing</a></li>
+  <li><a href="/speaking/" accesskey="s">Speaking</a></li>
+  <li><a href="/contact/" accesskey="c">Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+<div id="navsite">
+ <ul>
+  <li><a href="/" accesskey="h"><span class="akey">H</span>ome</a></li>
+  <li><a href="/about/" accesskey="b">A<span class="akey">b</span>out</a></li>
+  <li><a href="/archives/" accesskey="a"><span class="akey">A</span>rchives</a></li>
+  <li><a href="/writing/" accesskey="w"><span class="akey">W</span>riting</a></li>
+  <li><a href="/speaking/" accesskey="s"><span class="akey">S</span>peaking</a></li>
+  <li><a href="/contact/" accesskey="c"><span class="akey">C</span>ontact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+.akey {
+ text-decoration: underline;
+}
+    
+    
+====================================
+<div id="crumbs">
+ <h3>Location:</h3>
+<ul>
+ <li><a href="/">Home</a>
+  <ul>
+   <li><a href="/writing/">Writing</a>
+    <ul>
+     <li><a href="/writing/books/">Books</a>
+      <ul>
+       <li><a href="/writing/books/">CSS Cookbook</a></li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+</div>
+    
+    
+====================================
+#crumbs {
+ background-color: #eee;
+ padding: 4px;
+}
+#crumbs h3 {
+ display: none;
+}
+#crumbs ul {
+ display: inline;
+ padding-left: 0;
+ margin-left: 0;
+}
+#crumbs ul li {
+ display: inline;
+}
+#crumbs ul li a:link {
+ padding: .2em;
+}
+    
+    
+====================================
+#crumbs ul ul li{
+ background-image: url(arrow_r.gif);
+ background-repeat: no-repeat;
+ background-position: left;
+ padding-left: 20px;
+}
+    
+    
+====================================
+#crumbs ul ul li:before {
+ content: url(arrow.gif);
+}
+    
+    
+====================================
+<a href="/" id="linkhome">
+ <span>Homepage</span>
+</a>
+    
+    
+====================================
+a span {
+ display: none;
+}
+a:link {
+ display: block;
+ width: 100px;
+ height: 50px;
+ background-image: url(submit.png);
+ background-repeat: no-repeat;
+ background-position: top left;
+}
+a:link:hover {
+ display: block;
+ width: 100px;
+ height: 50px;
+ background-image: url(submit-roll.png);
+ background-repeat: no-repeat;
+ background-position: top left;
+}
+a:link:active {
+ display: block;
+ width: 100px;
+ height: 50px;
+ background-image: url(submit-on.png);
+ background-repeat: no-repeat;
+ background-position: top left;
+}
+    
+    
+====================================
+<h2 id="headworld"><span>Hello, World!</span></h2>
+    
+    
+====================================
+h2#headworld span {
+ display: none;
+}
+h2#headworld {
+ width: 395px;
+ height: 95px;
+ background-image: url(heading.gif);
+ background-repeat: no-repeat;
+ background-position: top left;
+}
+    
+    
+====================================
+ <h2 id="headworld">Hello, World!</h2>
+    
+    
+====================================
+h2#headworld {
+ /* The width of the image */
+ width: 395px;
+ /* The height of the image is the first padding value */
+ padding: 95px 0 0 0;
+ overflow: hidden;
+ background-image: url("heading.gif");
+ background-repeat: no-repeat;
+ voice-family: "\"}\"";
+ voice-family:inherit;
+ height /**/: 95px;
+ height: 0px !important;
+}
+    
+    
+====================================
+a span {
+ display: none;
+}
+a:link, a:visited {
+ display: block;
+ width: 125px;
+ height: 30px;
+ background-image: url(btn_omni.gif);
+ background-repeat: no-repeat;
+ background-position: 0 0;
+}
+a:link:hover, a:visited:hover {
+ display: block;
+ width: 125px;
+ height: 30px;
+ background-image: url(btn_omni.gif);
+ background-repeat: no-repeat;
+ /* move the image 30 pixels up */
+ background-position: 0 −30px;
+}
+a:link:active, a:visited:active  {
+ display: block;
+ width: 125px;
+ height: 30px;
+ background-image: url(btn_omni.gif);
+ background-repeat: no-repeat;
+ /* move the image 60 pixels up */
+ background-position: 0 −60px;
+}
+    
+    
+====================================
+<h5>Interesting Links (+/-)</h5>
+<ul id="menulink">
+ <li><a href="http://www.oreilly.com/">O'Reilly</a></li>
+ <li><a href="http://www.slashdot.org/">Slashdot</a></li>
+ <li><a href="http://www.apple.com/">Apple</a></li>
+ <li><a href="http://www.microsoft.com/">Microsoft</a></li>
+ <li><a href="http://www.mozilla.org/">Mozilla</a></li>
+</ul>
+    
+    
+====================================
+#menulink {
+ display: none;
+}
+    
+    
+====================================
+function kadabra(zap) {
+ if (document.getElementById) {
+  var abra = document.getElementById(zap).style;
+  if (abra.display == "block") {
+   abra.display = "none";
+   } else {
+   abra.display = "block";
+  }
+  return false;
+  } else {
+  return true;
+ }
+}
+    
+    
+====================================
+<h5><a href="#" onclick="return kadabra('menulink');">
+Interesting Links (+/-)</a></h5>
+    
+    
+====================================
+<p>Are you sure you want to know the truth? If so,
+follow <a href="#" onclick="return kadabra('spoiler'); ">this
+link.</a></p>
+<p id="spoiler">Darth Vadar was Luke's father!</p>
+    
+    
+====================================
+<body id="pagespk">
+    
+    
+====================================
+<div id="navsite">
+  <h5>Site navigation:</h5>
+  <ul>
+   <li><a href="/" id="linkhom">Home</a></li>
+   <li><a href="/about/" id="linkabt">About</a></li>
+   <li><a href="/archives/" id="linkarh">Archives</a></li>
+   <li><a href="/writing/" id="linkwri">Writing</a></li>
+   <li><a href="/speaking/" id="linkspk">Speaking</a></li>
+   <li><a href="/contact/" id="linkcnt">Contact</a></li>
+  </ul>
+</div>
+    
+    
+====================================
+#pagespk a#linkspk {
+ border-left: 10px solid #f33;
+ border-right: 1px solid #f66;
+ border-bottom: 1px solid #f33;
+ background-color: #fcc;
+ color: #333;
+}
+    
+    
+====================================
+<div id="navsite">
+ <h5>Site navigation:</h5>
+ <ul>
+  <li><a href="/"Home</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/archives/">Archives</a></li>
+  <li><a href="/writing/" >Writing</a></li>
+  <li>Speaking</li>
+  <li><a href="/contact/" >Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+#pagehom a#linkhom:link,
+#pageabt a#linkabt:link,
+#pagearh a#linkarh:link,
+#pagewri a#linkwri:link,
+#pagespk a#linkspk:link,
+#pagecnt a#linkcnt:link  {
+ border-left: 10px solid #f33;
+ border-right: 1px solid #f66;
+ border-bottom: 1px solid #f33;
+ background-color: #fcc;
+ color: #333;
+}
+    
+    
+====================================
+<a href="http://www.google.com/" title="Search the Web">...</a>
+    
+    
+====================================
+<div id="header">
+ <h2>Personal Site dot-com</h2>
+ <h5>Site navigation:</h5>
+ <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/archives/">Archives</a></li>
+  <li><a href="/writing/">Writing</a></li>
+  <li id="current"><a href="/speaking/">Speaking</a></li>
+  <li><a href="/contact/">Contact</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+#header li {
+ float:left;
+ background-image: url(tab_right.gif);
+ background-repeat: no-repeat;
+ background-position: right top;
+ margin:0;
+ padding: 0;
+}
+    
+    
+====================================
+#header a {
+ display: block;
+ background-image: url("tab_left.gif");
+ background-repeat: no-repeat;
+ background-position: left top;
+ padding: 5px 15px;
+ color: #ccc;
+ text-decoration: none;
+ font-family: Georgia, Times, "Times New Roman", serif;
+}
+    
+    
+====================================
+#header #current {
+ background-image:url("tab_right_current.gif");
+}
+#header #current a {
+ background-image:url("tab_left_current.gif");
+ color: black;
+}
+    
+    
+====================================
+<img src="target_header.jpg" alt="Header" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+ <area shape="circle" coords="115,136,72" href="#mark" />
+ <area shape="circle" coords="244,145,55" href="#jessica" />
+ <area shape="circle" coords="340,88,58" href="#trueman" />
+ <area shape="circle" coords="480,287,79" href="#katrina" />
+</map>
+<div class="bios">
+ <dl id="katrina">
+  <dt>Katrina</dt>
+  <dd>...</dd>
+ </dl>
+ <dl id="jessica">
+  <dt>Jessica</dt>
+  <dd>...</dd>
+ </dl>
+ <dl id="trueman">
+  <dt>Trueman</dt>
+  <dd>...</dd>
+</dl>
+ <dl id="mark">
+  <dt>Mark</dt>
+  <dd>...</dd>
+</dl>
+</div><!-- end /#bios -->
+    
+    
+====================================
+.bios dt {
+ font-weight: bold;
+}
+.bios dd {
+ margin: 0;
+ padding: 0;
+}
+    
+    
+====================================
+.bios dl:target {
+ background-color: #999999;
+ border: 1px solid black;
+ padding: 1em;
+ font-weight: bold;
+ line-height: 1.5;
+}
+.bios dl:target dt {
+ font-style: italic;
+ color: white;
+ font-size: 1.5em;
+ background-color: #cccccc;
+ margin-right: 20px;
+}
+.bios dl:target dd {
+ margin-right: 20px;
+ background-color: #cccccc;
+ padding: 0 1em 1em 1em;
+}
+    
+    
+====================================
+.bios dl:not(:target) {
+ border: none;
+ padding: 0;
+ font-size: .8em;
+}
+    
+    
+====================================
+<h5>
+ <a href="#menulink">Interesting Links</a>
+</h5>
+<ul id="menulink">
+ <li><a href="http://www.ora.com/">O'Reilly</a></li>
+ <li><a href="http://www.slashdot.org/">Slashdot</a></li>
+ <li><a href="http://www.apple.com/">Apple</a></li>
+ <li><a href="http://www.microsoft.com/">Microsoft</a></li>
+ <li><a href="http://www.mozilla.org/">Mozilla</a></li>
+</ul>
+    
+    
+====================================
+/* default rendering */
+ul#menulink {
+ display: none;
+}
+
+/* when 'targeted' */
+ul:target {
+ display: block;
+}
+
+/* revert back to default rendering */
+ul:not(:target) {
+ display: none;
+}
+    
+    
+==================

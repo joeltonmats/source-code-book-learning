@@ -1,0 +1,1216 @@
+chapter: Images
+==================
+img {
+ filter: gray;
+}
+    
+    
+====================================
+img {
+ width: 300px;
+ border: 2px solid #666;
+ background: #fff;
+ padding: 2px;
+}
+    
+    
+====================================
+img {
+ width: 300px;
+ border: 2px solid #666;
+ background: #fff;
+ padding: 2px;
+}
+a:hover img {
+ border-style: solid;
+ background: #999;
+}
+    
+    
+====================================
+div{
+ background-image: url(beach.jpg);
+ width: 375px;
+ height: 500px;
+ border: 8px solid #666;
+ border-radius: 40px;
+ -moz-border-radius: 40px;
+ -webkit-border-radius: 40px;
+}
+    
+    
+====================================
+div#roundbkgd {
+ background-image: url(beach.jpg);
+ width: 375px;
+ height: 500px;
+ border: 8px solid #666;
+
+ /* top-left corner */
+ border-top-left-radius: 40px;
+ -moz-border-radius-topleft: 40px;
+ -webkit-border-top-left-radius: 40px;
+
+ /* bottom-right corner */
+ border-bottom-right-radius: 40px;
+ -moz-border-radius-bottomright: 40px;
+ -webkit-border-bottom-right-radius: 40px;
+
+ /* bottom-left corner */
+ border-bottom-left-radius: 40px;
+ -moz-border-radius-bottomleft: 40px;
+ -webkit-border-bottom-left-radius: 40px;
+}
+    
+    
+====================================
+img {
+ width: 375px;
+ height: 500px;
+ border: 8px solid #666;
+ background: #fff;
+ display:block;
+ border-radius: 40px;
+ -moz-border-radius: 40px;
+ -webkit-border-radius: 40px;
+}
+    
+    
+====================================
+a img {
+ border: 0;
+}
+    
+    
+====================================
+<a href="http://csscookbook.com">
+ <img src="beach.jpg" border="0" alt="beach" />
+</a>
+    
+    
+====================================
+body {
+ background-image: url(bkgd.jpg);
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+body {
+ background-image: url(bkgd.jpg);
+ background-repeat: repeat-x;
+}
+    
+    
+====================================
+html {
+ height: 100%;
+}
+body {
+ background-image: url(bkgd.jpg);
+ background-repeat: no-repeat;
+ background-position: 75px 150px;
+}
+    
+    
+====================================
+body {
+ background-image: url(bkgd.jpg);
+ background-repeat: no-repeat;
+ background-position: center;
+}
+    
+    
+====================================
+body {
+ background-image: url(bkgd.jpg);
+ background-repeat: no-repeat;
+ background-position: bottom right;
+}
+    
+    
+====================================
+h2 {
+ border: 1px solid #666;
+ border-radius: 20px;
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ background: white;
+ padding-top: 72px;
+ text-align: center;
+ background: url(mail.gif) top center no-repeat,
+  url(printer.gif) 40% 24px no-repeat,
+  url(gift.gif) 60% 24px no-repeat,
+  url(content-bkgd.png) 50% 50% repeat-x,
+  url(heading-sub-bkgd.png) 3em 3em repeat-x,
+  url(plane.gif) center no-repeat;
+ font-family: "Gill Sans", Trebuchet, Calibri, sans-serif;
+ color: #666;
+}
+    
+    
+====================================
+h2 {
+ border: 1px solid #666;
+ border-radius: 20px;
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ background: white;
+ padding-top: 72px;
+ text-align: center;
+ background-image: url(mail.gif),
+  url(printer.gif),
+  url(gift.gif),
+  url(content-bkgd.png),
+  url(heading-sub-bkgd.png),
+  url(plane.gif);
+ background-position: top center,
+  40% 24px,
+  60% 24px,
+  50% 50%,
+  3em 3em,
+  center;
+ background-repeat: no-repeat,
+  no-repeat,
+  no-repeat,
+  repeat-x,
+  repeat-x,
+  no-repeat;
+ font-family: "Gill Sans", Trebuchet, Calibri, sans-serif;
+}
+    
+    
+====================================
+h2 {
+ padding-top: 72px; /* enough padding for the images */
+ text-align: center;
+ background: url(plane.gif), url(mail.gif), url(printer.gif), url(gift.gif);
+ background-position: center, top center, 40% 24px, 60% 24px;
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+<div id="section">
+ <h2>Images on Borders</h2>
+ <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et
+ gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum
+ e pluribus unum..</p>
+</div><!-- /#section -->
+    
+    
+====================================
+#section {
+ margin-right: 40px;
+ color: #000;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ width: 100px;
+ text-align: center;
+ border-style: solid;
+ border-color: #930;
+ border-width: 26px 39px 37px 43px;
+ border-image: url(frame.png) 26 39 37 43 stretch stretch;
+ -webkit-border-image: url(frame.png) 26 39 37 43 stretch stretch;
+-moz-border-image: url(frame.png) 26 39 37 43 stretch round;
+}
+    
+    
+====================================
+<form action="/" method="get">
+ <button>Submit</button>
+</form>
+    
+    
+====================================
+button {
+ background: none;
+ width: 250px;
+ padding: 10px 0 10px 0;
+ border-style: solid;
+ border-color: #666;
+ border-width: 0 17px 0 17px;
+ border-image: url(bkgd-button.png) 0 17 0 17 stretch stretch;
+ -webkit-border-image: url(bkgd-button.png) 0 17 0 17 stretch stretch;
+ -moz-border-image: url(bkgd-button.png) 0 17 0 15 stretch stretch;
+ color: white;
+ font-family: "Gill Sans", Trebuchet, Calibri, sans-serif;
+ font-weight: bold;
+ text-transform: uppercase;
+ text-shadow: 0px 0px 5px rgba(0,0,0,.8);
+}
+    
+    
+====================================
+border-width: 0 17px 0 17px;
+    
+    
+====================================
+border-width: 0 17px 0 17px;
+border-image: url(bkgd-button.png);
+    
+    
+====================================
+border-width: 0 17px 0 17px;
+border-image: url(bkgd-button.png);
+border-image: url(bkgd-button.png) 0 17 0 17;
+    
+    
+====================================
+border-width: 0 17px 0 17px;
+border-image: url(bkgd-button.png);
+border-image: url(bkgd-button.png) 0 17 0 17 stretch stretch;
+    
+    
+====================================
+body {
+ background-image: url(bkgd.jpg);
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+    
+    
+====================================
+body {
+ background-image: url(bkgd2.jpg);
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: −125px 75px;
+ margin: 75px 75px 0 375px;
+}
+h1, h2, h3 {
+ padding-top: 0;
+ margin-top: 0;
+ text-transform: uppercase;
+}
+p {
+ text-align: justify;
+}
+    
+    
+====================================
+h1, h2, h3 {
+ font-size: 200%;
+ background-image: url(bkgd2.jpg);
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
+ padding: 1.5em;
+ text-align: center;
+ color: white;
+}
+    
+    
+====================================
+body {
+ background-image: url(button_redstar.gif);
+ background-size: 25% auto;
+ -o-background-size: 25% auto;
+ -webkit-background-size: 25% auto;
+ -khtml-background-size: 25% auto;
+ background-repeat: repeat-x;
+ margin-top: 30%;
+}
+    
+    
+====================================
+<img id="stretch" src="green_car.jpg"  alt="photo of green car" />
+    
+    
+====================================
+body {
+ margin: 0;
+ padding: 0;
+}
+#stretch {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+}
+    
+    
+====================================
+body {
+ background-image: url(green_car.jpg);
+ -webkit-background-size: 100% 100%;
+ -o-background-size: 100% 100%;
+}
+    
+    
+====================================
+<iframe width="100%" height="100%" src="full-bleed.html" border="0"
+noborder="noborder" frameborder="0" padding="0" spacing="0"
+scrolling="no"></iframe>
+    
+    
+====================================
+img {
+ border: 1px solid #cecece;
+ width: 60%;
+ float: left;
+ margin-right: .7em;
+ margin-bottom: .5em;
+}
+    
+    
+====================================
+img {
+ border: 1px solid #cecece;
+ width: 60%;
+ max-width: 300px;
+ float: left;
+ margin-right: .7em;
+ margin-bottom: .5em;
+}
+    
+    
+====================================
+#content img[src$=".gif"] {
+ image-rendering: -moz-crisp-edges;
+ -ms-interpolation-mode: nearest-neighbor;
+}
+    
+    
+====================================
+#content img[src$=".gif"] {
+ image-rendering: optimizeQuality;
+ -ms-interpolation-mode: bicubic;
+}
+    
+    
+====================================
+img {
+ display: block;
+ float: left;
+ margin: 20px;
+}
+    
+    
+====================================
+img+img {
+ -webkit-transform: rotate(270deg);
+ -moz-transform: rotate(270deg);
+ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+    
+    
+====================================
+div.building {
+ border: 1px solid #666;
+ float: left;
+ width: 300px;
+ height: 300px;
+ margin: 20px;
+ background-image: -webkit-gradient(radial,center center,900,center
+ bottom,0,from(#0cf),to(white));
+ background-image: -moz-radial-gradient(center,900px,center
+ bottom,0,from(#0cf),to(white));
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+background-image: -webkit-gradient();
+    
+    
+====================================
+background-image: -webkit-gradient(linear);
+    
+    
+====================================
+background-image: -webkit-gradient(radial,center center,900);
+    
+    
+====================================
+background-image: -webkit-gradient(radial,center center,900,center bottom,0);
+    
+    
+====================================
+background-image: -webkit-gradient(radial,center
+center,900,center bottom,0,from(#0cf),to(white));
+    
+    
+====================================
+background-image: -moz-linear-gradient(left top, left bottom,
+from(rgba(153,51,0,.3)), to(#6b3703), color-stop(0.5, #903000));
+    
+    
+====================================
+if (navigator.platform == "Win32" &&
+ navigator.appName == "Microsoft Internet Explorer" &&
+ window.attachEvent) {
+  window.attachEvent("onload", fnLoadPngs);
+}
+
+function fnLoadPngs() {
+ var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+ var itsAllGood = (rslt != null && Number(rslt[1]) >= 5.5);
+ for (var i = document.all.length - 1, obj = null;
+  (obj = document.all[i]); i--) {
+   if (itsAllGood &&
+ obj.currentStyle.backgroundImage.match(/\.png/i) != null) {
+  this.fnFixPng(obj);
+  obj.attachEvent("onpropertychange",
+ this.fnPropertyChanged);
+  }
+ }
+}
+
+function fnPropertyChanged() {
+ if (window.event.propertyName == "style.backgroundImage") {
+  var el = window.event.srcElement;
+  if (!el.currentStyle.backgroundImage.match(/x\.gif/i)) {
+    var bg = el.currentStyle.backgroundImage;
+    var src = bg.substring(5,bg.length-2);
+    el.filters.item(0).src = src;
+    el.style.backgroundImage = "url(x.gif)";
+  }
+ }
+}
+
+function fnFixPng(obj) {
+ var bg = obj.currentStyle.backgroundImage;
+ var src = bg.substring(5,bg.length-2);
+ obj.style.filter =
+"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"
+ + src + "', sizingMethod='scale')";
+ obj.style.backgroundImage = "url(x.gif)";
+}
+    
+    
+====================================
+<script src="/_assets/js/bgsleight.js" type="text/javascript"></script>
+    
+    
+====================================
+<div id="frame">
+ <div id="banner">
+  <h1>White House Confidential <br /><span>
+Classified Lawn Care Secrets</span></h1>
+ </div><!-- end #banner -->
+ <p>...</p>
+</div>
+    
+    
+====================================
+#banner {
+ width: 550px;
+ height: 561px;
+ overflow: hidden;
+ background-image: url(whitehouse.jpg);
+ background-position: 0;
+ background-repeat: no-repeat;
+ position: relative
+}
+    
+    
+====================================
+h1 {
+ margin: 0;
+ padding: 0;
+ font-family: Verdana, Arial, sans-serif;
+ margin-top: 325px;
+ margin-left: 25px;
+ position: absolute;
+ bottom: 0;
+ color: white;
+ text-shadow: 0 1px 0 #666;
+ text-align: center;
+ border-left: 2px solid #666;
+ border-right: 2px solid #666;
+ border-top: 2px solid #666;
+
+ /* room around text */
+ padding-left: 25px;
+
+ /* bring in the translucent background image */
+ background-image: url(white-banner.png);
+ background-position: bottom;
+ background-repeat: no-repeat;
+}
+h1 span {
+ font-size: .8em;
+}
+    
+    
+====================================
+<h1>
+ <span></span>
+ Replacement Text Is Here
+</h1>
+    
+    
+====================================
+h1 {
+ width: 216px;
+ height: 72px;
+ position: relative:
+}
+    
+    
+====================================
+h1 span {
+ background: url(replacementimage.jpg) no-repeat;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+}
+    
+    
+====================================
+<h1>
+ <span>
+  Replacement Text Is Here
+ </span>
+</h1>
+    
+    
+====================================
+h1 {
+ background: url(replacementimage.jpg) no-repeat;
+ width: 216px;
+ height: 72px;
+}
+h1 span {
+ display: none;
+}
+    
+    
+====================================
+<h1>
+ Replacement Text Is Here
+</h1>
+    
+    
+====================================
+h1 {
+ text-indent: −9000em;
+ background: url(replacementimage.jpg) no-repeat;
+ width: 216px;
+ height: 72px;
+}
+    
+    
+====================================
+h1 {
+ content: url(logo.gif);
+}
+    
+    
+====================================
+h1 {
+ content: url(logo.mov);
+}
+    
+    
+====================================
+<h1>Visit France City!</h1>
+ <div><img src="frenchtown.jpg" alt=" " /></div>
+<h2>The quaint and charming little destination in France</h2>
+    
+    
+====================================
+div {
+ background-image: url(frenchtown.jpg);
+ background-repeat: no-repeat;
+ background-position: top right;
+ height: 300px;
+ border: 1px solid black;
+ max-width: 714px;
+}
+div img {
+ display: none;
+}
+    
+    
+====================================
+<h2><img src="headline_text.gif" alt="Headline image set in
+GIF format" /></h2>
+    
+    
+====================================
+h2 {
+ background-image: url(headline_bkgd.jpg);
+ background-repeat: none;
+ width: 587px;
+ height: 113px;
+}
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+  <img src="kids.jpg" width="360" height="304"  alt="kids
+playing" />
+  <div id="boat"><img src="boat.gif" width="207" height="123"
+   alt="boat" /></div>
+  <div id="water"><img src="landscape.gif" width="315"
+height="323"
+   alt="landscape" /></div>
+ </body>
+</html>
+    
+    
+====================================
+#boat {
+ position:absolute;
+ width:207px;
+ height:123px;
+ z-index:2;
+ left: 264px;
+ top: 0;
+}
+#water {
+ position:absolute;
+ width:315px;
+ height:323px;
+ z-index:1;
+ left: 359px;
+ top: −20px;
+}
+    
+    
+====================================
+body {
+ margin: 0;
+}
+    
+    
+====================================
+<h2>Kids Welcome New Boat!</h2>
+ <img src="kids.jpg" width="360" height="304"  alt="kids
+playing" />
+ <div id="boat"><img src="boat.gif" width="207" height="123"
+   alt="boat" /></div>
+ <div id="water"><img src="landscape.gif" width="315" height="323"
+alt="landscape" /></div>
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+ <title>CSS Cookbook</title>
+<style type="text/css">
+body {
+ margin: 5% 10% 0 10%;
+}
+#content {
+ background-image: url(landscape.gif);
+ background-repeat: no-repeat;
+ background-position: bottom right;
+ height: 400px;
+ width: 674px;
+}
+h2 {
+ margin: 0;
+ padding: 0;
+ background-image: url(kids.jpg);
+ background-repeat: no-repeat;
+ background-position: bottom left;
+ height: 400px;
+ width: 600px;
+}
+#boat {
+ background-image: url(boat.gif);
+ background-repeat: no-repeat;
+ display: block;
+ width: 207px;
+ height: 123px;
+ margin-left: 250px;
+ margin-top: 75px;
+}
+</style>
+ </head>
+ <body>
+  <div id="content">
+   <h2>Kids Welcome New Boat!
+    <span id="boat">
+    </span>
+   </h2>
+  </div>
+ </body>
+</html>
+    
+    
+====================================
+<div id="box">
+ <h2>
+  I Met a Girl I&#8217;d Like to Know Better
+ </h2>
+ <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Ut wisi enim ad minim veniam.</p>
+</div>
+    
+    
+====================================
+#box {
+ width: 214px;
+ background-image: url(bkgd_bottom.gif);
+ background-position: bottom;
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+h2 {
+ background-image: url(bkgd_top.gif);
+ backgroung-position: left top;
+ background-repeat: no-repeat;
+ padding: 7px 7px 3px 7px;
+ margin: 0;
+ border-bottom: 1px solid #999;
+ font-size: 1.3em;
+ font-weight: normal;
+ color: #eee;
+}
+    
+    
+====================================
+<div id="box">
+ <div id="innerhead">
+  <h2>
+   I Met a Girl I&#8217;d Like to Know Better
+  </h2>
+ </div>
+ <div id="content">
+  <div id="innercontent">
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+erat volutpat. Ut wisi enim ad minim veniam.</p>
+  </div>
+ </div>
+</div>
+    
+    
+====================================
+#innerhead {
+ background-image: url(corner_tl.gif);
+ background-position: top left;
+background-repeat: no-repeat;
+}
+h2 {
+ background-image: url(corner_tr.gif);
+ background-position: top right;
+ background-repeat: no-repeat;
+ margin: 0;
+ padding: 7px;
+ border-bottom: 1px solid #999;
+ font-size: 1.3em;
+ font-weight: normal;
+ color: #eee;
+}
+#content {
+ background-image: url(corner_bl.gif);
+ background-position: bottom left;
+ background-repeat: no-repeat;
+}
+#innercontent {
+ background-image: url(corner_br.gif);
+ background-position: bottom right;
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+<div id="box">
+ <div id="head_outer">
+  <div id="head_inner">
+   <h2>
+    I Met a Girl I&#8217;d Like to Know Better
+   </h2>
+  </div>
+ </div>
+ <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+volutpat. Ut wisi enim ad minim veniam.</p>
+</div>
+    
+    
+====================================
+div#box {
+ width: 55%;
+ background-color: #999999;
+ background-image: url(corner_bl.gif);
+ background-repeat: no-repeat;
+ background-position: bottom left;
+}
+#head_outer {
+ background-image: url(corner_tl.gif);
+ background-repeat: no-repeat;
+}
+#head_inner {
+ background-image: url(corner_tr.gif);
+ background-repeat: no-repeat;
+ background-position: top right;
+}
+div p {
+ margin: 0;
+ padding: 7px;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 1.1em;
+ background-image: url(corner_br.gif);
+ background-position: bottom right;
+ background-repeat: no-repeat;
+ color: #333333;
+ font-size: .8em;
+ line-height: 1.5;
+}
+    
+    
+====================================
+<script type="text/javascript" src="/_assets/js/niftycube.js"></script>
+    
+    
+====================================
+<div id="box">
+<h2>Marquee selectus</h2>
+<p>...<p>
+</div>
+    
+    
+====================================
+<script type="text/javascript" src="niftycube.js"></script>
+<script type="text/javascript">
+ window.onload=function() {
+  Nifty("div#box","big");
+}
+</script>
+    
+    
+====================================
+<script type="text/javascript">
+ window.onload=function() {
+  Nifty("div#box","small");
+}
+</script>
+    
+    
+====================================
+<script type="text/javascript">
+ window.onload=function() {
+  Nifty("div, h3.main div, p","small");
+}
+</script>
+    
+    
+====================================
+<script type="text/javascript">
+ window.onload=function() {
+  Nifty("div, h3.main div, p","small top");
+}
+</script>
+    
+    
+====================================
+#header {
+ min-width: 250px;
+ text-shadow: 0 −1px 0 rgba(0,0,0,.8);
+ box-shadow: 3px 3px 19px rgba(0,0,0,.8);
+ -webkit-box-shadow: 3px 3px 19px rgba(0,0,0,.8);
+ -moz-box-shadow: 3px 3px 19px rgba(0,0,0,.8);
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#930),
+ to(#6b3703), color-stop(0.5, #903000));
+ background-image: -moz-linear-gradient(left top, left bottom,
+ from(rgba(153,51,0,.3)), to(#6b3703), color-stop(0.5, #903000));
+ margin: 7px;
+ padding: 14px;
+}
+    
+    
+====================================
+<div class="imgholder">
+ <img src="dadsaranick2.jpg" alt="Photo of Dad, Sara, Nick" />
+ </div>
+    
+    
+====================================
+div.imgholder {
+ float:left;
+ background: url(dropshadow.png) no-repeat bottom
+  right !important;
+ background: url(dropshadow.gif) no-repeat bottom right;
+ margin: 10px 7px 0 10px !important;
+ margin: 10px 0 0 5px;
+}
+    
+    
+====================================
+div.imgholder img {
+ display: block;
+ position: relative;
+ background-color: #fff;
+ border: 1px solid #666;
+ margin: −3px 5px 5px −3px;
+ padding: 2px;
+}
+    
+    
+====================================
+<div class="imgholder">
+ <div>
+  <img src="dadsaranick2.jpg" alt="Photo of Dad, Sara, Nick" />
+ </div>
+</div>
+    
+    
+====================================
+div.imgholder {
+ float: left;
+ background: url(dropshadow.gif) no-repeat bottom right;
+ margin: 0 7px 7px 0;
+}
+    
+    
+====================================
+div.imgholder div {
+ background: url(shadowmask.png) no-repeat;
+ padding: 0 6px 6px 0;
+}
+    
+    
+====================================
+div.imgholder img {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #666;
+    padding: 2px;
+}
+    
+    
+====================================
+<blockquote>
+ <p>
+  <span>
+   Be bold, baby!
+  </span>
+ </p>
+ <cite>
+  Christopher Schmitt
+ </cite>
+</blockquote>
+    
+    
+====================================
+blockquote {
+ width: 250px;
+}
+blockquote p {
+ background: url(balloontip.gif);
+ background-repeat: no-repeat;
+ background-position: bottom;
+ padding-bottom: 28px;
+}
+blockquote p span {
+ display: block;
+ padding:  0.25em 0.25em 0.5em 0.5em;
+ border: 1pt solid black;
+ border-bottom-width: 0;
+ font-size: 3em;
+ font-family: "Comic Sans MS", Verdana, Helvetica, sans-serif;
+ line-height: 0.9em;
+}
+cite {
+ text-align: right;
+ display: block;
+ width: 250px;
+}
+    
+    
+====================================
+font-family: "Comic Sans MS", Verdana, Helvetica, sans-serif;
+    
+    
+====================================
+<blockquote>
+ <p>
+  <span>
+   Be bold, baby!
+  </span>
+ </p>
+ <cite>
+  <span class="no">
+   Christopher Schmitt
+  </span>
+ </cite>
+</blockquote>
+    
+    
+====================================
+.no {
+ display: none;
+}
+    
+    
+====================================
+cite {
+ margin: 0;
+ padding: 0;
+ background-image: url(baby.jpg);
+ background-position: 0 0;
+ height: 386px;
+ text-align: right;
+ display: block;
+ width: 250px;
+}
+    
+    
+====================================
+<div class="slide">
+ <img src="singlepixel.gif" alt="" />
+</div>
+    
+    
+====================================
+div.slide {
+ width: 500px;
+ height: 468px;
+ background-image: url(face.jpg);
+ background-repeat: no-repeat;
+}
+.slide img {
+ width: 500px;
+ height: 468px;
+}
+    
+    
+====================================
+<div class="slide">
+</div>
+    
+    
+====================================
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="imagetoolbar" content="false" / >
+    
+    
+====================================
+<script type="text/javascript" src="scripts/reflection.js">
+</script>
+    
+    
+====================================
+<img src="christinaleaf.png" alt="christina m. huggins" />
+    
+    
+====================================
+<img src="christinaleaf.png" alt="christina m. huggins" class="reflect" />
+    
+    
+====================================
+<img src="christinaleaf.png" alt="christina m. huggins"
+class="reflect rheight99" />
+    
+    
+====================================
+<img src="christinaleaf.png" alt="christina m. huggins"
+class="reflect ropacity33" />
+    
+    
+====================================
+ <img src="christinaleaf.png" alt="christina m. huggins"
+class="reflect rheight99 ropacity33" />
+    
+    
+====================================
+h2 {
+ margin: 0;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ padding: 0 0 0 24px;
+ font-weight: normal;
+ background-image: url(sprite-source.gif);
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+h2#warning {
+ background-position: −16px −15px;
+}
+h2#questions {
+ background-position: −16px −51px;
+}
+h2#comment {
+ background-position: −16px −87px;
+}
+h2#document {
+ background-position: −16px −123px;
+}
+h2#print {
+ background-position: −16px −159px;
+}
+h2#search {
+ background-position: −16px −195px;
+}
+    
+    
+====================================
+div {
+ background-image: -moz-image-rect(url(bkgd.jpg), 0, 100, 100%, 0);
+ background-repeat: no-repeat;
+ width: 200px;
+ height: 200px;
+ border:1px solid #666;
+ float: left;
+ margin-right: 20px;
+}
+div + div {
+ background-image: -moz-image-rect(url(bkgd.jpg), 0, 100, 100%, 0);
+ background-repeat: repeat;
+}
+    
+    
+====================================
+background-image: -moz-image-rect(url(bkgd.jpg));
+    
+    
+====================================
+background-image: -moz-image-rect(url(bkgd.jpg), 0, 100, 100%, 0);
+    
+    
+====================================
+div {
+ background-image: url(bkgd.jpg);
+ background-image: -moz-image-rect(url(bkgd.jpg), 0, 1, 100%, 0);
+ background-repeat: no-repeat;
+ width: 200px;
+ height: 200px;
+ border:1px solid #666;
+ float: left;
+ margin-right: 20px;
+}
+    
+    
+====================================
+img {
+ display: block;
+ float: left;
+ margin-right:20px;
+ border: 10px solid #ccc;
+ padding: 2px;
+ background-color: #666;
+ -webkit-mask-box-image: url(mask.png);
+}
+    
+    
+====================================
+img {
+ display: block;
+ float: left;
+ margin-right:20px;
+ border: 10px solid #ccc;
+ padding: 2px;
+ background-color: #666;
+ -webkit-mask-box-image: -webkit-gradient(linear, left bottom, left top,
+from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+    
+    
+==================

@@ -1,0 +1,324 @@
+chapter: Using HTML Basics
+==================
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    
+    
+====================================
+<p><font face="Georgia, Times, serif" size="+2">Lorem ipsum dolor</font><font face="Arial, Helvetica, sans-serif" size="1">sit amet, consectetuer adipiscing
+elit, sed diam <b>nonummy</b> nibh euismod tincidunt ut laoreet dolore magna
+aliquam erat volutpat.</font></p>
+    
+    
+====================================
+My Basic Web Page
+Epsum factorial non deposit quid pro quo hic escorol.
+    
+    
+====================================
+<html>
+My Basic Web Page
+Epsum factorial non deposit quid pro quo hic escorol.
+</html>
+    
+    
+====================================
+<html>
+ <head>
+ </head>
+ <body>
+My Basic Web Page
+Epsum factorial non deposit quid pro quo hic escorol.
+ </body>
+</html>
+    
+    
+====================================
+<html>
+ <head>
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+My Basic Web Page
+Sed quis custodiet ipsos custodes?
+ </body>
+</html>
+    
+    
+====================================
+<html>
+ <head>
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+  <h1>My Basic Web Page</h1>
+  <p>Sed quis custodiet ipsos custodes?</p>
+ </body>
+</html>
+    
+    
+====================================
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+    
+    
+====================================
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+    
+    
+====================================
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+" http://www.w3.org/TR/1999/REC-html401-19991224/frameset.dtd">
+    
+    
+====================================
+<!DOCTYPE html>
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+  <h1>My Basic Web Page</h1>
+  <p>Epsum factorial non deposit quid pro quo hic escorol.</p>
+ </body>
+</html>
+    
+    
+====================================
+<!DOCTYPE html>
+<title>Small HTML5</title>
+<p>Hello world</p
+    
+    
+====================================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+  <h1>My Basic Web Page</h1>
+  <p>Epsum factorial non deposit quid pro quo hic escorol.</p>
+
+  <h2>Secondary Heading</h2>
+  <p>Feles mala! cur cista non uteris? stramentum novum in ea posui.</p>
+
+  <h3>Tertiary Heading</h3>
+  <p>Por scientie, musica, sport etc., li tot Europa usa li sam
+  vocabularium.</p>
+
+  <h4>Quaternary Heading</h4>
+  <p>Lex clavatoris designati rescindenda est.</p>
+
+  <h5>Quinary Heading</h5>
+  <p>Ire fortiter quo nemo ante iit.</p>
+
+  <h6>Senary Heading</h6>
+  <p>Interdum feror cupidine partium magnarum europe vincendarum.</p>
+
+ </body>
+</html>
+    
+    
+====================================
+<blockquote cite="http://www.example.com/">
+ <p>Si fallatis officium, quaestor infitias eat se quicquam scire de factis
+ vestris.</p>
+</blockquote>
+    
+    
+====================================
+<p>Virgil said <q>Sic itur ad astra</q>.</p>
+    
+    
+====================================
+<img src="saint-george-island.jpg" />
+    
+    
+====================================
+<img src="saint-george-island.jpg" alt="St. George Island beach at sunset
+with an approaching storm"  />
+    
+    
+====================================
+<img src="saint-george-island.jpg" alt="St. George Island beach at sunset
+with an approaching storm" title="St. George Island beach" />
+    
+    
+====================================
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+  <h1>Audio Example</h1>
+   <audio src="html5audio.ogg" autoplay controls>
+    <a href="html5test.ogg">Download audio</a>
+   </audio>
+ </body>
+</html>
+    
+    
+====================================
+<audio controls autobuffer>
+  <source src="html5audio.ogg" />
+  <source src="html5audio.mp3" />
+  <!-- include Adobe Flash player EMBED and OBJECT code here -->
+</audio>
+    
+    
+====================================
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>CSS Cookbook</title>
+ </head>
+ <body>
+  <h1>Video Example</h1>
+  <video src="html5video.ogg" width="320" height="240"
+controls poster="html5video.jpg">
+    <a href="html5video.ogg">Download movie</a>
+  </video>
+ </body>
+</html>
+    
+    
+====================================
+<p>Ma quande lingues coalesce, li grammatica del <strong>resultant lingue</strong>
+es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca
+va esser plu simplic e regulari quam li existent Europan lingues. It va esser
+tam simplic quam Occidental: in fact, it va esser Occidental. A <em>un
+Angleso</em> it va semblar un simplificat Angles, quam un skeptic Cambridge amico
+dit me que Occidental es.</p>
+    
+    
+====================================
+<ul>
+ First Item
+ Secondary Item
+ Tertiary Item
+ Quaternary Item
+</ul>
+    
+    
+====================================
+<ul>
+<li>First Item</li>
+<li>Secondary Item</li>
+<li>Tertiary Item</li>
+<li>Quaternary Item</li>
+</ul>
+    
+    
+====================================
+<dl><dt>First Term</dt><dd>Seriatim</dd><dt>Secondary Term</dt><dd>Sequentia</dd><dt>Tertiary Term<dt><dd>Sequens mirabitur aetas</dd></dl>
+    
+    
+====================================
+<p>This book's <a href="http://www.csscookbook.com/">Web site</a> contains
+links to download more materials.</p>
+    
+    
+====================================
+<p>Check out the <a href="about.html">About page</a> for more information.</p>
+    
+    
+====================================
+<p>This book's <a href="http://www.csscookbook.com/" title="Link to the book
+site">Web site</a> contains links to download more material.</p>
+    
+    
+====================================
+<a href="http://www.csscookbook.com/services.html">Services Page</a>
+    
+    
+====================================
+<a href="services.html">Services Page</a>
+    
+    
+====================================
+<a href="../widget.html">Widget Page</a>
+    
+    
+====================================
+<a href="../../products.html">Product Page</a>
+    
+    
+====================================
+<a href="/products/products.html">Product Page</a>
+    
+    
+====================================
+<h2 id="hireme">Hire Me</h2>
+    
+    
+====================================
+<a href="#hireme">Hire Me</a>
+    
+    
+====================================
+<table border="1" cellspacing="1" cellpadding="1"><caption>
+    Know Your IE6 Adoption Rate
+  </caption><tr><th>&nbsp;</th><th>2002</th><th>2003</th><th>2004</th><th>2005</th><th>2006</th><th>2007</th><th>2008</th><th>2009</th></tr><tr><td>%</td><td>45</td><td>62</td><td>82</td><td>81</td><td>78</td><td>50</td><td>45</td><td>36</td></tr></table>
+    
+    
+====================================
+<div class="vcard">
+  <span class="fn n">Josiah Bartlet</span>
+  <div class="org">White House</div>
+  <div class="adr">
+    <div class="street-address">1600 Pennsylvania Avenue NW</div>
+    <span class="locality">Washington</span>,
+    <span class="region">DC</span>,
+    <span class="postal-code">20500</span>
+  </div>
+</div>
+    
+    
+====================================
+<div class="vevent" id="hcalendar-The-CSS-Summit">
+ <a class="url" href="http://csssummit.com/">
+  <abbr class="dtstart" title="2009-07-18T09:00-04:0000">July 18,
+2009  9</abbr>
+  - <abbr class="dtend" title="2009-07-18T18:00-04:00">6pm</abbr>
+  :  <span class="summary">The CSS Summit</span>
+ at <span class="location">Online Conference</span></a>
+</div>
+    
+    
+====================================
+javascript:void(document.location='http://validator.w3.org/check?
+charset=%28detect+automatically%29&doctype=Inline&ss=1&group=0&
+verbose=1&uri='+escape(document.location))
+    
+    
+==================

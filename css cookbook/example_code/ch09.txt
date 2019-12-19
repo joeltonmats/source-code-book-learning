@@ -1,0 +1,510 @@
+chapter: Tables
+==================
+table {
+ border-collapse: collapse;
+ border: 5px solid #444;
+}
+td {
+ padding: 10px;
+}
+th {
+ padding: 10px;
+ color: white;
+ background-color: black;
+}
+td, th+th {
+ border: 5px solid #666;
+}
+td+td {
+ border: 5px solid #ccc;
+ text-align: center;
+}
+td#winner {
+ border: 7px dotted #999;
+}
+    
+    
+====================================
+table {
+ border-collapse: collapse;
+}
+    
+    
+====================================
+table#runoffdata {
+ border-collapse: separate;
+ border-spacing: 4px 4px;
+}
+    
+    
+====================================
+<table cellspacing="15">
+ <tr>
+   <th colspan="2">
+    General Demographic Characteristics of Tallahassee, FL
+   </th>
+ </tr>
+ <tr>
+   <th>
+   </th>
+   <th>
+    Estimate
+   </th>
+ </tr>
+ <tr>
+   <td>
+    Total population
+   </td>
+   <td>
+    272,091
+   </td>
+ </tr>
+</table>
+    
+    
+====================================
+border-collapse: separate;
+border-spacing: 15px;
+    
+    
+====================================
+table caption {
+ font: 1.5em Georgia, "Times New Roman", Times, serif;
+ padding: 1em;
+}
+    
+    
+====================================
+<table id="shoppingcartTable" summary="List of products
+in your shopping cart.">
+ <caption>Shopping Cart Listing - <strong>Subtotal: $45.16</strong>;
+changed quantities? <input type="submit"  value="Update price(s)" /></caption>
+ ...
+</table>
+    
+    
+====================================
+td a {
+ display: block;
+ background-color: #333;
+ color: white;
+ text-decoration: none;
+ padding: 4px;
+}
+    
+    
+====================================
+<td class="navText">
+ <a href="/">Home</a>
+</td>
+    
+    
+====================================
+td.navText a {
+ font-size: x-small;
+}
+    
+    
+====================================
+<td>
+ <div class="tblcontent">
+ <p>To-do list on your day off.</p>
+ <ul>
+   <li><a href="http://www.imdb.com/title/tt0120737">Watch <cite>Fellowship of
+the Rings</cite>, Extended Version</a></li>
+   <li><a href="http://www.imdb.com/title/tt0167261/">Watch
+<cite>Two Towers</cite>, Extended Version</a></li>
+   <li><a href="http://www.imdb.com/title/tt0167260/">Watch <cite>Return of the
+King</cite>, Extended Version</a></li>
+  <li>Start or join local Elvish society.</li>
+ </ul>
+</div>
+</td>
+    
+    
+====================================
+.tblcontent p {
+ margin: 0;
+ padding: 0;
+ font-weight: bold;
+}
+.tblcontent ul {
+ margin: 0;
+ padding: 0;
+}
+.tblcontent li {
+ margin: 0;
+ padding: 0;
+ line-height: 1.5;
+}
+.tblcontent li a {
+ padding-left: 15px;
+ background-image: url(bullet.gif);
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+th {
+ text-align: left;
+ padding: 1em 1.5em 1em 0.5em;
+ color: white;
+ border-right: 1px solid rgba(0, 204, 255, .8);
+ border-bottom: 1px solid rgba(0, 204, 255, .8);;
+ text-shadow: 0 1px 0 rgba(0, 0, 0, .8);
+ background: blue url(title-glass.png) repeat-x 50%;
+ font: .9em Arial, Helvetica, Verdana, sans-serif;
+}
+    
+    
+====================================
+.secondrow th {
+/* Use a lighter shade of blue in the background */
+ background-color: #009;
+}
+    
+    
+====================================
+<tr>
+ <th colspan="4">
+ Table 1. General Demographic Characteristics
+ </th>
+</tr>
+<tr class="secondrow">
+ <th>
+
+ </th>
+ <th>
+  Estimate
+ </th>
+ <th>
+  Lower&nbsp;Bound
+ </th>
+ <th>
+  Upper&nbsp;Bound
+ </th>
+</tr>
+    
+    
+====================================
+td img {
+ display: block;
+}
+    
+    
+====================================
+#shoppingcartTable {
+ border-collapse: collapse;
+ width: 100%;
+ border: 1px solid #666;
+}
+#shoppingcartTable th {
+ background: #888 url(th_bkgd.jpg) repeat-x;
+ font: italic 1.5em Georgia, "Times New Roman", Times, serif;
+ padding: .5em 0 .5em 7px;
+ text-align: left;
+ border-top: 1px solid #666;
+ border-bottom: 1px solid #666;
+ text-shadow: #ccc −2px 2px −2px;
+}
+    
+    
+====================================
+tr {
+ background-color: #eee;
+}
+tr.odd {
+ background-color: #ccc;
+}
+    
+    
+====================================
+<tr>
+ <td class="dltprod">
+  <p>Item added on March 22, 2006.</p>
+  <a href="" title="Delete this product"><img src="x.gif" alt="delete"
+class="dltitem" /></a>
+ </td>
+ <td class="prodcell">
+  <img class="prod" alt="product image" src="u2-dismantle.jpg" />
+  <div class="prodtitle"><a href="/product.php?id=B0006399FS">How
+to Dismantle an Atomic Bomb</a></div>
+   ~ <strong>U2</strong>
+ </td>
+ <td><input type="text" value="1" name="qty" size="2" /></td>
+ <td>$9.66</td>
+</tr>
+<tr class="odd">
+ <td class="dltprod">
+  <p>Item added on March 22, 2006.</p>
+  <a href="" title="Delete this product"><img src="x.gif" alt="delete"
+class="dltitem" /></a>
+ </td>
+ <td class="prodcell">
+  <img class="prod" alt="product image" src="apple-whenthepawn.jpg" />
+  <div class="prodtitle"><a href="/product.php?id=B00002MZ4W">When The Pawn
+Hits...</a></div>
+  ~ <strong>Fiona Apple</strong>
+ </td>
+ <td><input type="text" value="1" name="qty" size="2" /></td>
+ <td>$7.97</td>
+</tr>
+    
+    
+====================================
+tr {
+ background-color: #eee;
+}
+tr:nth-child(odd) {
+ background-color: #ccc;
+}
+    
+    
+====================================
+tr:hover {
+ background: yellow;
+}
+    
+    
+====================================
+<table cellspacing="0">
+    
+    
+====================================
+ <tr>
+  <th colspan="7" id="year">
+   <a href="year.html?previous">&lt;</a> 2010 <a
+href="year.html?next">&gt;</a>
+  </th>
+ </tr>
+ <tr>
+  <th colspan="7" id="month">
+   <a href="month.html?previous">&lt;</a> October <a
+href="month.html?next">&gt;</a>
+  </th>
+ </tr>
+  <tr id="days">
+  <th>Sunday</th>
+  <th>Monday</th>
+  <th>Tuesday</th>
+  <th>Wednesday</th>
+  <th>Thursday</th>
+  <th>Friday </th>
+  <th>Saturday</th>
+ </tr>
+    
+    
+====================================
+<tr>
+ <td class="weekend">
+  <div>
+   <a href="1.html" class="date">1</a>
+   <a href="add.html" class="addevent">+</a>
+  </div>
+ </td>
+    
+    
+====================================
+  <td>
+   <div>
+    <a href="2.html" class="date">2</a>
+    <a href="add.html" class="addevent">+</a>
+   </div>
+   <a href="16.html?id=1" class="event">Regular City
+ Commission meeting agenda</a>
+  </td>
+    
+    
+====================================
+  <td>
+   <div>
+    <a href="3.html" class="date">3</a>
+    <a href="add.html" class="addevent">+</a>
+   </div>
+  </td>
+  <td>
+    <div>
+     <a href="4.html" class="date">4</a>
+     <a href="add.html" class="addevent">+</a>
+    </div>
+  </td>
+  <td>
+   <div>
+    <a href="5.html" class="date">5</a>
+    <a href="add.html" class="addevent">+</a>
+   </div>
+   <a href="5.html?id=1" class="event">Dad's birthday</a>
+  </td>
+  <td>
+    <div>
+     <a href="6.html" class="date">6</a>
+     <a href="add.html" class="addevent">+</a>
+    </div>
+  </td>
+  <td class="weekend">
+    <div>
+     <a href="7.html" class="date">7</a>
+     <a href="add.html" class="addevent">+</a>
+    </div>
+    <a href="7.html?id=1" class="event">FSU at UM</a>
+  </td>
+ </tr>
+
+ [...]
+
+ <tr>
+  <td class="weekend">
+    <div>
+     <a href="29.html" class="date">29</a>
+     <a href="add.html" class="addevent">+</a>
+    </div>
+    <div class="event">Buy candy</div>
+  </td>
+  <td>
+    <div>
+     <a href="30.html" class="date">30</a>
+     <a href="add.html" class="addevent">+</a>
+    </div>
+    <a href="16.html?id=1" class="event">Regular City
+Commission meeting agenda</a>
+  </td>
+  <td>
+    <div>
+     <a href="31.html" class="date">31</a>
+     <a href="add.html" class="addevent">+</a>
+    </div>
+    <a href="31.html?id=1" class="event">Halloween</a>
+    <a href="31.html?id=2" class="event">Flu shot</a>
+  </td>
+  <td>
+   <div class="emptydate">&nbsp;</div>
+  </td>
+  <td>
+   <div class="emptydate">&nbsp;</div>
+  </td>
+  <td>
+   <div class="emptydate">&nbsp;</div>
+  </td>
+  <td class="weekend">
+   <div class="emptydate">&nbsp;</div>
+  </td>
+ </tr>
+</table>
+    
+    
+====================================
+body {
+ font-size: 62.5%;
+}
+table {
+ width: 100%;
+ border-collapse: collapse;
+}
+td a:link, td a:visited {
+ text-decoration: none;
+ font-family: "Gill Sans", Calibri, Trebuchet, sans-serif;
+}
+    
+    
+====================================
+#year {
+ font-family: Consolas, "Lucida Console", Monaco, monospace;
+ font-size: 3em;
+ padding: 0;
+ margin: 0;
+}
+#month {
+ font-family: Consolas, "Lucida Console", Monaco, monospace;
+ font-size: 2em;
+ padding: 0;
+ margin: 0;
+}
+#days {
+ background: black url(title-glass.png) repeat-x 50%;
+ color: white;
+ font-family: "Gill Sans", Calibri, Trebuchet, sans-serif;
+ width: 75px;
+ text-shadow: 0px −1px 0px rgba(0, 0, 0, .8);
+ border: 1px solid rgba(0,0,0,.5);
+ border-top: none;
+}
+#days th {
+ padding: 4px;
+}
+    
+    
+====================================
+.date {
+ border-right: 1px solid black;
+ border-bottom: 1px solid black;
+ font-family: Consolas, "Lucida Console", Monaco, monospace;
+ text-decoration: none;
+ float: left;
+ width: 1.5em;
+ height: 1.5em;
+ background-color: white;
+ text-align: center;
+}
+.addevent {
+ display: block;
+ float: left;
+ width: 1em;
+ height: 1em;
+ text-align: center;
+ background-color: #666;
+ color: white;
+ font-weight: bold;
+ text-decoration: none;
+}
+    
+    
+====================================
+.event {
+ clear: both;
+ padding-left: 1em;
+ padding-bottom: .75em;
+ display: block;
+}
+    
+    
+====================================
+td {
+ width: 14%;
+ background-color: #ccc;
+ border: 1px solid white;
+ vertical-align: top;
+ font-size: 1.2em;
+ padding: 1px;
+ background: url(content-bkgd.png) repeat-x;
+ border: 1px solid rgba(0,0,0,.5);
+ border-top: none;
+}
+    
+    
+====================================
+.weekend {
+ background-color: #999;
+}
+    
+    
+====================================
+.emptydate {
+ border-right: 1px solid #666;
+ border-bottom: 1px solid #666;
+ font-family: monospace;
+ text-decoration: none;
+ float: left;
+ width: 1.5em;
+ height: 1.5em;
+ background-color: #ccc;
+ text-align: center;
+}
+    
+    
+====================================
+#today {
+ border: 2px solid black;
+}
+    
+    
+==================

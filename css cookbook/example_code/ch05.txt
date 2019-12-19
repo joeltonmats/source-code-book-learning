@@ -1,0 +1,520 @@
+chapter: Page Elements
+==================
+html, body {
+ margin: 0;
+ padding: 0;
+}
+    
+    
+====================================
+html, body {
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+h1, h2, h3 {
+ margin-top: 0;
+ padding-top: 0;
+ background-color: #666;
+}
+p {
+ background-color: #999;
+}
+    
+    
+====================================
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,
+td{margin:0;padding:0;}table{border-collapse:collapse;border-
+spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,
+var,optgroup{font-style:inherit;font-weight:inherit;}del,
+ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-
+weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-
+variant:normal;}sup{vertical-align:baseline;}sub{vertical-
+align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,
+option{font-family:inherit;font-size:inherit;font-style:inherit;font-
+weight:inherit;}input,button,textarea,select{*font-size:100%;}
+    
+    
+====================================
+<link rel="stylesheet" type="text/css"href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css">
+<link rel="stylesheet" type="text/css" href="mywebsitestylesheet.css">
+    
+    
+====================================
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+    
+    
+====================================
+body,html {
+ scrollbar-face-color: #99ccff;
+ scrollbar-shadow-color: #ccccff;
+ scrollbar-highlight-color: #ccccff;
+ scrollbar-3dlight-color: #99ccff;
+ scrollbar-darkshadow-color: #ccccff;
+ scrollbar-track-color: #ccccff;
+ scrollbar-arrow-color: #000033;
+}
+    
+    
+====================================
+.highlight {
+ scrollbar-face-color: #99ccff;
+ scrollbar-shadow-color: #ccccff;
+ scrollbar-highlight-color: #ccccff;
+ scrollbar-3dlight-color: #99ccff;
+ scrollbar-darkshadow-color: #ccccff;
+ scrollbar-track-color: #ccccff;
+ scrollbar-arrow-color: #000033;
+}
+<form>
+ <textarea class="highlight"></textarea>
+</form>
+    
+    
+====================================
+html .highlight, body .highlight {
+ scrollbar-face-color: #99ccff;
+ scrollbar-shadow-color: #ccccff;
+ scrollbar-highlight-color: #ccccff;
+ scrollbar-3dlight-color: #99ccff;
+ scrollbar-darkshadow-color: #ccccff;
+ scrollbar-track-color: #ccccff;
+ scrollbar-arrow-color: #000033;
+}
+    
+    
+====================================
+.highlight {
+ scrollbar-face-color: #99ccff;
+ scrollbar-shadow-color: #ccccff;
+ scrollbar-highlight-color: #ccccff;
+ scrollbar-3dlight-color: #99ccff;
+ scrollbar-darkshadow-color: #ccccff;
+ scrollbar-track-color: #ccccff;
+ scrollbar-arrow-color: #000033;
+ -ms-scrollbar-face-color: #99ccff;
+ -ms-scrollbar-shadow-color: #ccccff;
+ -ms-scrollbar-highlight-color: #ccccff;
+ -ms-scrollbar-3dlight-color: #99ccff;
+ -ms-scrollbar-darkshadow-color: #ccccff;
+ -ms-scrollbar-track-color: #ccccff;
+ -ms-scrollbar-arrow-color: #000033;
+}
+    
+    
+====================================
+h1, h2, h3 {
+ text-align: center;
+}
+    
+    
+====================================
+h1, h2, h3 {
+ margin-left: auto;
+ margin-right: auto;
+ width: 300px;
+}
+    
+    
+====================================
+<div class="center">
+ <table>
+  <tr>
+   <td>This is the first cell</td>
+   <td>This is the second cell</td>
+  </tr>
+  <tr>
+   <td>This is the third cell, it's under the first cell</td>
+   <td>This is the fourth cell, it's under the second cell.</td>
+  </tr>
+ </table>
+</div>
+    
+    
+====================================
+.center {
+ width: 50%;
+ margin-left: auto;
+ margin-right: auto;
+}
+    
+    
+====================================
+<div class="flagicon"><img src="flag.gif" alt="Flag" width="160"
+height="60" /></div>
+    
+    
+====================================
+.flagicon {
+ text-align: center;
+}
+    
+    
+====================================
+<img src="wolf.jpg" width="256" height="192" alt="Photo of wolf.">
+    
+    
+====================================
+body {
+ padding-left: 50%;
+}
+img {
+ /* equal to the negative of half its width */
+ margin-left: −138px;
+}
+    
+    
+====================================
+img {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ margin-top: −96px;
+ margin-left: −138px;
+ height: 192px;
+ width: 256px;
+}
+    
+    
+====================================
+<div id="centerFrame">
+ <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian
+quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus
+carborundum e pluribus unum. Defacto lingo est igpay atinlay.</p>
+ <img src="wolf.jpg" width="256" height="192" alt="Photo of
+wolf." />
+</div>
+    
+    
+====================================
+#centerFrame  {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ /* adjust negative value until content is centered */
+ margin-top: −150px;
+ margin-left: −138px;
+ width: 256px;
+}
+    
+    
+====================================
+body {
+ margin: 0;
+ padding: 1.5em;
+ border: 50px #666 ridge;
+}
+    
+    
+====================================
+border-width: 50px;
+border-color: #666;
+border-style: ridge;
+    
+    
+====================================
+img.left {
+ float: left;
+ margin-right: 7px;
+ margin-bottom: 3px;
+ border: 4px double #666;
+}
+    
+    
+====================================
+<div id="top"></div>
+<div id="topright"></div>
+<div id="right"></div>
+<div id="bottomright"></div>
+<div id="bottom"></div>
+<div id="bottomleft"></div>
+<div id="left"></div>
+<div id="topleft"></div>
+    
+    
+====================================
+#topleft, #topright, #bottomleft, #bottomright {
+ height: 24px;
+ width: 24px;
+ position: fixed;
+ display: block;
+ z-index: 20;
+}
+    
+    
+====================================
+#top, #bottom {
+ height: 24px;
+ position: fixed;
+ left: 0;
+ right: 0;
+ display: block;
+ background-color: #ccff00;
+ z-index: 30
+}
+#left, #right {
+ width: 24px;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ display: block;
+ background-color: #ccff00;
+ z-index: 50;
+}
+    
+    
+====================================
+#top {
+ top: 0;
+}
+#bottom {
+ bottom: 0;
+}
+#left {
+ left: 0;
+}
+#right {
+ right: 0;
+}
+#topleft {
+ top: 0;
+ left: 0;
+}
+#topright {
+ top: 0;
+ right: 0;
+}
+ #bottomleft {
+ bottom: 0;
+ left: 0;
+}
+ #bottomright {
+ bottom: 0;
+ right: 0;
+}
+    
+    
+====================================
+<style type="text/css">
+hr {
+ border: 0;
+ height: 43px;
+ background-image: url(hr.gif);
+ background-position: 50% 0;
+ background-repeat: no-repeat;
+ margin: .66em 0;
+}
+</style>
+
+<!--[if lt IE 8]>
+<style type="text/css">
+hr {
+ display: list-item;
+ list-style: url(hr.gif) inside;
+ filter: alpha(opacity=0);
+ width: 0;
+}
+</style>
+    
+    
+====================================
+<!--[if lt IE 8]>
+<style type="text/css">
+hr {
+ display: list-item;
+ list-style: url(hr.gif) inside;
+ filter: alpha(opacity=0);
+ width: 0;
+}
+</style>
+<![endif]-->
+    
+    
+====================================
+<title>Mr. McCool's Homepage</title>
+<!-- Structure for Lightbox effect -->
+<script type="text/javascript" src="prototype.js"></script>
+<script type="text/javascript" src="scriptaculous.js?load=effects"></script>
+<!-- Script for Lightbox -->
+<script type="text/javascript" src="lightbox.js"></script>
+    
+    
+====================================
+<title>Mr. McCool's Homepage</title>
+<script type="text/javascript" src="prototype.js"></script>
+<script type="text/javascript" src="scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="lightbox.js"></script>
+<link rel="stylesheet" href="lightbox.css" type="text/css" media="screen" />
+    
+    
+====================================
+<a href="trammell_shoes.jpg" rel="lightbox" title="Trammell shows off
+his happy shoes."><img src="trammell_shoes_tn.jpg" alt="Mark Trammel
+is happy with his shoes." /></a>
+    
+    
+====================================
+<script type="text/javascript" src="/_assets/js/prototype.js"></script>
+<script type="text/javascript" src="/_assets/js/scriptaculous.js?load=effects">
+</script>
+<script type="text/javascript" src="/_assets/js/lightbox.js"></script>
+<link rel="stylesheet" href="/_assets/css/lightbox.css"
+type="text/css" media="screen" />
+    
+    
+====================================
+var fileLoadingImage = "/_assets/img/loading.gif";
+var fileBottomNavCloseImage = "/_assets/img/closelabel.gif";
+    
+    
+====================================
+#prevLink, #nextLink {
+ width: 49%;
+ height: 100%;
+/* Trick IE into showing hover */
+ background: transparent url(/_assets/img/blank.gif) no-repeat;
+ display: block;
+}
+#prevLink:hover, #prevLink:visited:hover {
+ background: url(/_assets/img/prevlabel.gif) left 15% no-repeat;
+}
+#nextLink:hover, #nextLink:visited:hover {
+ background: url(/_assets/img/nextlabel.gif) right 15% no-repeat;
+}
+    
+    
+====================================
+<ul>
+ <li><a href="trammell_shoes.jpg" rel="lightbox[austin]"
+title="Trammell shows off his happy shoes."><img src="trammell_shoes_tn.jpg"
+alt="Mark Trammel is happy with his shoes." /></a></li>
+ <li><a href="molly_andy.jpg" rel="lightbox[austin]" title="Molly and
+Andy pose for a shot."><img src="molly_andy_tn.jpg" alt="Molly and Andy
+pose for a shot." /></a></li>
+ <li><a href="msjen.jpg" rel="lightbox[austin]" title="Ms. Jen at
+breakfast."><img src="msjen_tn.jpg" alt="Ms. Jen at breakfast." /></a></li>
+</ul>
+    
+    
+====================================
+<a href="trammell_shoes.jpg" rel="lightbox" title="Trammell shows off
+his happy shoes."><img src="trammell_shoes_tn.jpg" alt="Mark Trammel
+is happy with his shoes." /></a>
+    
+    
+====================================
+#number4 {
+  opacity: .4; /* .4 = 40% transparency */
+  filter: alpha(opacity=40);  /* 40 = 40% transparency */
+}
+    
+    
+====================================
+#number4 {
+ background-color: rgba(255, 255, 0, .4);
+}
+    
+    
+====================================
+#number4 {
+ background-color: rgb(255, 255, 0);
+ background-color: rgba(255, 255, 0, .4);
+}
+    
+    
+====================================
+#number4 {
+  background-color: transparent;
+}
+    
+    
+====================================
+#number4 {
+ background-color: transparent;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFF00,
+ endColorstr=#66FFFF00);
+}
+    
+    
+====================================
+#number4 {
+ background-color: transparent;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFF00,
+ endColorstr=#66FFFF00);
+ zoom: 1;
+}
+    
+    
+====================================
+<!--[if IE]><style type="text/css">
+#number4 {
+ background-color: transparent;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66FFFF00,
+ endColorstr=#66FFFF00);
+ zoom: 1;
+}
+</style><![endif]-->
+    
+    
+==================

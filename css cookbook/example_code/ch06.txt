@@ -1,0 +1,616 @@
+chapter: Lists
+==================
+li {
+ list-style-type: lower-roman;
+}
+    
+    
+====================================
+<ul>
+ <li><span>I'm Not the Same Person I was in the Database</span></li>
+ <li><span>Past Breaches of Our Privacy</span></li>
+ <li>The Best of Intentions</li>
+ <li>Whatever Happened to Automation?</li>
+ <li>The Smart Choice is Not Needing to Make One</li>
+</ul>
+    
+    
+====================================
+ul {
+ color: #F00;
+}
+    
+    
+====================================
+ul span {
+ color: black;
+}
+    
+    
+====================================
+ul {
+ margin-left: 40px;
+ padding-left: 0px;
+}
+    
+    
+====================================
+li {
+ border-top: 1px solid black;
+ padding: .3em 0;
+}
+    
+    
+====================================
+ul {
+ margin-left: 40px;
+ padding-left: 0px;
+ border-bottom: 1px solid black;
+ list-style: none;
+ width: 36%;
+}
+    
+    
+====================================
+li {
+ border-top: 1px solid black;
+ padding: .3em 0;
+}
+ul {
+ margin-left: 0px;
+ padding-left: 40px;
+ border-bottom: 1px solid black;
+ list-style: none;
+ width: 36%;
+}
+    
+    
+====================================
+ul {
+ list-style: none;
+ margin: 0;
+ padding: 0 0 0 1em;
+ text-indent: −1em;
+}
+li {
+ width: 33%;
+ padding: 0;
+ margin: 0 0 0.25em 0;
+}
+li:before {
+ content: "\00BB \0020";
+}
+    
+    
+====================================
+ul {
+ list-style: none;
+ margin: 0;
+ padding: 0 0 0 1em;
+ text-indent: −1em;
+}
+    
+    
+====================================
+li:before {
+ content: ">> ";
+}
+    
+    
+====================================
+li:before {
+ content: "\00BB \0020";
+}
+    
+    
+====================================
+<ul>
+ <li>&#187; I'm not the Same Person I was in the Database</li>
+ <li>&#187; Past Breaches of Our Privacy</li>
+ <li>&#187; The Best of Intentions</li>
+ <li>&#187; Whatever Happened to Automation?</li>
+ <li>&#187; The Smart Choice is Not Needing to Make One</li>
+</ul>
+    
+    
+====================================
+li {
+ list-style-type: disc;
+ list-style-image: url(bullet.gif);
+}
+    
+    
+====================================
+ul {
+ list-style-type: disc;
+ list-style-image: url(bullet.gif);
+}
+ul ul {list-style-image: none;}
+    
+    
+====================================
+ul {
+ margin-left: 40px;
+ padding-left: 0px;
+ list-style: none;
+}
+    
+    
+====================================
+ul {
+ margin-left: 40px;
+ padding-left: 0px;
+ list-style: none;
+}
+li {
+ padding: .3em 0 1em 40px;
+ font: 1.1em/1.2 Verdana, Arial, Verdana, sans-serif;
+}
+    
+    
+====================================
+ul {
+ margin-left: 40px;
+ padding-left: 0px;
+ list-style: none;
+}
+li {
+ padding: .3em 0 1em 40px;
+ font: 1.1em/1.2 Verdana, Arial, Verdana, sans-serif;
+ background: url(search_32.gif) no-repeat;
+}
+    
+    
+====================================
+ul {
+    background: url(list-bkgd.gif) bottom;
+    width: 298px;
+    list-style: none;
+    padding: 0 0 12px;
+    margin: 0;
+}
+    
+    
+====================================
+ul {
+    background: url(list-bkgd.gif) bottom;
+    width: 298px;
+    list-style: none;
+    padding: 0 0 12px;
+    margin: 0;
+}
+li {
+    color: #eee;
+    font-family: Verdana, Arial, Verdana, sans-serif;
+    padding: 7px 7px 7px 20px;
+    border-bottom: 1px solid #888;
+    background: url(list-marker.gif) no-repeat 5px .8em;
+}
+    
+    
+====================================
+<h3>
+ Table of Contents
+</h3>
+<p>
+ As proposed, the contents of the paper will contain the
+following sections:
+</p>
+<ul>
+ <li>I'm not the Same Person I was in the Database</li>
+ <li>Past Breaches of Our Privacy</li>
+ <li>The Best of Intentions</li>
+ <li>Whatever Happened to Automation?</li>
+ <li class="last">The Smart Choice is Not Needing to Make One</li>
+</ul>
+<p>
+ If there are any objections to how these sections are divided,
+please let <a href="mailto:nick@example.com">Nicholas</a> know about
+it.
+</p>
+    
+    
+====================================
+ul, li {
+ display: inline;
+ margin: 0;
+ padding: 0;
+ font-weight: bold;
+ font-style: italic;
+}
+li:after {
+ content: ", ";
+}
+li.last:after {
+ content: ".";
+}
+p {
+ display: inline;
+}
+    
+    
+====================================
+ul {
+ width: 30%;
+ padding: 0 0 0.75em 0;
+ margin: 0;
+ list-style: none;
+}
+li {
+ text-indent: −0.75em;
+ margin: 0.33em 0.5em 0.5em 1.5em;
+}
+    
+    
+====================================
+li {
+ list-style-position: inside;
+ width: 33%;
+ padding: 0;
+ margin: 0;
+}
+ul {
+ margin: 0;
+ padding: 0 0 0 1em;
+}
+    
+    
+====================================
+<dl>
+ <dt>CSS</dt>
+ <dd>Cascading Style Sheets</dd>
+ <dt>HTML</dt>
+ <dd>HyperText Markup Language</dd>
+ <dd>How To Meet Ladies</dd>
+ <dd>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et
+ gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus
+ unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio
+ incongruous feline nolo contendre.</dd>
+</dl>
+    
+    
+====================================
+dl {
+ margin-left: 5em;
+}
+    
+    
+====================================
+dt {
+ width: 4em;
+}
+    
+    
+====================================
+dt {
+ width: 4em;
+ float: left;
+ clear: left;
+ margin:0 0 1em −5em;
+ font-weight: bold;
+}
+    
+    
+====================================
+dd {
+ float: left;
+ width: 100%;
+}
+    
+    
+====================================
+dd {
+ float:left;
+ width:100%;
+ padding: .2em 0 0 0;
+ margin: 0 0 1em 0;
+}
+    
+    
+====================================
+dt {
+ width: 4em;
+ float: left;
+ clear: left;
+ margin:0 0 1em −5em;
+ font-weight: bold;
+ border-top: 1px solid #000;
+ padding: .2em 0 0 0;
+}
+dd {
+ float: left;
+ width: 100%;
+ padding: .2em 0 0 0;
+ margin: 0 0 1em 0;
+ color: #333;
+}
+dt+dd {
+ border-top: 1px solid #000;
+}
+    
+    
+====================================
+dt:after {
+ content: ":";
+}
+    
+    
+====================================
+dt {
+ counter-reset: item;
+}
+    
+    
+====================================
+dd:before {
+ content: counters(item, "") ". " ;
+}
+    
+    
+====================================
+dd:before {
+ content: counters(item, "") ". " ;
+ counter-increment:item;
+}
+    
+    
+====================================
+<div id="screenplay">
+
+<h3>Cut to</h3>
+
+<p>Int. Kitchen - Continuous</p>
+
+<dialog>
+ <dt>Beth</dt>
+ <dd> I told you the one about Salma Hayek?</dd>
+</dialog>
+
+<p>Beth walks closer to John.</p>
+
+<p>The innocuous baby monitor gets <strong>louder</strong>.</p>
+
+<dialog>
+ <dt>Beth</dt>
+ <dd>Nursing a hungry baby in some destitute African village?</dd>
+ <dt>John</dt>
+ <dd><span class="how">(gasps)</span>No.</dd>
+ <dt>Beth</dt>
+ <dd>This actually happened, but the commentator, I forget who, ended the piece with 
+     "your move, Jolie"</dd>
+</dialog>
+
+</div><!-- /#screenplay -->
+    
+    
+====================================
+body {
+ font-size: 62.5%;
+ font-family: "Courier New", Courier, monospace;
+ margin: 0 auto;
+ width: 612px;
+}
+#screenplay {
+ padding: 0 10.9em;
+}
+#screenplay h3 + p {
+ text-transform: uppercase;
+}
+#screenplay h3 {
+ text-transform: uppercase;
+ text-align: right;
+ background: white;
+}
+#screenplay h3:after {
+ content: ":";
+}
+dialog {
+ font-size: 1.2em;
+}
+dt {
+ text-transform: uppercase;
+ text-align: center;
+ margin-top: 1.6em;
+}
+dd {
+ margin-left: 7.2em;
+}
+span.how {
+ display: block;
+ text-align: center;
+ margin-right: 7.2em;
+ padding-right: 5em;
+}
+#screenplay strong {
+ text-transform: uppercase;
+}
+    
+    
+====================================
+<ul class="itinerary">
+ <li>Morning Sessions
+  <ul>
+   <li>Troubleshooting IE6</li>
+   <li>Object Oriented CSS</li>
+   <li>Fluid Typography</li>
+   <li>Tomorrow's CSS3 Today</li>
+  </ul>
+ </li>
+ <li>Afternoon Sessions
+  <ul>
+   <li>Web Form Elements</li>
+   <li>Flexible Layouts</li>
+   <li>Coding Layouts</li>
+   <li>Future CSS &amp; Markup</li>
+  </ul>
+ </li>
+</ul>
+    
+    
+====================================
+.itinerary, .itinerary  ul {
+ list-style-type: none;
+ background-image: url(pipe.gif);
+ background-repeat: repeat-y;
+ margin: 0;
+ padding: 0;
+}
+.itinerary  ul {
+ margin-left: 12px;
+}
+    
+    
+====================================
+.itinerary  li {
+    margin: 0;
+    padding: 0 12px 0 28px;
+    background-image: url(branch.gif);
+    background-repeat: no-repeat;
+    line-height: 1.5;
+}
+    
+    
+====================================
+<ul class="itinerary">
+ <li>Morning Sessions
+  <ul>
+   <li>Troubleshooting IE6</li>
+   <li>Object Oriented CSS</li>
+   <li>Fluid Typography</li>
+   <li class="branchend">Tomorrow's CSS3 Today</li>
+  </ul>
+ </li>
+ <li class="branchend">Afternoon Sessions
+  <ul>
+   <li>Web Form Elements</li>
+   <li>Flexible Layouts</li>
+   <li>Coding Layouts</li>
+   <li class="branchend">Future CSS &amp; Markup</li>
+  </ul>
+ </li>
+</ul>
+    
+    
+====================================
+.itinerary  li.branchend {
+/* matches background color of */
+/* parent element or page */
+ background-color: #fff;
+ background-image: url(branchend.gif);
+}
+    
+    
+====================================
+.itinerary  li:last-of-type {
+/* matches background color of */
+/* parent element or page */
+
+ background-color: #fff;
+ background-image: url(branchend.gif);
+}
+    
+    
+====================================
+<div class="product" id="prod345781">
+<h1>CSS Cookbook</h1>
+<p>Submit your review:</p>
+ <ul class="rating">
+  <li class="one"><a href="#">1 Star</a></li>
+  <li class="two"><a href="#">2 Stars</a></li>
+  <li class="three"><a href="#">3 Stars</a></li>
+  <li class="four"><a href="#">4 Stars</a></li>
+  <li class="five"><a href="#">5 Stars</a></li>
+ </ul>
+</div>
+    
+    
+====================================
+.rating  {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ clear: both;
+ width: 75px;
+ height: 15px;
+ background-image: url(stars.gif);
+ background-repeat: no-repeat;
+ position: relative;
+}
+    
+    
+====================================
+.rating li {
+ text-indent: −9999em;
+ float: left; /* for IE6 */
+}
+    
+    
+====================================
+.rating li a {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 20;
+ height: 15px;
+ width: 15px;
+ display: block;
+}
+.rating .one a {
+ left: 0;
+}
+.rating .two a {
+ left: 15px;
+}
+.rating .three a {
+ left: 30px;
+}
+.rating .four a {
+ left: 45px;
+}
+.rating .five a {
+ left: 60px;
+}
+    
+    
+====================================
+#prod345781 .rating {
+ /* background-position: 0 0px;      0 out of 5 */
+ /* background-position: 0 −15px;    1 out of 5 */
+    background-position: 0 −30px; /* 2 out of 5 */
+ /* background-position: 0 −45px;    3 out of 5 */
+ /* background-position: 0 −60px;    4 out of 5 */
+ /* background-position: 0 −75px;    1 out of 5 */
+}
+    
+    
+====================================
+#prod345781 .rating li a:hover {
+ z-index: 10;
+ width: 75px;
+ height: 15px;
+ overflow: hidden;
+ left: 0;
+ background-image: url(stars.gif);
+ background-repeat: no-repeat;
+}
+    
+    
+====================================
+#prod345781 .rating .one a:hover {
+ background-position: 0 −105px; /* 1 out of 5 */
+}
+#prod345781 .rating .two a:hover {
+ background-position: 0 −120px; /* 2 out of 5 */
+}
+#prod345781 .rating .three a:hover {
+ background-position: 0 −135px; /* 3 out of 5 */
+}
+#prod345781 .rating .four a:hover {
+ background-position: 0 −150px; /* 4 out of 5 */
+}
+#prod345781 .rating .five a:hover {
+ background-position: 0 −165px; /* 5 out of 5 */
+}
+    
+    
+==================
