@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Custom filter via SVG</title>
+
+<style>
+  /**
+  * 1. Safari will position the filter wrong unless the element
+  *    is promoted to its own layer, here via the translateZ(0)-trick.
+  */
+  .filter-1977 {
+    -webkit-filter: url(#filter-1977);
+            filter: url(#filter-1977);
+  }
+</style>
+</head>
+<body>
+  
+  <img src="img/cat.jpg" alt="Charles the Cat">
+  
+  <img class="filter-1977" src="img/cat.jpg" alt="Charles the Cat">
+  
+  <svg height="0" viewBox="0 0 100 100">
+    <filter id="filter-1977"
+            primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+      <feComponentTransfer result="contrastout">
+          <feFuncR type="linear" slope="1.1" intercept="-0.05"/>
+          <feFuncG type="linear" slope="1.1" intercept="-0.05"/>
+          <feFuncB type="linear" slope="1.1" intercept="-0.05"/>
+      </feComponentTransfer>
+      <feComponentTransfer in="contrastout" result="brightnessout"> 
+          <feFuncR type="linear" slope="1.1"/>
+          <feFuncG type="linear" slope="1.1"/>
+          <feFuncB type="linear" slope="1.1"/>
+      </feComponentTransfer>
+      <feColorMatrix in="brightnessout"
+                     type="saturate" values="1.3" result="img" />
+      <feFlood flood-color="#f36abc" flood-opacity="0.3"
+               x="0" y="0" width="1" height="1"
+               result="overlay" />
+      <feBlend in="overlay" in2="img" mode="screen" />s
+    </filter>
+  </svg>
+</body>
+</html>

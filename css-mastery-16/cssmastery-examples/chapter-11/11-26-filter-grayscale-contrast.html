@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grayscale and contrast filter</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700" rel="stylesheet" type="text/css">
+  <style>
+
+    img {
+      max-width: 100%;
+    }
+
+    .universe-header {
+      max-width: 450px;
+      position: relative;
+      -webkit-filter: grayscale(70%) brightness(0.7) contrast(2);
+      filter: grayscale(50%) contrast(1.5);
+    }
+
+    :root .universe-title {
+      margin: 0;
+      width: 90%;
+      height: 0;
+      padding-bottom: 27%;
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      top: 54%;
+      font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+    }
+
+    .universe-title text {
+      fill: #602135;
+      text-transform: uppercase;
+    }
+    .universe-title svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+    }
+
+    @supports (mix-blend-mode: screen) {
+      /**
+      * 1. Only add the mix-blend-mode rules if supported. Screen makes black
+      *    100% transparent.
+      * 2. Change the fill color to black for supporting browsers,
+      *    resulting in 100% transparency for the text.
+      */
+      .universe-title {
+        mix-blend-mode: screen;
+      }
+      .universe-title text {
+        fill: #000;
+      }
+    }
+
+    .universe-span-1 {
+      font-size: 53.2px;
+    }
+    .universe-span-2 {
+      font-size: 96.2px;
+    }    
+  </style>
+</head>
+<body>
+  <header class="universe-header">
+    <h2 class="universe-title">
+      <svg viewBox="0 0 400 120" role="img" aria-labelledby="universe-title-textcontent">
+        <text id="universe-title-textcontent">
+          <!-- Put both tspan elements on same line, to prevent bug in WebKit. -->
+          <tspan class="universe-span-1" x="6" dy="0.8em">The Observable</tspan> <tspan class="universe-span-2" x="3" dy="0.75em">Universe</tspan>
+        </text>
+      </svg>
+    </h2>
+    <img class="fig fig-universe" src="img/universe.jpg" alt="A starscape with far galaxies.">
+  </header>
+</body>
+</html>

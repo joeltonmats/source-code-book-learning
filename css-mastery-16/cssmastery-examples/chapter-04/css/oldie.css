@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'AlegreyaSans';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  src: url('fonts/alegreya/AlegreyaSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/alegreya/AlegreyaSans-Regular.woff2') format('woff2'),
+       url('fonts/alegreya/AlegreyaSans-Regular.woff') format('woff'),
+       url('fonts/alegreya/AlegreyaSans-Regular.ttf') format('truetype'),
+       url('fonts/alegreya/AlegreyaSans-Regular.svg#AlegreyaSans-Regular') format('svg');
+}

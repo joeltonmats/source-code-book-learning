@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letterpress effect using CSS</title>
+  
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: .9375em;
+      line-height: 1.4;
+    }
+
+    h1 {
+      font-size: 4em;
+      color: #666;
+      line-height: 2;
+    }
+    .impressed,
+    .embossed,
+    .amp {
+      padding: .25em;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .impressed {
+      background-color: #6990E1;
+      color: #31446B;
+      text-shadow: 0 -1px 1px #B3D6F9, 0 1px 0 #243350;
+    }
+
+    .embossed {
+      background-color: #3C5486;
+      color: #92B1EF;
+      text-shadow: 0 -1px 0 #243350, 0 1px 0 #DEF2FE;
+    }
+
+  </style>
+</head>
+<body>
+  <h1><span class="impressed">Impressed</span> <span class="embossed">Embossed</span></h1>
+</body>
+</html>

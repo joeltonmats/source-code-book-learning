@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Isolation demo</title>
+  <style>
+    html,body {
+      height: 100%;
+    }
+    body {
+      background-image: repeating-linear-gradient(45deg, #fff, #fff 20px, #eee 0, #eee 40px);
+      background-size: cover;
+    }
+
+    .group {
+      position: relative;
+      margin: 2em;
+    }
+
+    .group-b {
+      left: 200px;
+      /*opacity: 0.999;*/
+      isolation: isolate;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background-color: #ccc;
+      mix-blend-mode: multiply;
+      -webkit-clip-path: circle();
+      clip-path: circle();
+    }
+    .one {
+      top: 57px;
+      left: 46px;
+      background-color: #ff55dc;
+    }
+    .two {
+      background-color: #69cfff;
+    }
+    .three {
+      left: 75px;
+      top: -12px;
+      background-color: #afff8e;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="group group-a">
+    <div class="item one"></div>
+    <div class="item two"></div>
+    <div class="item three"></div>
+  </div>
+
+  <div class="group group-b">
+    <div class="item one"></div>
+    <div class="item two"></div>
+    <div class="item three"></div>
+  </div>
+
+</body>
+</html>

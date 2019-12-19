@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variations of message component.</title>
+
+  <style>
+    body {
+      font-family: Avenir Next, SegoeUI, sans-serif;
+    }
+    p {
+      margin: 0;
+    }
+    .message {
+      border-radius: .5em;
+      padding: 1em;
+      border: .25em solid rgba(0, 0, 0, 0.15);
+      background-color: #ffffed;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .message-warning {
+      background-color: #ffeded;
+    }
+    .message-success {
+      background-color: #edffed;
+    }
+    .message + .message {
+      margin-top: 2em;
+    } 
+  </style>
+</head>
+<body>    
+  <div class="message">
+    <p>This is a <code>message</code> box</p>
+  </div>
+
+  <div class="message message-warning">
+    <p>This is a <code>message message-warning</code> box</p>
+  </div>
+
+  <div class="message message-success">
+    <p>This is a <code>message message-success</code> box</p>
+  </div>
+
+</body>
+</html>

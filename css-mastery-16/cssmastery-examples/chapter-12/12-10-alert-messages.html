@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visually similar alert messages</title>
+
+  <style>
+    body {
+      font-family: Avenir Next, SegoeUI, sans-serif;
+    }
+
+    div {
+      margin-bottom: 2em;
+    }
+    p {
+      margin: 0;
+    }
+
+    div#pink-box {
+      border-radius: .5em;
+      padding: 1em;
+      border: .25em solid #d9c7cc;
+      background-color: #ffeded;
+      color: #373334;
+    }
+
+    .warning {
+      border-radius: .5em;
+      padding: 1em;
+      border: .25em solid rgba(0, 0, 0, 0.15);
+      background-color: #ffeded;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .message {
+      border-radius: .5em;
+      padding: 1em;
+      border: .25em solid rgba(0, 0, 0, 0.15);
+      background-color: #ffffed;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .message-warning {
+      background-color: #ffeded;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Which one has the better code?</h1>
+  
+  <div id="pink-box">
+    <p>This is alert message implementation one</p>
+  </div>
+
+  <div class="warning">
+    <p>This is alert message implementation two</p>
+  </div>
+
+  <div class="message message-warning">
+    <p>This is alert message implementation three</p>
+  </div>
+  
+</body>
+</html>

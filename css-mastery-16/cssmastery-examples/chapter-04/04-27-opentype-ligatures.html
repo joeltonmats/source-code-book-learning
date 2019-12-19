@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trying out ligatures</title>
+
+  <style>
+
+    @font-face {
+      font-family: Vollkorn;
+      src: url('fonts/vollkorn/Vollkorn-Regular.woff2') format('woff2'),
+      url('fonts/vollkorn/Vollkorn-Regular.woff') format('woff');
+    }
+    
+    article {
+      max-width: 70em;
+      margin: 0 auto;
+    }
+    body {
+      font-family: Vollkorn, Georgia, Times, 'Times New Roman', serif;
+    }
+    p {
+      font-size: 5em;
+      line-height: 1.333;
+      margin: 0;
+    }
+    /**
+    * 1. Older Firefox/Gecko versions use a slightly different syntax.
+    */
+    p.ligatures-enabled {
+      font-variant-ligatures: discretionary-ligatures;
+      font-variant-ligatures: discretionary-ligatures;
+      -webkit-font-feature-settings: "liga", "dlig";
+         -moz-font-feature-settings: "liga", "dlig";
+         -moz-font-feature-settings: "liga=1, dlig=1"; /* 1 */
+              font-feature-settings: "liga", "dlig";
+    }
+
+  </style>
+</head>
+<body>
+  <article>
+    <p>A fine day for a different fjord!</p>
+    <p class="ligatures-enabled">A fine day for a different fjord!</p>
+  </article>
+
+</body>
+</html>

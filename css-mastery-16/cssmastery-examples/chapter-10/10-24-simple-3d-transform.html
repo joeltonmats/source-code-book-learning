@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple 3D transform</title>
+
+    <style>
+    /**
+    * 1. Don't forget to set the perspective with a pixel unit!
+    *    Most browsers allow you to use unitless lengths, but
+    *    some don't, so always set in pixels.
+    * 2. We're just using height + flexbox + margin: auto to center the 
+    *    element in the container here.
+    * 3. Some prefixes are needed for legacy support.
+    * 4. Setting the body to flex, just to line up the wrappers.
+    */
+    
+    .wrapper-2 {
+      -webkit-perspective: 140px; /* 1 */
+         -moz-perspective: 140px; /* 1 */
+           -o-perspective: 140px; /* 1 */
+              perspective: 140px; /* 1 */
+    }
+    .wrapper-3 {
+      -webkit-perspective: 800px; /* 1 */
+         -moz-perspective: 800px; /* 1 */
+           -o-perspective: 800px; /* 1 */
+              perspective: 800px; /* 1 */
+    }
+
+    
+    [class^="wrapper"] {
+      width: 150px;
+      display: -ms-flexbox; /* 2 */
+      display: -webkit-box; /* 2 */
+      display: -webkit-flex; /* 2 */
+      display: -moz-box; /* 2 */
+      display: flex; /* 2 */
+    }
+
+    .box {
+      margin: auto; /* 2 */
+      border: 2px solid;
+      width: 100px;
+      height: 100px;
+      -webkit-transform: rotateY(60deg); /* 3 */
+         -moz-transform: rotateY(60deg); /* 3 */
+           -o-transform: rotateY(60deg); /* 3 */
+              transform: rotateY(60deg); /* 3 */
+    }
+
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex; /* 4 */
+    }
+    
+    </style>
+</head>
+<body>
+
+  <div class="wrapper-1">
+    <div class="box"></div>
+  </div>
+
+  <div class="wrapper-2">
+    <div class="box"></div>
+  </div>
+
+  <div class="wrapper-3">
+    <div class="box"></div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple transform</title>
+  <style>
+    /**
+    * 1. Prefixes are required for a lot of older browsers. Depending on
+    *    how essential it is to support legacy browsers, you may need all
+    *    or some of these - check http://caniuse.com for current browser support.
+    *    In this case, we’ve only used the standardized property to keep it
+    *    readable.
+    */
+    .box {
+      width: 100px;
+      height: 100px;
+      margin-top: 20px;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+      background-color: #eee;
+      outline: 1px solid;
+      transform: matrix(1.4142135623731,
+                        1.4142135623731,
+                        -1.16484955484288,
+                        1.66357756990331,
+                        70.7106781186548,
+                        70.7106781186547); /* 1 */
+      /* equivalent to:;
+          transform: rotate(45deg)
+                     translate(100px, 0)
+                     scale(2)
+                     skewX(10deg); */
+    }
+  </style>
+</head>
+<body>
+    <div class="box" id="matrixed"></div>
+
+    <button type="button" id="showstyle">Press me to show the computed transform style of the box!</button>
+
+    <script>
+    document.getElementById('showstyle').onclick = function () {
+        alert(window.getComputedStyle(document.getElementById('matrixed')).transform);
+    }; 
+    </script>
+</body>
+</html>

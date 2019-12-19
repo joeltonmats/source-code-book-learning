@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step animation with transitions</title>
+    <style>
+    .hello {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #ccc;
+      background: url(images/step-animation.png) no-repeat 0 -1200px;
+      -webkit-transition: background-position 0s .3s steps(6, start);
+              transition: background-position 0s .3s steps(6, start);
+    }
+    .hello:hover {
+      -webkit-transition-delay: 0;
+              transition-delay: 0;
+      -webkit-transition-duration: .6s;
+              transition-duration: .6s;
+      background-position: 0 0;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="hello">
+        
+    </div>
+
+</body>
+</html>

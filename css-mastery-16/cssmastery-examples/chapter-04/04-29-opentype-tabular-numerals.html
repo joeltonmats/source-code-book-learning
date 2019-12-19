@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabular Numerals</title>
+  <style>
+    @font-face {
+      font-family: AlegreyaSans;
+      src: url('fonts/alegreya/AlegreyaSans-Regular.woff2') format('woff2'),
+      url('fonts/alegreya/AlegreyaSans-Regular.woff') format('woff');
+    }
+    @font-face {
+      font-family: AlegreyaSans;
+      src: url('fonts/alegreya/AlegreyaSans-Bold.woff2') format('woff2'),
+      url('fonts/alegreya/AlegreyaSans-Bold.woff') format('woff');
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      max-width: 8em;
+      font-family: AlegreyaSans, Helvetica, Arial, sans-serif;
+      font-size: 3em;
+    }
+
+    table th {
+      text-align: left;
+    }
+
+    table {
+      text-align: right;
+      font-variant-numeric: tabular-nums lining-nums;
+      /* low-level feature-settings, means the same as the above line: */
+      -webkit-font-feature-settings: 'tnum', 'lnum';
+         -moz-font-feature-settings: 'tnum', 'lnum';
+         -moz-font-feature-settings: 'tnum=1', 'lnum';
+              font-feature-settings: 'tnum', 'lnum';
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th scope="row">Jacket</th>
+      <td class="numeral">$439.99</td>
+    </tr>
+    <tr>
+      <th scope="row">Shoes</th>
+      <td class="numeral">$129.99</td>
+    </tr>
+  </table>
+</body>
+</html>

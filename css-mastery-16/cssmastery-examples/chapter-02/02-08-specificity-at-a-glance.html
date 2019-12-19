@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Specificity at a glance — Debugging</title>
+
+  <style>
+    #content #main h2 {
+      color: gray;
+    }
+
+    div > #main > h2 {
+      color: green;
+    }
+
+    #content > [id="main"] .news-story:nth-of-type(1) h2.first {
+      color: hotpink;
+    }
+    :root [id="content"]:first-child > #main  h2:nth-last-child(3) {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"> 
+    <main id="main"> 
+      <h2>Strange Times</h2> 
+      <p>Here you can read bizarre news stories from around the globe.</p> 
+      <div class="news-story"> 
+        <h2 class="first">Bog Snorkeling Champion Announced Today</h2> 
+        <p>The 2008 Bog Snorkeling Championship was won by Conor Murphy
+          with an impressive time of 1 minute 38 seconds.</p> 
+        </div> 
+      </main>
+    </div>
+</body>
+</html>

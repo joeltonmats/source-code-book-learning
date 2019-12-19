@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid layout with grid track alignment</title>
+  <!-- the base styles and "housekeeping" styles are in here: -->
+  <link rel="stylesheet" href="css/grid-base.css">
+<!-- the HTML5 shiv, to help older browsers understand styling
+ on newer HTML5 elements: -->
+ <script src="js/html5shiv.min.js"></script>
+
+ <style>
+  body {
+    padding: 2em;
+  }
+  .grid {
+    display: -webkit-grid;
+    display: grid;
+    height: 100px;
+    margin-bottom: 4em;
+    outline: 2px dashed #666;
+    width: 500px;
+    -webkit-grid-template-rows: 100px;
+            grid-template-rows: 100px;
+    -webkit-grid-template-columns: repeat(8, 50px);
+            grid-template-columns: repeat(8, 50px);
+    justify-content: start; /* implied, default */
+  }
+  .grid-end {
+    -webkit-justify-content: end;
+            justify-content: end;
+  }
+  .grid-center {
+    -webkit-justify-content: center;
+            justify-content: center;
+  }
+  .grid-space-between {
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+  }
+  .grid-space-around {
+    -webkit-justify-content: space-around;
+            justify-content: space-around;
+  }
+  .grid-space-evenly {
+    -webkit-justify-content: space-evenly;
+            justify-content: space-evenly;
+  }
+  .grid > * {
+    outline: 1px solid #fff;
+    background-color: #ccc;
+  }
+
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="grid grid-end">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="grid grid-center">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="grid grid-space-between">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="grid grid-space-around">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="grid grid-space-evenly">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

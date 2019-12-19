@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Using calc() to calculate width</title>
+  <style>
+  /**
+  * 1. Don't forget – spaces are needed around plus and minus signs.
+  */
+  .thing {
+    height: 1em;
+    outline: 1px solid red;
+    width: -webkit-calc(50% + 20px*4 - 1em); /* [1] */
+    width: calc(50% + 20px*4 - 1em); /* [1] */
+  }
+  </style>
+</head>
+<body>
+  <div class="thing"></div>
+    
+</body>
+</html>

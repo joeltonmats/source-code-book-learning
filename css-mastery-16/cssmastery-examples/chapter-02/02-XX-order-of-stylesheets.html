@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order of stylesheets</title>
+  <link rel="stylesheet" href="css/sheet1.css">
+  <style>
+    @import 'css/sheet3.css';
+
+    h1 {
+      color: fuchsia;
+    }
+  </style>
+  <link rel="stylesheet" href="css/sheet2.css">
+</head>
+<body>
+  <h1>What color am I?</h1>
+</body>
+</html>

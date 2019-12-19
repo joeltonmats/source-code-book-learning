@@ -1,0 +1,22 @@
+@import 'library';
+
+body {
+    color: $primary-color;
+    background-color: darken($secondary-color, 10%);
+}
+%inverted {
+    color: $secondary-color;
+    background-color: $primary-color;
+    @include font-smoothing;
+}
+.page-header {
+    @extend %inverted;
+    display: flex;
+}
+.page-footer {
+    @extend %inverted;
+    background-color: #14203B;
+    a {
+        color: darken(#fff, 10%);
+    }
+}

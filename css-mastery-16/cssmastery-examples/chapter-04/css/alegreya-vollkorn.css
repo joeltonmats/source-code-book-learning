@@ -1,0 +1,30 @@
+@font-face {
+  font-family: AlegreyaSans;
+  src: url('../fonts/alegreya/AlegreyaSans-Regular.woff2') format('woff2'),
+  url('../fonts/alegreya/AlegreyaSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: AlegreyaSans;
+  src: url('../fonts/alegreya/AlegreyaSans-Italic.woff2') format('woff2'),
+  url('../fonts/alegreya/AlegreyaSans-Italic.woff') format('woff');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Vollkorn;
+  src: url('../fonts/vollkorn/Vollkorn-Regular.woff2') format('woff2'),
+  url('../fonts/vollkorn/Vollkorn-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: Vollkorn;
+  src: url('../fonts/vollkorn/Vollkorn-Bold.woff2') format('woff2'),
+  url('../fonts/vollkorn/Vollkorn-Bold.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: Vollkorn;
+  src: url('../fonts/vollkorn/Vollkorn-Medium.woff2') format('woff2'),
+  url('../fonts/vollkorn/Vollkorn-Medium.woff') format('woff');
+  font-weight: 500;
+}

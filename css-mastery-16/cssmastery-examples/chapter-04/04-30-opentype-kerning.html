@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kerning pairs</title>
+  <style>
+    @font-face {
+      font-family: AlegreyaSans;
+      src: url('fonts/alegreya/AlegreyaSans-Regular.woff2') format('woff2'),
+      url('fonts/alegreya/AlegreyaSans-Regular.woff') format('woff');
+    }
+    body {
+      font-family: AlegreyaSans, Helvetica, Arial, sans-serif;
+      font-size: 5em;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .kern {
+      font-kerning: normal;
+      -webkit-font-feature-settings: 'kern';
+         -moz-font-feature-settings: 'kern';
+         -moz-font-feature-settings: 'kern=1';
+              font-feature-settings: 'kern';
+    }
+  </style>
+</head>
+<body>
+  <p>VAT means Value-Added Tax</p>
+  <p class="kern">VAT means Value-Added Tax</p>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Animate along an arc</title>
+  <style>
+    /* "housekeeping" to set the stage. */ 
+    body {
+      font-family: "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+      background-color: #edf5f8;
+      margin: 0;
+      padding: 1em;
+    }
+
+    button {
+      margin-top: 2em;
+      cursor: pointer;
+      border: 0;
+      padding: .5em 1em;
+      color: #fff;
+      border-radius: .25em;
+      outline: none;
+      font-size: 1em;
+      background-color: #173b6d;
+      background-image: -webkit-linear-gradient(top, #1a4a8e, #173b6d);
+      background-image: -moz-linear-gradient(top, #1a4a8e, #173b6d);
+      background-image: -o-linear-gradient(top, #1a4a8e, #173b6d);
+      background-image: linear-gradient(to bottom, #1a4a8e, #173b6d);
+      box-shadow: 0 .25em 0 rgba(23, 59, 109, 0.3), inset 0 1px 0 rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 150ms ease-in;
+      -moz-transition: all 150ms ease-in;
+      -o-transition: all 150ms ease-in;
+      transition: all 150ms ease-in;
+    }
+    button:active {
+      box-shadow: 0 0 0 rgba(23, 59, 109, 0.3), inset 0 1px 0 rgba(0, 0, 0, 0.3);
+      -webkit-transform: translateY(.25em);
+      -moz-transform: translateY(.25em);
+       -ms-transform: translateY(.25em);
+        -o-transform: translateY(.25em);
+           transform: translateY(.25em);
+    }
+
+    /* -- end housekeeping. -- */
+
+    /**
+    * Note: we've simplified the prefixed syntax down to just using
+    * the webkit-prefixed version (which covers most browsers in use today) 
+    * apart from the standard unprefixed syntax.
+    */
+
+    /**
+    * Make the container be a horizontal flexbox container, distributing the
+    * items inside to space out all the way to the edges.
+    */
+    .upload {
+      display: -webkit-box; 
+      display: -webkit-flex; 
+      display: -ms-flexbox; 
+      display: -moz-box; 
+      display: flex; 
+      display: -ms-flex; 
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between; 
+      -ms-flex-pack: justify; 
+      -moz-box-pack: justify; 
+           justify-content: space-between;
+      height: 100px;
+      width: 400px;
+      margin-top: 100;
+      background-color: rgba(0,0,0,0.1);
+      padding: 1em;
+      border-radius: .5em;
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+    }
+    /**
+    * A class name common for all the icons, setting the background properties
+    * and common sizing.
+    */
+    .icon {
+      width: 4em;
+      background: none no-repeat 50% 50%/contain;
+    }
+
+    .computer-icon {
+      background-image: url(images/monitor.svg);
+    }
+    /**
+    * Here's where we tie in the animation properties.
+    */
+    .file-icon {
+      -webkit-animation: jump 2s ease-in-out infinite;
+              animation: jump 2s ease-in-out infinite;
+      /* equal to setting the following animation properties:
+      animation-name: jump;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      */
+      background-image: url(images/file.svg);
+    }
+
+    /**
+    * We give the server icon positioning to be able to position it on top of  
+    * the file icon with z-index.
+    */
+    .server-icon {
+      position: relative;
+      z-index: 2;
+      background-image: url(images/cloud_storage.svg);
+    }
+
+    /**
+    * When the animation is paused, change the animation-play-state prop.
+    */
+    .file-icon.is-paused {
+      -webkit-animation-play-state: paused;
+              animation-play-state: paused;
+    }
+    /**
+    * When the animation is stopped (at the start of an iteration), hide the icon
+    * and set the play state to paused.
+    */
+    .file-icon.is-stopped {
+      display: none;
+      -webkit-animation-play-state: paused;
+              animation-play-state: paused;
+    }
+
+    /**
+    * When the animation is stopped, show a checkmark icon
+    * after the server icon, using a pseudo-element.
+    */
+    .file-icon.is-stopped + .server-icon::after {
+      content: '';
+      display: block;
+      width: 3em;
+      height: 3em;
+      background: url(images/checkmark.svg) 50% 50% no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: 1.5em;
+      left: 60%;
+    }
+
+
+    /**
+    * Keyframe definitions - note that prefixed versions have to have
+    * a prefixed @keyframe block as well.
+    */
+
+    @-webkit-keyframes jump {
+      from {
+        -webkit-transform:  rotate(0deg) translateX(-170px) rotate(0deg) scale(1);
+      }
+      70%, 100% {
+        -webkit-transform: rotate(175deg) translateX(-170px) rotate(-175deg) scale(.5);
+      }
+    }
+
+    @keyframes jump {
+      from {
+        transform:  rotate(0deg) translateX(-170px) rotate(0deg)  scale(1);
+      }
+      70%, 100% {
+        transform: rotate(175deg) translateX(-170px) rotate(-175deg) scale(.5);
+      }
+    }
+
+
+    </style>
+</head>
+
+
+<body>
+  <h1>File uploading animation</h1>
+  <div class="upload">
+    <div class="icon computer-icon"></div>
+    <div class="icon file-icon is-paused"></div>
+    <div class="icon server-icon"></div>
+  </div>
+  <button type="button" class="button-pause">Play/pause animation</button>
+  <button type="button" class="button-stop">Finish/restart animation</button>
+
+
+  <script>
+    /**
+    * This script handles toggling of some states in the demo. It uses animation
+    * events to trigger the adding and removing of class names to elements to
+    * demonstrate controlling animations. If you're interested in how to use
+    * CSS Animation events, read on.
+    *
+    * For the animation events, we need to add listeners for both the standardized
+    * events as well as the prefixed versions. This is done via a helper 
+    * function, adding & removing the listeners for us.
+    * 
+    * In this case, we want to listen to the event 'animationiteration',
+    * which is fired when an iteration of an animation on an element is finished. 
+    * This means we have to listen for the various prefixed versions as well.
+    * WebKit-based browsers call this event 'webkitAnimationIteration', IE calls 
+    * it 'MSAnimationIteration'. If you need to support older versions of Mozilla-
+    * based browsers (e.g. Firefox), you need to use 'MozAnimationIteration' as
+    * well, and older versions of Opera support 'oanimationiteration'.
+    * 
+    */
+
+    var icon = document.querySelector('.file-icon'), // The file icon element.
+        pause = document.querySelector('.button-pause'), // play/pause button.
+        stop = document.querySelector('.button-stop'), // stop/start button
+        prefixes = ['webkit', 'MS', ""]; // List of prefixes to support.
+
+    // Helper function to generate prefixed versions of the event handlers.
+    function prefixedEvent(addOrRemove, prefixes, element, evt, callback) {
+      var l = prefixes.length;
+
+        // Loop over all the prefixes to support and run either
+        // element.addEventListener or element.removeEventListener, based
+        // on the value of the addOrRemove argument.
+        for (var current=0; current<l; current++) {
+            // set the event name to the lowercased standard version if no prefix.
+            if (prefixes[current] === "") {
+              evt = evt.toLowerCase();
+            }
+            element[addOrRemove + 'EventListener'](prefixes[current]+evt, callback, false);
+          }
+        }
+
+    // Toggle stop/start
+    function toggleAnimation() {
+        // If we are starting, remove the listener to stop at the end of
+        // the current iteration.
+        if (icon.classList.contains('is-stopped')) {
+            // We need 3 listeners to cover the most popular browsers today:
+            prefixedEvent('remove', prefixes, icon, 'AnimationIteration', stopAnimation);
+            icon.classList.remove('is-stopped');
+          } else {
+            // If we are stopping, wait for the iteration to finish.
+            waitToStop();
+          }
+        }
+
+    // Function to toggle play/pause state.
+    function pauseAnimation() {
+      icon.classList.toggle('is-paused');
+    }
+    // Function to stop the animation.
+    function stopAnimation() {
+      icon.classList.add('is-stopped');
+    }
+    // Function to add a listener for the animationiteration event.
+    function waitToStop() {
+      prefixedEvent('add', prefixes, icon, 'AnimationIteration', stopAnimation);
+    }
+
+    // Finally, add event listeners for the buttons.
+    pause.addEventListener('click', pauseAnimation, false);
+    stop.addEventListener('click', toggleAnimation, false);
+    
+  </script>
+</body>
+</html>

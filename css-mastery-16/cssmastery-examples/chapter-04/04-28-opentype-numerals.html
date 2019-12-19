@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trying out ligatures</title>
+
+  <style>
+
+    @font-face {
+      font-family: Vollkorn;
+      src: url('fonts/vollkorn/Vollkorn-Regular.woff2') format('woff2'),
+      url('fonts/vollkorn/Vollkorn-Regular.woff') format('woff');
+    }
+    
+    body {
+      font-family: Vollkorn, Georgia, Times, 'Times New Roman', serif;
+    }
+    p {
+      font-size: 5em;
+      line-height: 1.333;
+      margin: 0;
+    }
+    .lining-nums {
+      font-variant-numeric: lining-nums;
+      -webkit-font-feature-settings: "lnum";
+         -moz-font-feature-settings: "lnum";
+         -moz-font-feature-settings: "lnum=1";
+              font-feature-settings: "lnum";
+    }
+    .old-style {
+      font-variant-numeric: oldstyle-nums;
+      -webkit-font-feature-settings: "onum";
+         -moz-font-feature-settings: "onum";
+         -moz-font-feature-settings: "onum=1";
+              font-feature-settings: "onum";
+    }
+
+  </style>
+</head>
+<body>
+  <article>
+    <p class="lining-nums">In 1998, Flash sites were all the rage</p>
+    <p class="old-style">In 1998, Flash sites were all the rage</p>
+  </article>
+
+</body>
+</html>

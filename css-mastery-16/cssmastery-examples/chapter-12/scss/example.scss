@@ -1,0 +1,57 @@
+/**
+* This file is written in the SCSS syntax of Sass-script. It needs to be 
+* compiled into CSS by a Sass library. You can find installation instructions 
+* for various applications with Sass support at http://sass-lang.com/install.
+*/
+
+$primary-color: #333;
+$secondary-color: #fff;
+
+$breakpoints: (
+    mid: 35em,
+    large: 50em
+    );
+
+@function ratio($target, $context) {
+    @return ($target / $context) * 100%;
+}
+
+@mixin font-smoothing($subpixel: false) {
+    @if $subpixel {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+    @else {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+}
+
+body {
+    color: $primary-color;
+    background-color: $secondary-color;
+}
+
+%inverted {
+    color: $secondary-color;
+    background-color: $primary-color;
+    @include font-smoothing;
+}
+
+.row-trio > * {
+    @media only screen and (min-width: map-get($breakpoints, large)) {
+        width: ratio(300, 960);
+    }
+}
+.page-header {
+    @extend %inverted;
+}
+
+.page-footer {
+    @extend %inverted;
+    background-color: #14203B;
+    a {
+        color: darken(#fff, 10%);
+    }
+}

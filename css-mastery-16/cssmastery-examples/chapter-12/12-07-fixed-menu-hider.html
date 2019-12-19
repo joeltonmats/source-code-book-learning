@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fixed menu hider example</title>
+  <style>
+    html, body, .page-footer {
+      height: 100%;
+    }
+    body {
+      font-family: Avenir Next, SegoeUI, sans-serif;
+      background-color: #4e2450;
+      background-image: linear-gradient(to right, #4e2450, #664267);
+      color: #fff;
+      padding-top: 3.125em; /* 50px */
+      margin: 0;
+    }
+    
+    .wrapper {
+      max-width: 76em;
+      width: 95%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .a11y-hidden {
+      top: 0;
+      position: absolute;
+      crop: rect(0,0,0,0);
+      height: 0;
+      width: 0;
+      margin: -1px;
+      overflow: hidden;
+    }
+
+    .page-head {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3.125em;
+      background-color: #fff;
+      color: #454545;
+      box-shadow: 0 .25em .25em rgba(0,0,0,0.2);
+      -webkit-transition: top .25s ease-in-out;
+      -moz-transition: top .25s ease-in-out;
+      -o-transition: top .25s ease-in-out;
+      transition: top .25s ease-in-out;
+    }
+
+    .page-head-hide {
+      top: -3.125em;
+    }
+
+    .page-title {
+      margin: .2916em 0; /* 7px 0 */
+      font-size: 1.5em;
+      line-height: 1.5;
+      float: left;
+    }
+    .page-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-head-menu {
+      margin: .4375em 0;
+      line-height: 2.125;
+      float: right;
+    }
+    .page-head-menu a {
+      color: #39508e;
+    }
+
+    .page-footer {
+      background-color: #333;
+      color: #fff;
+    }
+    .page-footer-title {
+      margin: 0;
+      font-size: 1.5em;
+      line-height: 1.5;
+      margin: .2916em 0;
+    }
+    .page-footer a {
+      color: #fff;
+    }
+
+    .page-footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 1.5em 0;
+    }
+    .page-footer-links li {
+      border-top: 1px solid #666;
+    }
+    .page-footer-links a {
+      text-decoration: none;
+      display: block;
+      line-height: 2.125;
+      padding: .25em;
+    }
+    .page-footer-links a:hover,
+    .page-footer-links a:focus {
+      background-color: #000;
+    }
+
+    .post {
+      background-color: #fff;
+      color: #333;
+      padding: 2em;
+      margin: 2em 0;
+      box-shadow: 0 .25em .25em rgba(0,0,0,0.2);
+      border-radius: .5em;
+    }
+
+    .post a {
+      color: #39508e;
+    }
+
+  </style>
+</head>
+<body>
+  <a id="top" name="top"><span class="a11y-hidden">Top of the page</span></a>
+  <header class="page-head">
+    <div class="wrapper">
+      <h1 class="page-title"><a href="/" id="page-title-link">Fixed</a></h1>
+
+      <p class="page-head-menu">
+        <a href="#menu-list">Menu</a>
+      </p>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+      <article class="post">
+        <h2><a href="/post">Fixed positioning: friend or foe?</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aliquid minima at, sint reprehenderit soluta voluptates assumenda delectus cumque provident enim, quas facilis ab! Ipsa amet, vel nesciunt odit atque.</p>
+      </article>
+    </div>
+  </main>
+
+
+  <footer class="page-footer">
+    <nav class="wrapper">
+      <h2 class="page-footer-title"><a id="menu-list" tabindex="-1" aria-label="">Site menu</a></h2>
+      <ul class="page-footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+
+      <p><a href="#top">&uarr; Back up</a></p>
+    </nav>
+  </footer>
+
+  <script src="js/scrollUpMenu.js"></script>
+  <script>
+    window.scrollUpMenu.init('.page-head', 'page-head-hide');
+  </script>
+</body>
+</html>

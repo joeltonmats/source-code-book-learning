@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple transform</title>
+    <style>
+        /**
+        * 1. Prefixes are required for a lot of older browsers. Depending on
+        *    how essential it is to support legacy browsers, you may need all
+        *    or some of these - check http://caniuse.com for current browser support.
+        */
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            background-color: #eee;
+            outline: 1px solid;
+            -webkit-transform: rotate(45deg); /* 1 */
+               -moz-transform: rotate(45deg); /* 1 */
+                -ms-transform: rotate(45deg); /* 1 */
+                 -o-transform: rotate(45deg); /* 1 */
+                    transform: rotate(45deg); /* 1 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

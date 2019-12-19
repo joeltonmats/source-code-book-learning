@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OOCSS – media object, structure vs skin</title>
+
+  <style>
+    /* grid styles */
+    .row {
+      margin: 0 -1em;
+    }
+    .row:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .row-trio > * {
+      width: 33.333%;
+      box-sizing: border-box;
+      padding: 0 1em;
+      margin-bottom: 2em;
+    }
+
+    .col {
+      float: left;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="row row-trio"><!-- container -->
+    <div class="col"><!-- container -->
+      <!-- content: -->
+      <article class="media-block post-teaser">
+        <div class="media-body post-teaser-body">
+          <h2 class="post-title">Post teaser heading</h2>
+          <p>Article text goes here...</p>
+        </div>
+        <img class="media-fig post-fig" src="" alt="">
+      </article>
+    </div>
+
+    <div class="col"><!-- container -->
+      <!-- content: -->
+      <article class="media-block post-teaser">
+        <div class="media-body post-teaser-body">
+          <h2 class="post-title">Post teaser no. 2</h2>
+          <p>Article text goes here...</p>
+        </div>
+        <img class="media-fig post-fig" src="" alt="">
+      </article>
+    </div>
+
+    <div class="col"><!-- container -->
+      <!-- content: -->
+      <article class="media-block post-teaser">
+        <div class="media-body post-teaser-body">
+          <h2 class="post-title">Post teaser no. 2</h2>
+          <p>Article text goes here...</p>
+        </div>
+        <img class="media-fig post-fig" src="" alt="">
+      </article>
+    </div>
+  </div>
+  
+
+</body>
+</html>

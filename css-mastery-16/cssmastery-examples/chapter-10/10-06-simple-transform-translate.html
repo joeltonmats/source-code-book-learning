@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple transform</title>
+  <style>
+    /**
+    * 1. Prefixes are required for a lot of older browsers. Depending on
+    *    how essential it is to support legacy browsers, you may need all
+    *    or some of these - check http://caniuse.com for current browser support.
+    *    The translation is equivalent to translateX(100%).
+    */
+    .box {
+      width: 100px;
+      height: 100px;
+      margin-top: 20px;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+      background-color: #eee;
+      outline: 1px solid;
+      -webkit-transform-origin: 10px 10px;
+         -moz-transform-origin: 10px 10px;
+          -ms-transform-origin: 10px 10px;
+           -o-transform-origin: 10px 10px;
+              transform-origin: 10px 10px;
+      -webkit-transform: translate(100%, 0); /* 1 */
+         -moz-transform: translate(100%, 0); /* 1 */
+          -ms-transform: translate(100%, 0); /* 1 */
+           -o-transform: translate(100%, 0); /* 1 */
+              transform: translate(100%, 0); /* 1 */
+    }
+  </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

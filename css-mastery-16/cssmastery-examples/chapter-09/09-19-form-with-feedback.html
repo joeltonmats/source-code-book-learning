@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Simple Form</title>
+  <style>
+    body {
+      font-family: "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+      background-color: #edf5f8;
+      padding: 20px;
+    }
+    input,
+    textarea {
+      font: inherit;
+    }
+    fieldset {
+      border: 0;
+      padding: 0.01em 0 0 0;
+      margin: 0;
+    }
+    .fieldset-wrapper {
+      padding: 1em;
+      margin-bottom: 1em;
+      border: 1px solid #eee; /* mostly for IE8 */
+      background-color: #fff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    }
+    /**
+    * No border for more modern browsers.
+    */
+    :root .fieldset-wrapper {
+      border: 0;
+    }
+
+    legend {
+      padding: 0 0 .5em 0;
+      font-weight: bold;
+      color: #777;
+    }
+    label {
+      cursor: pointer;
+    }
+    .field-text label {
+      display: block;
+    }
+    .field-text label,
+    .field-text input,
+    .field-text .form-help,
+    .field-text textarea {
+      width: 100%;
+      max-width: 20em;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+    }
+    .field-text input,
+    .field-text textarea {
+      padding: .375em .3125em .3125em;
+      border: 1px solid #ccc;
+      border-radius: .25em;
+    }
+    .field-text :focus {
+      outline: 0;
+      box-shadow: 0 0 .5em rgba(93, 162, 248, 0.5);
+      border-color: #5da2f8;
+    }
+    .field-text :invalid {
+      border-color: #e72633;
+      box-shadow: 0 0 .5em rgba(229, 43, 37, 0.5);
+    }
+    textarea {
+      height: 10em;
+      resize: vertical;
+    }
+    input[type="radio"] {
+      margin-right: .75em;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      padding: .5em 1em;
+      color: #fff;
+      border-radius: .25em;
+      font-size: 1em;
+      background-color: #173b6d;
+      background-image: -webkit-linear-gradient(top, #1a4a8e, #173b6d);
+      background-image: linear-gradient(to bottom, #1a4a8e, #173b6d);
+      box-shadow: 0 .25em 0 rgba(23, 59, 109, 0.3), inset 0 1px 0 rgba(0, 0, 0, 0.3);
+    }
+    .field-submit {
+      padding: 1em;
+    }
+
+    .form-help {
+      display: block;
+      /* hide the help by default, 
+      without hiding it from screen readers */
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    input:focus + .form-help {
+      padding: .5em;
+      margin-top: .5em;
+      border: 1px solid #e1de8a;
+      border-radius: .25em;
+      font-style: italic;
+      color: #737373;
+      background-color: #fff;
+      position: static;
+      width: auto;
+      height: auto;
+      crop: none;
+    }
+
+    ::-webkit-input-placeholder {
+      font-style: italic;
+    }
+    :-ms-input-placeholder {  
+      font-style: italic; 
+    }
+    ::-moz-placeholder {
+      font-style: italic;  
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Leave a comment</h1>
+  <form id="comments_form" action="/comments/" method="post">
+    <div class="fieldset-wrapper">
+      <fieldset>
+        <legend>Your Contact Details</legend>
+
+        <p class="field field-text">
+          <label for="comment-author">Name:</label>
+          <input name="comment-author" required id="comment-author" type="text" />
+        </p>
+
+        <p class="field field-text">
+          <label for="comment-email">Email Address:</label>
+          <input name="comment-email" required id="comment-email" type="email" />
+        </p>
+
+        <p class="field field-text">
+          <label for="comment-url">Web Address:</label>
+          <input name="comment-url" aria-describedby="comment-url-help" id="comment-url" type="url" placeholder="http://example.com" />
+          <span id="comment-url-help" role="tooltip" class="form-help">Fill in your URL if you have one. Make sure to include the ”http://”-part.</span>
+        </p>
+      </fieldset>
+    </div>
+
+    <div class="fieldset-wrapper">
+      <fieldset>
+        <legend>Comments</legend>
+        <p class="field field-text">
+          <label for="comment-text">Message:</label>
+          <textarea name="comment-text" id="comment-text" cols="20" rows="10"></textarea>
+        </p>
+      </fieldset>
+    </div>
+    
+    <div class="fieldset-wrapper">
+      <fieldset>
+        <legend>Remember Me</legend>
+        <p class="field">
+          <label><input name="remember" type="radio" value="yes" />Yes</label>
+        </p>
+        
+        <p class="field">
+          <label>
+            <input name="remember" type="radio" value="no" checked="checked" />No</label>
+          </p>
+        </fieldset>
+      </div>
+
+      <p class="field-submit">
+        <button id="submit" class="submit" name="submit" type="submit">Post comment</button>
+      </p>
+    </form>
+
+  </body>
+
+  </html>

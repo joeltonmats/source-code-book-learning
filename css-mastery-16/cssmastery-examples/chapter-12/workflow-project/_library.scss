@@ -1,0 +1,14 @@
+$primary-color: #333;
+$secondary-color: #fff;
+
+@mixin font-smoothing($subpixel: false) {
+    @if $subpixel {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+    @else {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+}

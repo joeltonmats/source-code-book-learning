@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A 3D flipping widget</title>
+  
+  <!-- Load modernizr first, so that all the class names we base our 
+       styles on are there as early as possible. -->
+  <script src="js/modernizr.js"></script>
+  <script>
+      // The following test is here to detect svg background-image support for the
+      // checkboxes, and is not specifically related to this example.
+      Modernizr.addTest('svgbg', document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1'));
+  </script>
+  <!-- We'll put styles from the menu example in a separate file and re-use
+       them for this example. -->
+  <link rel="stylesheet" href="css/menu.css">
+  <style>
+    /**
+    * 1. Generally, we'd set perspective for all browsers here.
+    *    Since IE is buggy with regards to perspective and requires
+    *    the perspective() function instead, we use that (see below) - 
+    *    which doesn't play nice with iOS (sigh). Therefore, we just supply
+    *    the -webkit-perspective property here.
+    */
+    .csstransforms3d.classlist .flip-wrapper {
+        position: relative;
+        -webkit-perspective: 1000px; /* 1 */
+    }
+    /**
+    * Rules common to the two sides of the widget.
+    * 1. We set the backface visibility to hidden, so that we don't need to
+    *    worry about the back of the "cards" shining through.
+    */
+    .csstransforms3d.classlist .flip-b,
+    .csstransforms3d.classlist .flip-a {
+        box-sizing: border-box;
+        -webkit-transition: -webkit-transform .25s ease-in-out;
+           -moz-transition: -moz-transform .25s ease-in-out;
+                transition: transform .25s ease-in-out;
+        -webkit-backface-visibility: hidden; /* 1 */
+           -moz-backface-visibility: hidden; /* 1 */
+                backface-visibility: hidden; /* 1 */
+    }
+    .csstransforms3d.classlist .flip-a {
+        -webkit-transform: perspective(1000px) rotateY(0); /* 1 */
+           -moz-transform: perspective(1000px) rotateY(0); /* 1 */
+                transform: perspective(1000px) rotateY(0); /* 1 */
+    }
+    /**
+    * The backside of the widget.
+    * 1. Set the card to be absolutely positioned inside the parent, and
+    *    set the top/right/bottom/left props to 0 so that the element stretches
+    *    to fill the entire space of the parent (now equal to the space of side A!).
+    * 2. Remove any margin.
+    * 3. Set the perspective and flip the card -180 degrees, so it ends up 
+    *    "behind" side A.
+    */
+    .csstransforms3d.classlist .flip-b {
+        position: absolute; /* 1 */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0; /* 2 */
+        -webkit-transform: perspective(1000px) rotateY(-180deg); /* 3 */
+           -moz-transform: perspective(1000px) rotateY(-180deg); /* 3 */
+                transform: perspective(1000px) rotateY(-180deg); /* 3 */
+    }
+    /**
+    * 1. When the parent has the class indicating flipped state, rotate side A
+    *    180 degrees.
+    */
+    .csstransforms3d.classlist .flip-wrapper.is-flipped .flip-a {
+        -webkit-transform: perspective(1000px) rotateY(180deg); /* 1 */
+           -moz-transform: perspective(1000px) rotateY(180deg); /* 1 */
+                transform: perspective(1000px) rotateY(180deg); /* 1 */
+    }
+    /**
+    * 1. When the parent has the class indicating flipped state, rotate side B
+    *    back to 0 degrees.
+    */
+    .csstransforms3d.classlist .flip-wrapper.is-flipped .flip-b {
+        -webkit-transform: perspective(1000px) rotateY(0deg); /* 1 */
+           -moz-transform: perspective(1000px) rotateY(0deg); /* 1 */
+                transform: perspective(1000px) rotateY(0deg); /* 1 */
+    }
+    /**
+    * These two classes are used by the JS to toggle the visibility property
+    * in order to prevent the user from tabbing into the side that is hidden.
+    * These classes are added/removed in conjunction with the transition-events
+    * that are emitted when the widget has rotated - see the JS file if you
+    * want to dig deeper!
+    */
+    .csstransforms3d.classlist .flip-enabled {
+        visibility: visible;
+    }
+    .csstransforms3d.classlist .flip-disabled {
+        visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="flip-wrapper menu-wrapper">
+        <div class="flip-a menu">
+            <h1 class="menu-heading">Top menu choices</h1>
+            <ol class="menu-list">
+                <li>Capricciosa</li>
+                <li>Margherita</li>
+                <li>Vesuvio</li>
+                <li>Calzone</li>
+                <li>Quattro Stagioni</li>
+                <li>Pescatore</li>
+                <li>Bolognese</li>
+                <li>Shawarma</li>
+                <li>Mexicana</li>
+                <li>Fungi</li>
+            </ol>
+        </div>
+
+        <div class="flip-b menu-settings">
+            <form action="">
+                <h2>Show only these pizzas:</h2>
+                <ul class="checkboxes">
+                    <li>
+                        <input type="checkbox" checked name="meat" id="checkbox-meat">
+                        <label for="checkbox-meat">Pizzas with meat</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked name="fish" id="checkbox-fish">
+                        <label for="checkbox-fish">Pizzas with fish or seafood</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked name="veg" id="checkbox-veg">
+                        <label for="checkbox-veg">Vegetarian pizzas</label>
+                    </li>
+                </ul>
+                <!-- The button for filtering pizzas can presumably be included in
+                     the markup, since it could potentially be  -->
+                <button type="submit" class="menu-save">Show me pizzas!</button>
+            </form>
+            
+
+        </div>
+    </div>
+
+    <p><a href="#">Focusable link</a></p>
+
+    <!-- Here, we link to the JS file powering the flippable widget. -->
+    <script src="js/flipwidget.js"></script>
+    <script>
+        // Initialize the flip widget with options:
+        window.FlipWidget({'flipElementSel': '.flip-a'});
+    </script>
+</body>
+</html>

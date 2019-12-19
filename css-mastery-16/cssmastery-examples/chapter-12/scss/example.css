@@ -1,0 +1,25 @@
+/**
+* This file is written in the SCSS syntax of Sass-script. It needs to be 
+* compiled into CSS by a Sass library. You can find installation instructions 
+* for various applications with Sass support at http://sass-lang.com/install.
+*/
+body {
+  color: #333;
+  background-color: #fff; }
+
+.page-header, .page-footer {
+  color: #fff;
+  background-color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@media only screen and (min-width: 50em) {
+  .row-trio > * {
+    width: 31.25%; } }
+
+.page-footer {
+  background-color: #14203B; }
+  .page-footer a {
+    color: #e6e6e6; }
+
+/*# sourceMappingURL=example.css.map */
